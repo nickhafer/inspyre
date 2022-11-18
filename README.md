@@ -1,3 +1,3 @@
 # inspyre
 CS 147 Final Project
-AndrewF. | Luc | Nick
+Andrew F. | Luc A. | Nick H.
