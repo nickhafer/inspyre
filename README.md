@@ -15,3 +15,5 @@ Andrew F. | Luc A. | Nick H.
 Andrew F. | Luc A. | Nick H.
 Hello
 >>>>>>> c31fac4846189b5f63a16b493726195b8acd8dfe
+
+Hello World from Andrew
