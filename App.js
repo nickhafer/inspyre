@@ -23,11 +23,6 @@ export default function App() {
         }}>
         This is the Insypre app. Check Plus
       </Text>
-      <Text
-        style={{
-          fontFamily: 'Sydney-Bold', // test to see if the font is loaded, feel free to remove this
-        }}>
-      </Text>
     </View>
   );
 }
