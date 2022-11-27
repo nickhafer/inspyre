@@ -1,4 +1,4 @@
-
+// import AppLoading from 'expo-app-loading';
 // import { StyleSheet, Text, View, StatusBar } from 'react-native';
 // import { useFonts } from 'expo-font';
 // import { Themes } from './assets/Themes';
@@ -41,7 +41,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { FontAwesome } from '@expo/vector-icons';
 
-import HomeStack from '__tests__/components';
+import HomeStack from './components/HomeStack';
 
 export default function App() {
   const Tab = createBottomTabNavigator();
