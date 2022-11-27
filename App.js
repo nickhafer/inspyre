@@ -21,7 +21,7 @@ export default function App() {
         style={{
           fontFamily: 'Sydney', // test to see if the font is loaded, feel free to remove this
         }}>
-        This is the Insypre app. Check Plus
+        This is the Insypre app. Check Plus Plus
       </Text>
     </View>
   );
