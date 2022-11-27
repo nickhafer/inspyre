@@ -59,7 +59,6 @@ export default function App() {
   );
 
   return (
-<<<<<<< HEAD
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
@@ -86,16 +85,6 @@ export default function App() {
         <Tab.Screen name="Profile" component={ProfileTab} />
       </Tab.Navigator>
     </NavigationContainer>
-=======
-    <View style={styles.container}>
-      <Text
-        style={{
-          fontFamily: 'Sydney', // test to see if the font is loaded, feel free to remove this
-        }}>
-        This is the Insypre app. Check Plus
-      </Text>
-    </View>
->>>>>>> parent of c39c561a (Update App.js)
   );
 }
 
