@@ -59,6 +59,7 @@ export default function App() {
   );
 
   return (
+<<<<<<< HEAD
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
@@ -85,6 +86,21 @@ export default function App() {
         <Tab.Screen name="Profile" component={ProfileTab} />
       </Tab.Navigator>
     </NavigationContainer>
+=======
+    <View style={styles.container}>
+      <Text
+        style={{
+          fontFamily: 'Sydney', // test to see if the font is loaded, feel free to remove this
+        }}>
+        This is the Insypre app. Check Plus
+      </Text>
+      <Text
+        style={{
+          fontFamily: 'Sydney-Bold', // test to see if the font is loaded, feel free to remove this
+        }}>
+      </Text>
+    </View>
+>>>>>>> parent of fca06e6a (error-free from Syndey-Bold)
   );
 }
 
