@@ -3,9 +3,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+function HomeScreen() {
+  return (
+    <View style={styles.screenContainer}>
+      <Text style={styles.screenText}>Home!</Text>
+    </View>
+  );
+}
 
-//defining all the tab navigators
-function SettingsScreen() {
+function SearchScreen() {
   return (
     <View style={styles.screenContainer}>
       <Text style={styles.screenText}>Search!</Text>
@@ -13,7 +19,23 @@ function SettingsScreen() {
   );
 }
 
-function DetailsScreen() {
+function CommunitiesScreen() {
+  return (
+    <View style={styles.screenContainer}>
+      <Text style={styles.screenText}>Communities!</Text>
+    </View>
+  );
+}
+
+function PostScreen() {
+  return (
+    <View style={styles.screenContainer}>
+      <Text style={styles.screenText}>Post!</Text>
+    </View>
+  );
+}
+
+function ProfileScreen() {
   return (
     <View style={styles.screenContainer}>
       <Text style={styles.screenText}>Details!</Text>
@@ -36,20 +58,31 @@ export default function App() {
 
             if (route.name === 'Home') {
               iconName = focused ? 'home' : 'home-outline';
-            } else if (route.name === 'Settings') {
-              iconName = focused ? 'settings' : 'settings-outline';
-            } else if (route.name === 'Details') {
+            } else if (route.name === 'Search') {
+              iconName = focused ? 'search' : 'search-outline';
+            } else if (route.name === 'Profile') {
               iconName = focused
-                ? 'information-circle'
-                : 'information-circle-outline';
+                ? "person-circle"
+                : 'person-circle-outline';
             }
+            else if (route.name === 'Communities') {
+              iconName = focused
+                ? 'people'
+                : 'people-outline';
+            } 
+            else if (route.name === 'Post') {
+              iconName = focused
+                ? 'add-circle'
+                : 'add-circle-outline';
+            } 
 
             return <Ionicons name={iconName} size={24} color="black" />;
           }
         })}>
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-        <Tab.Screen name="Details" component={DetailsScreen} />
+        <Tab.Screen name="Post" component={PostScreen} /> 
+        <Tab.Screen name="Profile" component={ProfileScreen} />
+        <Tab.Screen name="Communities" component={CommunitiesScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
