@@ -1,42 +1,73 @@
-import AppLoading from 'expo-app-loading';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
-import { useFonts } from 'expo-font';
-import { Themes } from './assets/Themes';
+import { Text, View, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-export default function App() {
-  let [fontsLoaded] = useFonts({
-    Sydney: require('./assets/Fonts/Sydney-Serial-Regular.ttf'),
-    SydneyBold: require('./assets/Fonts/Sydney-Serial-Bold.ttf'),
-  });
-  if (!fontsLoaded) return <AppLoading />;
-  /* ^Don't mind/edit the code above, it's there to load the font for you! */
-  StatusBar.setBarStyle(Themes.light.statusBar);
-  /* ^Don't mind/edit this one either unless you decide to do the dark theme one, in that case, you will have to change it accordingly*/
-
-  /* insert your code here */
-
+function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text
-        style={{
-          fontFamily: 'Sydney', // test to see if the font is loaded, feel free to remove this
-        }}>
-        This is the Insypre app. Check Plus
-      </Text>
-      <Text
-        style={{
-          fontFamily: 'Sydney-Bold', // test to see if the font is loaded, feel free to remove this
-        }}>
-      </Text>
+    <View style={styles.screenContainer}>
+      <Text style={styles.screenText}>Home!</Text>
     </View>
   );
 }
 
+function SettingsScreen() {
+  return (
+    <View style={styles.screenContainer}>
+      <Text style={styles.screenText}>Search!</Text>
+    </View>
+  );
+}
+
+function DetailsScreen() {
+  return (
+    <View style={styles.screenContainer}>
+      <Text style={styles.screenText}>Details!</Text>
+    </View>
+  );
+}
+
+const Tab = createBottomTabNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        tabBarOptions={{
+          labelStyle: { fontSize: 14 },
+        }}
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused }) => {
+            let iconName;
+
+            if (route.name === 'Home') {
+              iconName = focused ? 'home' : 'home-outline';
+            } else if (route.name === 'Settings') {
+              iconName = focused ? 'settings' : 'settings-outline';
+            } else if (route.name === 'Details') {
+              iconName = focused
+                ? 'information-circle'
+                : 'information-circle-outline';
+            }
+
+            return <Ionicons name={iconName} size={24} color="black" />;
+          }
+        })}>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="Details" component={DetailsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
+
 const styles = StyleSheet.create({
-  container: {
+  screenContainer: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  screenText: {
+    fontSize: 32,
   },
 });
