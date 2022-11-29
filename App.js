@@ -1,13 +1,44 @@
-import { Text, View, SafeAreaView, StyleSheet } from 'react-native';
+import { Text, View, FlatList, SafeAreaView, StyleSheet, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MessageScreen from './MessageScreen';
 
+
+
 function HomeScreen() {
+  const DATA = [
+  {
+    id: '1',
+    title: 'First Item',
+  },
+  {
+    id: '2',
+    title: 'Second Item',
+  },
+  {
+    id: '3',
+    title: 'Third Item',
+  },
+];
+
+const Item = ({ title }) => (
+  <View style={styles.item}>
+    <Text style={styles.title}>{title}</Text>
+  </View>
+);
+  
+  const renderItem = ({ item }) => (
+    <Item title={item.title} />
+  );
+
   return (
-    <SafeAreaView style={styles.screenContainer}>
-      <Text style={styles.screenText}>Home!</Text>
+    <SafeAreaView style={styles.container}>
+      <FlatList 
+        data={DATA}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+      />
     </SafeAreaView>
   );
 }
@@ -95,6 +126,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   screenText: {
+    fontSize: 32,
+  },
+  container: {
+    flex: 1,
+    marginTop: StatusBar.currentHeight || 0,
+  },
+  item: {
+    backgroundColor: '#f9c2ff',
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+  },
+  title: {
     fontSize: 32,
   },
 });
