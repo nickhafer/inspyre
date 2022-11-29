@@ -4,7 +4,7 @@
  */
 
 
-import { Text, View, FlatList, SafeAreaView, StyleSheet, StatusBar } from 'react-native';
+import { Text, View, FlatList, SafeAreaView, StyleSheet, StatusBar, Button, TouchableHighlight } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -16,8 +16,8 @@ function HomeScreen() {
   {
     id: '1',
     title: 'First Item',
-    item: 'broken chair',
-    user: 'Nick',
+    item_name: 'broken chair',
+    username: 'Nick',
     picture: 'image1',
     community: 'Stanford GSB',
     distance: '1.2 miles',
@@ -27,14 +27,24 @@ function HomeScreen() {
   },
 ];
 
-const Item = ({ title }) => (
+const Item = ({ title, username }) => (
   <View style={styles.item}>
     <Text style={styles.title}>{title}</Text>
+    <Text style={styles.username}>{username}</Text>
+    <TouchableHighlight onPress={()=>{}}>
+      <View>
+        <Ionicons name="paper-plane-outline" size={24} color="black" />
+        <Text>Message</Text>
+      </View>
+ </TouchableHighlight>
   </View>
 );
   
   const renderItem = ({ item }) => (
-    <Item title={item.title} />
+    <Item 
+    title={item.title} 
+    username={item.username}
+    />
   );
 
   return (
@@ -145,5 +155,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
+  },
+  username: {
+    fontSize: 16,
   },
 });
