@@ -3,38 +3,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MessageScreen from './MessageScreen';
-
-function HomeScreen() {
-  return (
-    <View style={styles.screenContainer}>
-      <Text style={styles.screenText}>Home!</Text>
-    </View>
-  );
-}
-
-function CommunitiesScreen() {
-  return (
-    <View style={styles.screenContainer}>
-      <Text style={styles.screenText}>Communities!</Text>
-    </View>
-  );
-}
-
-function PostScreen() {
-  return (
-    <View style={styles.screenContainer}>
-      <Text style={styles.screenText}>Post!</Text>
-    </View>
-  );
-}
-
-function ProfileScreen() {
-  return (
-    <View style={styles.screenContainer}>
-      <Text style={styles.screenText}>Details!</Text>
-    </View>
-  );
-}
+import PostScreen from './PostScreen';
+import CommunitiesScreen from './CommunitiesScreen';
+import ProfileScreen from './ProfileScreen';
+import HomeScreen from './HomeScreen';
 
 const Tab = createBottomTabNavigator();
 
