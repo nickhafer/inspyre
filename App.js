@@ -59,7 +59,7 @@ export default function App() {
                 ? "person-circle"
                 : 'person-circle-outline';
             }
-            else if (route.name === 'Communities') {
+            else if (route.name === 'Community') {
               iconName = focused
                 ? 'people'
                 : 'people-outline';
@@ -82,7 +82,7 @@ export default function App() {
         <Tab.Screen name="Post" component={PostScreen} /> 
         <Tab.Screen name="Profile" component={ProfileScreen} />
         <Tab.Screen name="Message" component={MessageScreen}/>
-        <Tab.Screen name="Communities" component={CommunitiesScreen} />
+        <Tab.Screen name="Community" component={CommunitiesScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
