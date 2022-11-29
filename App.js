@@ -50,11 +50,11 @@ export default function App() {
             return <Ionicons name={iconName} size={24} color="black" />;
           }
         })}>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Post" component={PostScreen} /> 
-        <Tab.Screen name="Profile" component={ProfileScreen} />
-        <Tab.Screen name="Message" component={MessageScreen}/>
-        <Tab.Screen name="Community" component={CommunitiesScreen} />
+        <Tab.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Post" component={PostScreen} options={{headerShown: false}}/> 
+        <Tab.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Message" component={MessageScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Community" component={CommunitiesScreen} options={{headerShown: false}} />
       </Tab.Navigator>
     </NavigationContainer>
   );
