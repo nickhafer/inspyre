@@ -1,9 +1,14 @@
+/*  CS 147 Final Project: inspyre
+ *  Authors: Andrew Franks, Nick Hafer, Luc Alvarez
+ *  CS 147 Autumn 2022
+ */
+
+
 import { Text, View, FlatList, SafeAreaView, StyleSheet, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MessageScreen from './MessageScreen';
-
 
 
 function HomeScreen() {
