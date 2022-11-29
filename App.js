@@ -16,14 +16,14 @@ function HomeScreen() {
   {
     id: '1',
     title: 'First Item',
-  },
-  {
-    id: '2',
-    title: 'Second Item',
-  },
-  {
-    id: '3',
-    title: 'Third Item',
+    item: 'broken chair',
+    user: 'Nick',
+    picture: 'image1',
+    community: 'Stanford GSB',
+    distance: '1.2 miles',
+    rating: '5 stars',
+    num_likes: 32,
+    liked: false
   },
 ];
 
