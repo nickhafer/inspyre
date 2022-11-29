@@ -79,10 +79,10 @@ export default function App() {
           }
         })}>
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Post" component={PostScreen} /> 
-        <Tab.Screen name="Profile" component={ProfileScreen} />
-        <Tab.Screen name="Message" component={MessageScreen}/>
         <Tab.Screen name="Community" component={CommunitiesScreen} />
+        <Tab.Screen name="Post" component={PostScreen} /> 
+        <Tab.Screen name="Message" component={MessageScreen}/>
+        <Tab.Screen name="Profile" component={ProfileScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
