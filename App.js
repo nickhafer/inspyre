@@ -2,19 +2,12 @@ import { Text, View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MessageScreen from './MessageScreen';
 
 function HomeScreen() {
   return (
     <View style={styles.screenContainer}>
       <Text style={styles.screenText}>Home!</Text>
-    </View>
-  );
-}
-
-function MessageScreen() {
-  return (
-    <View style={styles.screenContainer}>
-      <Text style={styles.screenText}>Message!</Text>
     </View>
   );
 }
