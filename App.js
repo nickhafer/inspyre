@@ -11,10 +11,10 @@ function HomeScreen() {
   );
 }
 
-function SearchScreen() {
+function MessageScreen() {
   return (
     <View style={styles.screenContainer}>
-      <Text style={styles.screenText}>Search!</Text>
+      <Text style={styles.screenText}>Message!</Text>
     </View>
   );
 }
@@ -50,7 +50,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator
         tabBarOptions={{
-          labelStyle: { fontSize: 14 },
+          labelStyle: { fontSize: 12 },
         }}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused }) => {
@@ -58,7 +58,8 @@ export default function App() {
 
             if (route.name === 'Home') {
               iconName = focused ? 'home' : 'home-outline';
-            } else if (route.name === 'Search') {
+            } 
+            else if (route.name === 'Search') {
               iconName = focused ? 'search' : 'search-outline';
             } else if (route.name === 'Profile') {
               iconName = focused
@@ -75,6 +76,11 @@ export default function App() {
                 ? 'add-circle'
                 : 'add-circle-outline';
             } 
+            else if (route.name === 'Message') {
+              iconName = focused
+                ? 'paper-plane'
+                : 'paper-plane-outline';
+            }
 
             return <Ionicons name={iconName} size={24} color="black" />;
           }
@@ -82,6 +88,7 @@ export default function App() {
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Post" component={PostScreen} /> 
         <Tab.Screen name="Profile" component={ProfileScreen} />
+        <Tab.Screen name="Message" component={MessageScreen}/>
         <Tab.Screen name="Communities" component={CommunitiesScreen} />
       </Tab.Navigator>
     </NavigationContainer>
