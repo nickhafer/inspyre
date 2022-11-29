@@ -3,38 +3,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MessageScreen from './MessageScreen';
-
-function HomeScreen() {
-  return (
-    <View style={styles.screenContainer}>
-      <Text style={styles.screenText}>Home!</Text>
-    </View>
-  );
-}
-
-function CommunitiesScreen() {
-  return (
-    <View style={styles.screenContainer}>
-      <Text style={styles.screenText}>Communities!</Text>
-    </View>
-  );
-}
-
-function PostScreen() {
-  return (
-    <View style={styles.screenContainer}>
-      <Text style={styles.screenText}>Post!</Text>
-    </View>
-  );
-}
-
-function ProfileScreen() {
-  return (
-    <View style={styles.screenContainer}>
-      <Text style={styles.screenText}>Details!</Text>
-    </View>
-  );
-}
+import PostScreen from './PostScreen';
+import CommunitiesScreen from './CommunitiesScreen';
+import ProfileScreen from './ProfileScreen';
+import HomeScreen from './HomeScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -78,11 +50,11 @@ export default function App() {
             return <Ionicons name={iconName} size={24} color="black" />;
           }
         })}>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Post" component={PostScreen} /> 
-        <Tab.Screen name="Profile" component={ProfileScreen} />
-        <Tab.Screen name="Message" component={MessageScreen}/>
-        <Tab.Screen name="Community" component={CommunitiesScreen} />
+        <Tab.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Post" component={PostScreen} options={{headerShown: false}}/> 
+        <Tab.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Message" component={MessageScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Community" component={CommunitiesScreen} options={{headerShown: false}} />
       </Tab.Navigator>
     </NavigationContainer>
   );
