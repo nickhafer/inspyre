@@ -24,6 +24,28 @@ export default function HomeScreen() {
             // num_likes: 32,
             // liked: false
         },
+        {
+            id: '2',
+            title: 'Used Towel',
+            username: 'Andrew',
+            image: 'image2',
+            // community: 'Stanford GSB',
+            // distance: '1.2 miles',
+            // rating: '5 stars',
+            // num_likes: 32,
+            // liked: false
+        },
+        {
+            id: '3',
+            title: 'Old Water Bottle',
+            username: 'Luc',
+            image: 'image3',
+            // community: 'Stanford GSB',
+            // distance: '1.2 miles',
+            // rating: '5 stars',
+            // num_likes: 32,
+            // liked: false
+        },
     ];
 
     const Item = ({ title, username, image }) => (
@@ -47,6 +69,21 @@ export default function HomeScreen() {
                 <View>
                     <Ionicons name="paper-plane-outline" size={24} color="black" />
                     <Text>Message</Text>
+                </View>
+            </Pressable>
+            <Pressable 
+                onPress={() => navigation.navigate('Chat')}
+                style={({ pressed }) => [
+                    {
+                        backgroundColor: pressed
+                        ? 'rgb(210, 230, 255)'
+                        : 'white'
+                    },
+                    styles.wrapperCustom
+                ]}>
+                <View>
+                    <Ionicons name="heart-outline" size={24} color="black" />
+                    <Text>Like</Text>
                 </View>
             </Pressable>
         </View>
