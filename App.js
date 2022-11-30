@@ -25,9 +25,6 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        tabBarOptions={{
-          labelStyle: { fontSize: 12 },
-        }}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused }) => {
             let iconName;

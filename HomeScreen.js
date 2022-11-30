@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MessageScreen from './MessageScreen';
 import CommunitiesScreen from './CommunitiesScreen';
-import App from './App';
+
 
 
 

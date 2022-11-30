@@ -1,6 +1,6 @@
-
 import { View, SafeAreaView, Text, ImageBackground, StyleSheet, Pressable } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+
 
 export default function DMScreen ({ navigation, route}) {
     const { destination } = route.params;

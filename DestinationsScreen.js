@@ -2,10 +2,10 @@ import { Image, Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Touch
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import CommunitiesScreen from './CommunitiesScreen';
-import App from './App';
-import IndividualMessage from './IndividualMessage';
 import { createStackNavigator } from '@react-navigation/stack';
+
+import CommunitiesScreen from './CommunitiesScreen';
+import IndividualMessage from './IndividualMessage';
 
 export default function DestinationScreen() {
     return (
