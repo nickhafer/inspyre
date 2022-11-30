@@ -28,7 +28,6 @@ export default function PeopleScreen ({ navigation }) {
             imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
             id: '3',
         },
-
         {
             message: 'Wonderful, that works for me.',
             time: '8h ago',
@@ -37,7 +36,6 @@ export default function PeopleScreen ({ navigation }) {
             id: '4',
 
         },
-
         {
             message: 'Very nice!!!',
             name: 'Terrance',
@@ -46,7 +44,6 @@ export default function PeopleScreen ({ navigation }) {
             id: '5',
 
         },
-
         {
             message: 'Wow',
             name: 'Julia',
@@ -57,34 +54,15 @@ export default function PeopleScreen ({ navigation }) {
         },
     ]
 
-    const LOCATIONS = [
-        {
-          id: 1,
-        //   image: Images.lakeLouise,
-          title: 'Lake Louise',
-          description: 'Lake Louise is rich heritage as one of the world\'s most awe-inspiring mountain destinations.',
-        },
-        { 
-          id: 2,
-        //   image: Images.sanFrancisco,
-          title: 'San Francisco',
-          description: 'Grab your coat and a handful of glitter and enter the land of fog and fabulousness.',
-        },
-        { 
-          id: 3,
-        //   image: Images.alesund,
-          title: 'Ålesund',
-          description: 'The far northern port of Ålesund might be far away from the bright lights of metropoliton Norway.',
-        }
-    ];
-
     // working code:
 
     const renderDestination = ({ item }) => (
         <View style={styles.destinationContainer}>
             {/* <Image style={styles.destinationImage} source={item.image} /> */}
+            {/* <Image style={styles.destinationImage} source={{uri: item.imageURL}} /> */}
             <View style={styles.destinationText}>
                 <View style={styles.destinationTitleDescription}>
+                    <Text style={styles.destinationTitle}>{item.imageURL}</Text>
                     <Text style={styles.destinationTitle}>{item.name}</Text>
                     <Text style={styles.destinationDescription}>{item.message}</Text>
                 </View>

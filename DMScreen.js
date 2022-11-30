@@ -12,8 +12,8 @@ export default function DMScreen ({ navigation, route}) {
             <AntDesign name="close" size={24} color="white" />
           </Pressable>
           <View style={styles.destinationText}>
-            <Text style={styles.destinationTitle}>{destination.title}</Text>
-            <Text style={styles.destinationDescription}>{destination.description}</Text>
+            <Text style={styles.destinationTitle}>{destination.name}</Text>
+            <Text style={styles.destinationDescription}>{destination.message}</Text>
           </View>
         </SafeAreaView>
       </ImageBackground>
