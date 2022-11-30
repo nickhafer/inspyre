@@ -13,6 +13,8 @@ export default function DMScreen ({ navigation, route}) {
           </Pressable>
           <View style={styles.messageText}>
             <Text style={styles.messageTitle}>{message.name}</Text>
+            </View>
+            <View style = {styles.messageDescriptionView}>
             <Text style={styles.messageDescription}>{message.message}</Text>
           </View>
         </SafeAreaView>
@@ -37,17 +39,28 @@ const styles = StyleSheet.create({
         margin: 16,
     },
     messageText: {
-        marginTop: 64,
+        marginTop: 10,
         padding: 16,
         backgroundColor: 'white',
         borderRadius: 8,
+        alignItems: 'center',
     },
     messageTitle: {
         fontSize: 40,
         fontWeight: 'bold',
+        //justifyContent: 'center',
     },
     messageDescription: {
         fontSize: 14,
         marginTop: 16,
-    }
+        //backgroundColor: 'white',
+    },
+    messageDescriptionView: {
+        backgroundColor: 'lightblue',
+        borderRadius: 8,
+        alignItems: 'center',
+        marginTop: 20,
+        paddingBottom: 10,
+        width: '50%',
+    },
   });
