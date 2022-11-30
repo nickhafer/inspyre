@@ -61,13 +61,13 @@ export default function PeopleScreen ({ navigation }) {
 
     // working code:
 
-    const renderDestination = ({ item }) => (
-        <View style={styles(item).destinationContainer}>
-            <View style={styles(item).destinationText}>
-                <Pressable onPress={() => navigation.navigate('DMScreen', { destination: item })}>
-                    <View style={styles(item).destinationTitle}>
-                        <Text style={styles(item).destinationTitle}>{item.name}</Text>
-                        <Text style={styles(item).destinationDescription}>{item.message}</Text>
+    const renderDM = ({ item }) => (
+        <View style={styles(item).messageContainer}>
+            <View style={styles(item).messageText}>
+                <Pressable onPress={() => navigation.navigate('DMScreen', { message: item })}>
+                    <View style={styles(item).messageTitle}>
+                        <Text style={styles(item).messageTitle}>{item.name}</Text>
+                        <Text style={styles(item).messageDescription}>{item.message}</Text>
                         <Text style={styles(item).exploreText}>{item.time}</Text>
                     </View>
                 </Pressable>
@@ -80,7 +80,7 @@ export default function PeopleScreen ({ navigation }) {
             <View style={styles.listContainer}>
                 <FlatList
                     data={DATA}
-                    renderItem={renderDestination}
+                    renderItem={renderDM}
                     keyExtractor={(item) => item.id}
                 />
             </View>
@@ -99,7 +99,7 @@ const styles = (item) => StyleSheet.create({
         width: 360,
         height: '80%',
     },
-    destinationContainer: {
+    messageContainer: {
         width: 320,
         flex: 1,
         margin: 20,
@@ -115,23 +115,23 @@ const styles = (item) => StyleSheet.create({
         },
         shadowRadius: 5,
     },
-    destinationImage: {
+    messageImage: {
         width: 320,
         height: 320,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
     },
-    destinationText: {
+    messageText: {
         flex: 1,
         justifyContent: 'space-around',
         marginHorizontal: 16,
     },
-    destinationTitle: {
+    messageTitle: {
         fontSize: 30,
         fontWeight: 'bold',
         marginBottom: 4,
     },
-    destinationDescription: {
+    messageDescription: {
         color: 'gray',
     },
     exploreText: {
