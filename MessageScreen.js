@@ -12,23 +12,27 @@ export default function MessageScreen() {
     {
       message: 'Hey, how is it going?',
       name: 'Lucas',
+      time: '5m ago',
       imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
 
     },
     {
       message: 'How are you doing?',
       name: 'Nichole',
+      time: '47m ago',
       imageUrl: 'https://www.nicepng.com/png/detail/70-701585_cucumber-clipart-cucumber-clip-art-free.png',
     },
     {
       message: 'Yes!',
       name: 'Tia',
+      time: '2h ago',
       imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
 
     },
 
     {
       message: 'Wonderful, that works for me.',
+      time: '8h ago',
       name: 'Lola',
       imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
 
@@ -37,6 +41,7 @@ export default function MessageScreen() {
     {
       message: 'Very nice!!!',
       name: 'Terrance',
+      time: '9h ago',
       imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
 
     },
@@ -44,6 +49,7 @@ export default function MessageScreen() {
     {
       message: 'Wow',
       name: 'Julia',
+      time: '2d ago',
       imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
 
     },
@@ -51,11 +57,14 @@ export default function MessageScreen() {
 
 
 
-  const Item = ({ name, message, imageUrl }) => (
+  const Item = ({ name, message, imageUrl, time }) => (
     <View style={styles.item}>
       <View style={styles.itemTop}>
       <Image source = {{uri: imageUrl}} style={styles.image}></Image>
       <Text style={styles.name}>{name}</Text>
+        <View style = {styles.timeView}>
+          <Text style = {styles.time}>{time}</Text>
+        </View>
       </View>
       <Text style={styles.message}>{message}</Text>
     </View>
@@ -66,14 +75,18 @@ export default function MessageScreen() {
       name={item.name} 
       message={item.message}
       imageUrl={item.imageUrl}
+      time = {item.time}
       
       />
     );
   
     return (
       <SafeAreaView style={styles.container}>
+        <View style = {styles.header}>
+        <Text style = {styles.headerText}>Inspyre Header</Text>
+      </View>
         <View style={styles.titleRow}>
-         <Text style={styles.titleText}>Messages</Text>
+         <Text style={styles.titleText}>Conversations</Text>
         </View>
         <FlatList 
           data={DATA}
@@ -102,26 +115,35 @@ export default function MessageScreen() {
     itemTop: {
       backgroundColor: 'white',
       flexDirection: 'row',
-      padding: 20,
-      marginVertical: 8,
-      marginHorizontal: 16,
     },
     item: {
       backgroundColor: 'white',
-      padding: 20,
-      marginVertical: 8,
-      marginHorizontal: 16,
+      padding: 10,
+      marginVertical: 4,
+      marginHorizontal: 0,
     },
     name: {
-      fontSize: 32,
+      fontSize: 20,
+    },
+    time: {
+      fontSize: 12,
+      color: 'grey',
+      //paddingStart: 200,
+    },
+    timeView: {
+      backgroundColor: 'red',
+      paddingTop: 5,
     },
     message: {
-      fontSize: 20,
+      fontSize: 15,
+      backgroundColor: 'white',
+      paddingStart: 50,
+      fontStyle: 'italic',
     },
     titleRow: {
       flexDirection: 'row',
       padding: 20,
-      backgroundColor: 'lightblue',
+      backgroundColor: 'white',
       justifyContent: 'center',
     },
     titleText: {
@@ -130,9 +152,21 @@ export default function MessageScreen() {
       textAlign: 'center',
     },
     image: {
-      width: 35,
+      width: 30,
       height: 30,
       margin: 10,
-      resizeMode: 'contain'
+      resizeMode: 'contain',
+      borderRadius: 100,
+
+    },
+    header: {
+      backgroundColor: 'lightgreen',
+      height: '7%',
+      borderBottomLeftRadius: 5,
+      borderBottomRightRadius: 5,
+    },
+    headerText: {
+      alignItems: 'center',
+     
     },
 });
