@@ -8,11 +8,15 @@ import { Text, View, FlatList, SafeAreaView, StyleSheet, StatusBar, Button, Touc
 import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import MessageScreen from './MessageScreen';
 import HomeScreen from './HomeScreen';
 import CommunitiesScreen from './CommunitiesScreen';
 import PostScreen from './PostScreen';
 import ProfileScreen from './ProfileScreen';
+
+import MessageStack from './MessageStack';
+
 
 
 const Tab = createBottomTabNavigator();
@@ -60,7 +64,7 @@ export default function App() {
         <Tab.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
         <Tab.Screen name="Community" component={CommunitiesScreen} options={{headerShown: false}}/>
         <Tab.Screen name="Post" component={PostScreen} options={{headerShown: false}}/> 
-        <Tab.Screen name="Chat" component={MessageScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Chat" component={MessageStack} options={{headerShown: false}}/>
         <Tab.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}}/>
       </Tab.Navigator>
     </NavigationContainer>
