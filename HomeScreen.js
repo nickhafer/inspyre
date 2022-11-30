@@ -1,10 +1,17 @@
-import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, TouchableHighlight } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, TouchableHighlight, Pressable, Button, navigation } from 'react-native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MessageScreen from './MessageScreen';
+import CommunitiesScreen from './CommunitiesScreen';
+import App from './App';
+
 
 
 export default function HomeScreen() {
+
+    const navigation = useNavigation();
+
     const DATA = [
         {
             id: '1',
@@ -24,12 +31,18 @@ export default function HomeScreen() {
         <View style={styles.item}>
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.username}>{username}</Text>
-            <TouchableHighlight onPress={()=>{}}>
+            {/* <TouchableHighlight onPress={()=>{NavigationContainer.navigate('Community')}}>
                 <View>
                     <Ionicons name="paper-plane-outline" size={24} color="black" />
                     <Text>Message</Text>
                 </View>
-            </TouchableHighlight>
+            </TouchableHighlight> */}
+            <Button
+                title="Go to Jane's profile"
+                onPress={() =>
+                    navigation.navigate('Community')
+                }
+            />
         </View>
     );
     
