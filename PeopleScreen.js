@@ -77,6 +77,13 @@ export default function PeopleScreen ({ navigation }) {
 
     return (
         <SafeAreaView style={styles.container}>
+            <View styles = {styles.chatHeader}>
+                <Text styles={styles.headerText}>
+                    Chat Header
+                </Text>
+
+            </View>
+            
             <View style={styles.listContainer}>
                 <FlatList
                     data={DATA}
@@ -133,6 +140,12 @@ const styles = (item) => StyleSheet.create({
     },
     messageDescription: {
         color: 'gray',
+    },
+    chatHeader: {
+        backgroundColor: 'blue',
+    },
+    headerText: {
+        fontSize: 42,
     },
     exploreText: {
         fontSize: 14,
