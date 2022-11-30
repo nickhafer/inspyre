@@ -1,12 +1,15 @@
-import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Image } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { Image, Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, TouchableHighlight, Pressable, Button, navigation } from 'react-native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import CommunitiesScreen from './CommunitiesScreen';
+import App from './App';
+import IndividualMessage from './IndividualMessage';
 
 
 
 export default function MessageScreen() {
+  const navigation = useNavigation();
 
   const DATA = [
     {
@@ -58,16 +61,22 @@ export default function MessageScreen() {
 
 
   const Item = ({ name, message, imageUrl, time }) => (
-    <View style={styles.item}>
-      <View style={styles.itemTop}>
-      <Image source = {{uri: imageUrl}} style={styles.image}></Image>
-      <Text style={styles.name}>{name}</Text>
-        <View style = {styles.timeView}>
-          <Text style = {styles.time}>{time}</Text>
+    <Pressable
+    onPress={() =>
+      navigation.navigate('Community') 
+  }
+    >
+      <View style={styles.item}>
+        <View style={styles.itemTop}>
+        <Image source = {{uri: imageUrl}} style={styles.image}></Image>
+        <Text style={styles.name}>{name}</Text>
+          <View style = {styles.timeView}>
+            <Text style = {styles.time}>{time}</Text>
+          </View>
         </View>
+        <Text style={styles.message}>{message}</Text>
       </View>
-      <Text style={styles.message}>{message}</Text>
-    </View>
+    </Pressable>
   );
     
     const renderItem = ({ item }) => (
