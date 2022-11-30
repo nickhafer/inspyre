@@ -5,11 +5,14 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import CommunitiesScreen from './CommunitiesScreen';
 import App from './App';
 import IndividualMessage from './IndividualMessage';
-
+import { createStackNavigator } from '@react-navigation/stack';
+import DestinationScreen from './DestinationsScreen';
+import DetailsScreen from './DetailsScreen';
 
 
 export default function MessageScreen() {
   const navigation = useNavigation();
+  const Stack = createStackNavigator();
 
   const DATA = [
     {
@@ -67,11 +70,6 @@ export default function MessageScreen() {
 
 
   const Item = ({ name, message, imageUrl, time }) => (
-    <Pressable
-    onPress={() =>
-      navigation.navigate('Community') 
-  }
-    >
       <View style={styles.item}>
         <View style={styles.itemTop}>
         <Image source = {{uri: imageUrl}} style={styles.image}></Image>
@@ -79,10 +77,10 @@ export default function MessageScreen() {
           <View style = {styles.timeView}>
             <Text style = {styles.time}>{time}</Text>
           </View>
+          <Button title="Go to details" onPress={() => navigation.navigate('DetailsScreen')}></Button>
         </View>
         <Text style={styles.message}>{message}</Text>
       </View>
-    </Pressable>
   );
     
     const renderItem = ({ item }) => (
@@ -108,6 +106,10 @@ export default function MessageScreen() {
           renderItem={renderItem}
           keyExtractor={item => item.id}
         />
+          <Stack.Navigator>
+            <Stack.Screen name = 'MessagesScreen' component = {DestinationScreen} />
+            <Stack.Screen name = 'DetailsScreen' component = {DetailsScreen}/>
+          </Stack.Navigator>
       </SafeAreaView>
     );
   }

@@ -4,7 +4,7 @@
  */
 
 
-import { Text, View, FlatList, SafeAreaView, StyleSheet, StatusBar, Button, TouchableHighlight } from 'react-native';
+import { Text, View, FlatList, SafeAreaView, StyleSheet, StatusBar, Button, TouchableHighlight, Pressable } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -13,6 +13,7 @@ import HomeScreen from './HomeScreen';
 import CommunitiesScreen from './CommunitiesScreen';
 import PostScreen from './PostScreen';
 import ProfileScreen from './ProfileScreen';
+
 
 const Tab = createBottomTabNavigator();
 
