@@ -14,6 +14,7 @@ export default function PeopleScreen ({ navigation }) {
             time: '5m ago',
             imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
             id: '1',
+            read: 'true'
         },
         {
             message: 'How are you doing?',
@@ -21,6 +22,7 @@ export default function PeopleScreen ({ navigation }) {
             time: '47m ago',
             imageUrl: 'https://www.nicepng.com/png/detail/70-701585_cucumber-clipart-cucumber-clip-art-free.png',
             id: '2',
+            read: 'false'
         },
         {
             message: 'Yes!',
@@ -28,6 +30,8 @@ export default function PeopleScreen ({ navigation }) {
             time: '2h ago',
             imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
             id: '3',
+            read: 'false'
+
         },
         {
             message: 'Wonderful, that works for me.',
@@ -35,7 +39,7 @@ export default function PeopleScreen ({ navigation }) {
             name: 'Lola',
             imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
             id: '4',
-
+            read: 'false'
         },
         {
             message: 'Very nice!!!',
@@ -43,7 +47,7 @@ export default function PeopleScreen ({ navigation }) {
             time: '9h ago',
             imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
             id: '5',
-
+            read: 'false'
         },
         {
             message: 'Wow',
@@ -51,7 +55,7 @@ export default function PeopleScreen ({ navigation }) {
             time: '2d ago',
             imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
             id: '6',
-
+            read: 'false'
         },
     ]
 
@@ -62,13 +66,14 @@ export default function PeopleScreen ({ navigation }) {
             {/* <Image style={styles.destinationImage} source={item.image} /> */}
             {/* <Image style={styles.destinationImage} source={{uri: item.imageURL}} /> */}
             <View style={styles.destinationText}>
-                <View style={styles.destinationTitleDescription}>
-                    <Text style={styles.destinationTitle}>{item.imageURL}</Text>
-                    <Text style={styles.destinationTitle}>{item.name}</Text>
-                    <Text style={styles.destinationDescription}>{item.message}</Text>
-                </View>
+                {/* borderColor: item.read === 'true' ? "blue" : "black" */}
+                
                 <Pressable onPress={() => navigation.navigate('DMScreen', { destination: item })}>
-                    <Text style={styles.exploreText}>{item.time}</Text>
+                    <View style={styles.destinationTitleDescription}>
+                        <Text style={styles.destinationTitle}>{item.name}</Text>
+                        <Text style={styles.destinationDescription}>{item.message}</Text>
+                        <Text style={styles.exploreText}>{item.time}</Text>
+                    </View>
                 </Pressable>
             </View>
         </View>
