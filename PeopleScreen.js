@@ -14,7 +14,7 @@ export default function PeopleScreen ({ navigation }) {
             time: '5m ago',
             imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
             id: '1',
-            read: 'true'
+            read: 'false'
         },
         {
             message: 'How are you doing?',
@@ -22,7 +22,7 @@ export default function PeopleScreen ({ navigation }) {
             time: '47m ago',
             imageUrl: 'https://www.nicepng.com/png/detail/70-701585_cucumber-clipart-cucumber-clip-art-free.png',
             id: '2',
-            read: 'false'
+            read: 'true'
         },
         {
             message: 'Yes!',
@@ -30,7 +30,7 @@ export default function PeopleScreen ({ navigation }) {
             time: '2h ago',
             imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
             id: '3',
-            read: 'false'
+            read: 'true'
 
         },
         {
@@ -39,7 +39,7 @@ export default function PeopleScreen ({ navigation }) {
             name: 'Lola',
             imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
             id: '4',
-            read: 'false'
+            read: 'true'
         },
         {
             message: 'Very nice!!!',
@@ -47,7 +47,7 @@ export default function PeopleScreen ({ navigation }) {
             time: '9h ago',
             imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
             id: '5',
-            read: 'false'
+            read: 'true'
         },
         {
             message: 'Wow',
@@ -55,24 +55,20 @@ export default function PeopleScreen ({ navigation }) {
             time: '2d ago',
             imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
             id: '6',
-            read: 'false'
+            read: 'true'
         },
     ]
 
     // working code:
 
     const renderDestination = ({ item }) => (
-        <View style={styles.destinationContainer}>
-            {/* <Image style={styles.destinationImage} source={item.image} /> */}
-            {/* <Image style={styles.destinationImage} source={{uri: item.imageURL}} /> */}
-            <View style={styles.destinationText}>
-                {/* borderColor: item.read === 'true' ? "blue" : "black" */}
-                
+        <View style={styles(item).destinationContainer}>
+            <View style={styles(item).destinationText}>
                 <Pressable onPress={() => navigation.navigate('DMScreen', { destination: item })}>
-                    <View style={styles.destinationTitleDescription}>
-                        <Text style={styles.destinationTitle}>{item.name}</Text>
-                        <Text style={styles.destinationDescription}>{item.message}</Text>
-                        <Text style={styles.exploreText}>{item.time}</Text>
+                    <View style={styles(item).destinationTitle}>
+                        <Text style={styles(item).destinationTitle}>{item.name}</Text>
+                        <Text style={styles(item).destinationDescription}>{item.message}</Text>
+                        <Text style={styles(item).exploreText}>{item.time}</Text>
                     </View>
                 </Pressable>
             </View>
@@ -137,7 +133,7 @@ export default function PeopleScreen ({ navigation }) {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = (item) => StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -154,7 +150,7 @@ const styles = StyleSheet.create({
         margin: 20,
         borderRadius: 20,
         borderWidth: 0.5,
-        borderColor: 'gray',
+        borderColor: item.read == 'true' ? 'grey' : 'blue',
         backgroundColor: 'white',
         shadowColor: 'darkgray',
         shadowOpacity: 0.4,
