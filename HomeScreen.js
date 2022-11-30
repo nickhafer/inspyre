@@ -31,18 +31,21 @@ export default function HomeScreen() {
         <View style={styles.item}>
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.username}>{username}</Text>
-            {/* <TouchableHighlight onPress={()=>{NavigationContainer.navigate('Community')}}>
+            <Pressable 
+                onPress={() => navigation.navigate('Community')}
+                style={({ pressed }) => [
+                    {
+                        backgroundColor: pressed
+                        ? 'rgb(210, 230, 255)'
+                        : 'white'
+                    },
+                    styles.wrapperCustom
+                ]}>
                 <View>
                     <Ionicons name="paper-plane-outline" size={24} color="black" />
                     <Text>Message</Text>
                 </View>
-            </TouchableHighlight> */}
-            <Button
-                title="Go to Jane's profile"
-                onPress={() =>
-                    navigation.navigate('Community')
-                }
-            />
+            </Pressable>
         </View>
     );
     
@@ -89,5 +92,9 @@ export default function HomeScreen() {
     },
     username: {
         fontSize: 16,
+    },
+    wrapperCustom: {
+        borderRadius: 8,
+        padding: 6
     },
 });
