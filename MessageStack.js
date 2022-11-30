@@ -10,10 +10,9 @@ export default function MessageStack ({}) {
 
     return (
         <Stack.Navigator 
-            // screenOptions={{
-            //     headerShown: false
-            // }}>
-            >
+            screenOptions={{
+                headerShown: false
+            }}>
             <Stack.Screen name="PeopleScreen" component={PeopleScreen} />
             <Stack.Screen name="DMScreen" component={DMScreen} />
         </Stack.Navigator>

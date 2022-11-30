@@ -9,7 +9,7 @@ export default function DMScreen ({ navigation, route}) {
     <ImageBackground source={destination.image} style={styles.backgroundImage}>
         <SafeAreaView style={styles.body}>
           <Pressable onPress={() => navigation.goBack()}>
-            <AntDesign name="close" size={24} color="white" />
+            <AntDesign name="left" size={24} color="black">Messages</AntDesign>
           </Pressable>
           <View style={styles.destinationText}>
             <Text style={styles.destinationTitle}>{destination.name}</Text>

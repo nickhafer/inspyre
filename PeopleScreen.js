@@ -86,51 +86,6 @@ export default function PeopleScreen ({ navigation }) {
             </View>
         </SafeAreaView>
     );
-
-    // code to make work:
-
-    const Item = ({ name, message, imageUrl, time }) => (
-      <View style={styles.item}>
-        <View style={styles.itemTop}>
-        <Image source = {{uri: imageUrl}} style={styles.image}></Image>
-        <Text style={styles.name}>{name}</Text>
-          <View style = {styles.timeView}>
-            <Text style = {styles.time}>{time}</Text>
-          </View>
-          <Button title="Go to details" onPress={() => navigation.navigate('DMScreen')}></Button>
-        </View>
-        <Text style={styles.message}>{message}</Text>
-      </View>
-    );
-    
-    const renderItem = ({ item }) => (
-      <Item 
-      name={item.name} 
-      message={item.message}
-      imageUrl={item.imageUrl}
-      time = {item.time}
-      />
-    );
-  
-    return (
-      <SafeAreaView style={styles.container}>
-        <View style = {styles.header}>
-        <Text style = {styles.headerText}>Inspyre Header</Text>
-      </View>
-        <View style={styles.titleRow}>
-         <Text style={styles.titleText}>Conversations</Text>
-        </View>
-        <FlatList 
-          data={DATA}
-          renderItem={renderItem}
-          keyExtractor={item => item.id}
-        />
-          <Stack.Navigator>
-            <Stack.Screen name = 'PeopleScreen' component = {PeopleScreen} />
-            <Stack.Screen name = 'DMScreen' component = {DMScreen}/>
-          </Stack.Navigator>
-      </SafeAreaView>
-    );
 }
 
 const styles = (item) => StyleSheet.create({
