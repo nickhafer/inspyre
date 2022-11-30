@@ -17,19 +17,22 @@ export default function MessageScreen() {
       name: 'Lucas',
       time: '5m ago',
       imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
-
+      id: '1',
     },
     {
       message: 'How are you doing?',
       name: 'Nichole',
       time: '47m ago',
       imageUrl: 'https://www.nicepng.com/png/detail/70-701585_cucumber-clipart-cucumber-clip-art-free.png',
+      id: '2',
+
     },
     {
       message: 'Yes!',
       name: 'Tia',
       time: '2h ago',
       imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
+      id: '3',
 
     },
 
@@ -38,6 +41,7 @@ export default function MessageScreen() {
       time: '8h ago',
       name: 'Lola',
       imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
+      id: '4',
 
     },
 
@@ -46,6 +50,7 @@ export default function MessageScreen() {
       name: 'Terrance',
       time: '9h ago',
       imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
+      id: '5',
 
     },
 
@@ -54,6 +59,7 @@ export default function MessageScreen() {
       name: 'Julia',
       time: '2d ago',
       imageUrl: 'https://us.123rf.com/450wm/kateen2528/kateen25282003/kateen2528200300007/141661994-realistic-fresh-blueberry-with-leaves.jpg?ver=6',
+      id: '6',
 
     },
   ];
