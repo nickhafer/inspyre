@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
       height: '100%'
     },
     body: {
-
+        backgroundColor: 'white',
+        height: '100%',
     },
     topBar: {
         flexDirection: 'row',

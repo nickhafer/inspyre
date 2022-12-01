@@ -137,6 +137,7 @@ const styles = (item) => StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         borderColor: item.read == 'true' ? 'grey' : 'blue',
+        backgroundColor: 'white',
     },
     messageTitle: {
         fontSize: 30,
@@ -153,13 +154,13 @@ const styles = (item) => StyleSheet.create({
     },
     headerText: {
         fontSize: 42,
-        fontFamily: 'InterBlack',
+        fontFamily: 'InterBold',
     },
     exploreText: {
         fontSize: 16,
         textTransform: 'uppercase',
         letterSpacing: 0.2,
-        fontFamily: 'InterSemiBold',
+        fontFamily: 'InterRegular',
     },
     picHalf: {
         width: '20%',
