@@ -28,7 +28,7 @@ export default function DMScreen ({ navigation, route}) {
                     <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
                 </Pressable>
                 <View style={styles.messageHeader}>
-                    <Text style={styles.conversationWith}> Chat with </Text>
+                    <Text style={styles.conversationWith}>Chat with</Text>
                     <Image style={styles.profilePic} 
                             source={{
                                 uri: message.imageUrl,

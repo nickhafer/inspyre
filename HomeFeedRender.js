@@ -48,15 +48,15 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
             />
             <View style={styles.bottomContainer}>
                 <View style={styles.textHalf}>
-                    <Text style={styles.title}> {title} </Text>
+                    <Text style={styles.title}>{title}</Text>
                     <View style={styles.locationLine}>
                         <Image
                             style={styles.pin}
                             source={require('./assets/Icons/pin.png')}
                         />
-                        <Text style={styles.location}> {location} </Text>
+                        <Text style={styles.location}>{location}</Text>
                     </View>
-                    <Text style={styles.distance}> {distance} </Text>
+                    <Text style={styles.distance}>{distance}</Text>
                 </View>
 
 
@@ -114,7 +114,8 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
     },
     title: {
         fontSize: 32,
-        fontFamily: 'InterBold',
+        fontFamily: 'InterBlack',
+        textAlign: 'left',
     },
     location: {
         fontSize: 24,
@@ -181,7 +182,6 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
         width: '100%',
         resizeMode: 'stretch',
         height: 400,
-        backgroundColor: 'red',
     },
     postHeader: {
         flex: 1,
@@ -221,6 +221,7 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
     pin: {
         height: 24,
         width: 24,
+        marginRight: 4,
     },
     locationLine: {
         flexDirection: 'row',
