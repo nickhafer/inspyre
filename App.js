@@ -87,7 +87,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
    
   },
-
   container: {
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
