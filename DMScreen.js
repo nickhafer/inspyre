@@ -7,6 +7,8 @@ export default function DMScreen ({ navigation, route}) {
     const { message } = route.params;
     const [text, setText] = useState('');
 
+    
+
     return (
         <SafeAreaView style={styles.body}>
             <Pressable onPress={() => navigation.goBack()}>
@@ -26,7 +28,7 @@ export default function DMScreen ({ navigation, route}) {
             <View style={styles.textInputView}>
                 <TextInput
                     style={styles.textInput}
-                    placeholder="Type here to translate!"
+                    placeholder="iMessage"
                     onChangeText={newText => setText(newText)}
                     defaultValue={text}
                 />
