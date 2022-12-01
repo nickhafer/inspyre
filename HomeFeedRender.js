@@ -6,14 +6,16 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
  import CommunitiesScreen from './CommunitiesScreen';
 
 
- export default function RenderFeedItem ({ title, username, image }) {
+ export default function RenderFeedItem ({ title, username, image, profilePic, location, distance }) {
     const navigation = useNavigation();
 
      return(
         <View style={styles.item}>
             <View style={styles.postHeader}>
                 <Image 
-                    source={require('./assets/Images/luc-profile-pic.jpeg')}
+                    source={{
+                        uri: profilePic,
+                    }}
                     style={styles.profilePic}
                 />
                 <View style={styles.nameRating}>
@@ -41,9 +43,9 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
                             style={styles.pin}
                             source={require('./assets/Icons/pin.png')}
                         />
-                        <Text style={styles.location}> Palo Alto, CA </Text>
+                        <Text style={styles.location}> {location} </Text>
                     </View>
-                    <Text style={styles.distance}> 0.7mi away </Text>
+                    <Text style={styles.distance}> {distance} </Text>
                 </View>
 
 

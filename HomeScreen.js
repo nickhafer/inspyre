@@ -19,11 +19,9 @@ export default function HomeScreen() {
             title: 'Broken Chair',
             username: 'Nick',
             image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
-            profilePic: 'luc-profile-pic',
+            profilePic: 'https://images.squarespace-cdn.com/content/v1/58febac49f7456d3c6db76d2/1540838397271-DA3L16U7L6MLRG3XFGTV/KatherinexTA-16.jpg?format=1000w',
             location: 'Palo Alto, CA',
-
-            // community: 'Stanford GSB',
-            // distance: '1.2 miles',
+            distance: '1.2 miles',
             // rating: '5 stars',
             // num_likes: 32,
             // liked: false
@@ -33,9 +31,9 @@ export default function HomeScreen() {
             title: 'Used Towel',
             username: 'Andrew',
             image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+            profilePic: 'https://images.squarespace-cdn.com/content/v1/58febac49f7456d3c6db76d2/1540838397271-DA3L16U7L6MLRG3XFGTV/KatherinexTA-16.jpg?format=1000w',
             location: 'Palo Alto, CA',
-            // community: 'Stanford GSB',
-            // distance: '1.2 miles',
+            distance: '1.6 miles',
             // rating: '5 stars',
             // num_likes: 32,
             // liked: false
@@ -45,9 +43,21 @@ export default function HomeScreen() {
             title: 'Old Water Bottle',
             username: 'Luc',
             image: 'https://www.outfit4events.com/runtime/cache/images/redesignProductFull/mh-mi0801-001.jpg',
+            profilePic: 'https://images.squarespace-cdn.com/content/v1/58febac49f7456d3c6db76d2/1540838397271-DA3L16U7L6MLRG3XFGTV/KatherinexTA-16.jpg?format=1000w',
             location: 'Palo Alto, CA',
-            // community: 'Stanford GSB',
-            // distance: '1.2 miles',
+            distance: '1.2 miles',
+            // rating: '5 stars',
+            // num_likes: 32,
+            // liked: false
+        },
+        {
+            id: '4',
+            title: 'Old paintbrushes',
+            username: 'Amy',
+            image: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/old-paintbrushes-03-richard-nixon.jpg',
+            profilePic: 'https://images.squarespace-cdn.com/content/v1/58febac49f7456d3c6db76d2/1540838397271-DA3L16U7L6MLRG3XFGTV/KatherinexTA-16.jpg?format=1000w',
+            location: 'Stanford, CA',
+            distance: '0.7 miles',
             // rating: '5 stars',
             // num_likes: 32,
             // liked: false
@@ -64,6 +74,7 @@ export default function HomeScreen() {
             profilePic={item.profilePic}
             rating={item.rating}
             location={item.location}
+            distance={item.distance}
         />
     );
   
