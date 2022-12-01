@@ -179,8 +179,6 @@ export default function HomeScreen() {
                     source={require('./FigmaIcons/SearchButton.png')}>
                     </Image>
                 
-                    
-                
             </Pressable>
           </View>
         <FlatList 
@@ -227,7 +225,6 @@ export default function HomeScreen() {
         borderRadius: 8,
         padding: 6
     },
-<<<<<<< HEAD
     inspyreIcon: {
         width: '50%',
         height:'100%',
@@ -237,21 +234,21 @@ export default function HomeScreen() {
       },
       HeaderView: {
         backgroundColor: 'white',
-        height: '7%',
+        height: '8%',
         borderRadius:7,
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingRight: 10,
+        marginBottom:10,
       },
       SearchIcon: {
         
       },
       SearchIconImage: {
-        width: 40,
+        width: 50,
         height: '100%',
 
       },
-=======
     profilePic: {
         height: 50,
         width: 50,
@@ -274,5 +271,4 @@ export default function HomeScreen() {
         flexDirection: 'row',
         alignItems: 'center',
     }
->>>>>>> 996c77a307aa94e47092e8505243a2f44aa694bd
 });
