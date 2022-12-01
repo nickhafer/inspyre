@@ -99,6 +99,30 @@ export default function HomeScreen() {
   
     return (
       <SafeAreaView style={styles.container}>
+        <View style = {styles.HeaderView}>
+          <Image
+            style = {styles.inspyreIcon}
+            source = {require('./FigmaIcons/Logo.png')}
+          />
+          <Pressable 
+                onPress={() => navigation.navigate('Chat')}
+                style={({ pressed }) => [
+                    {
+                        backgroundColor: pressed
+                        ? 'rgb(210, 230, 255)'
+                        : 'white'
+                    },
+                    styles.wrapperCustom
+                ]}>
+                    <Image
+                    style = {styles.SearchIconImage}
+                    source={require('./FigmaIcons/SearchButton.png')}>
+                    </Image>
+                
+                    
+                
+            </Pressable>
+          </View>
         <FlatList 
           data={DATA}
           renderItem={renderItem}
@@ -114,6 +138,7 @@ export default function HomeScreen() {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    //backgroundColor: 'black',
     },
     screenText: {
         fontSize: 32,
@@ -134,8 +159,37 @@ export default function HomeScreen() {
     username: {
         fontSize: 16,
     },
+    inpsyreHeader: {
+        width: '100%',
+        height: '50%',
+        //backgroundColor: 'blue',
+
+    },
     wrapperCustom: {
         borderRadius: 8,
         padding: 6
     },
+    inspyreIcon: {
+        width: '50%',
+        height:'100%',
+        resizeMode: 'contain',
+        alignContent: 'center',
+        justifyContent: 'space-between',
+      },
+      HeaderView: {
+        backgroundColor: 'white',
+        height: '7%',
+        borderRadius:7,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingRight: 10,
+      },
+      SearchIcon: {
+        
+      },
+      SearchIconImage: {
+        width: 40,
+        height: '100%',
+
+      },
 });
