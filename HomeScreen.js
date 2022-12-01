@@ -1,5 +1,11 @@
 import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, Image} from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer, NavigationContainer, useNavigation } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MessageScreen from './MessageScreen';
+import CommunitiesScreen from './CommunitiesScreen';
+import { useFonts } from 'expo-font';
+import InterBlack from './assets/Fonts/Inter-Black.ttf'
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MessageScreen from './MessageScreen';
@@ -52,6 +58,82 @@ export default function HomeScreen() {
         },
     ];
 
+<<<<<<< HEAD
+=======
+    const Item = ({ title, username, image }) => (
+        <View style={styles.item}>
+            <View style={styles.postHeader}>
+                <Image 
+                    source={require('./assets/Images/luc-profile-pic.jpeg')}
+                    style={styles.profilePic}
+                />
+                <View style={styles.nameRating}>
+                <Text style={styles.username}> {username} </Text>
+                <Image 
+                    source={require('./assets/Images/rating-green.png')}
+                    style={styles.rating}
+                />
+                </View>
+
+            </View>
+            <Image
+                source={require('./assets/Images/image1.png')}
+                style={styles.objectImage}
+            />
+            <View style={styles.bottomContainer}>
+            <View style={styles.textHalf}>
+                <Text style={styles.title}> {title} </Text>
+                <View style={styles.locationLine}>
+                    <Image
+                        style={styles.pin}
+                        source={require('./assets/Icons/pin.png')}
+                    />
+                    <Text style={styles.location}> Palo Alto, CA </Text>
+                </View>
+                <Text style={styles.distance}> 0.7mi away </Text>
+                
+
+            </View>
+            <View style={styles.iconsHalf}>
+            <Pressable 
+                onPress={() => navigation.navigate('Chat')}
+                style={({ pressed }) => [
+                    {
+                        backgroundColor: pressed
+                        ? 'rgb(210, 230, 255)'
+                        : 'white'
+                    },
+                    styles.wrapperCustom
+                ]}>
+                <View style={styles.iconContainer}>
+                    <Image
+                        source={require('./assets/Icons/chat-gray.png')}
+                        style={styles.chat} 
+                    />
+                </View>
+            </Pressable>
+            <Pressable 
+                onPress={() => navigation.navigate('Chat')}
+                style={({ pressed }) => [
+                    {
+                        backgroundColor: pressed
+                        ? 'rgb(210, 230, 255)'
+                        : 'white'
+                    },
+                    styles.wrapperCustom
+                ]}>
+                <View style={styles.iconContainer}>
+                    <Image
+                        source={require('./assets/Icons/like-gray.png')}
+                        style={styles.like} 
+                    />
+                </View>
+            </Pressable>
+            </View>
+            </View>
+        </View>
+    );
+>>>>>>> b9490121b0d46403cbbcc33ccb2a5eff5e29d3ea
 
     // const Item = ({ title, username, image }) => (
     //     <View style={styles.item}>
@@ -214,8 +296,12 @@ export default function HomeScreen() {
     rating: {
         width: 150,
         resizeMode: 'contain',
-        marginLeft: 60,
-
+    },
+    nameRating: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '80%',
     },
     objectImage: {
         width: '100%',
@@ -256,5 +342,12 @@ export default function HomeScreen() {
     iconContainer: {
         justifyContent: 'space-around',
         alignItems: 'center',
-    }
+    },
+    pin: {
+        height: 24,
+        width: 24,
+    },
+    locationLine: {
+        flexDirection: 'row',
+    },
 });
