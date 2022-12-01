@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
     },
     textInputView: {
         backgroundColor: 'lightgrey',
+        alignSelf: 'flex-end',
         borderRadius: 8,
         borderColor: 'black',
         borderWidth: 1,
@@ -96,6 +97,7 @@ const styles = StyleSheet.create({
     // },
     inputMessageView: {
         backgroundColor: 'lightblue',
+        alignSelf: 'flex-end',
         borderRadius: 8,
         alignItems: 'center',
         marginTop: 20,
