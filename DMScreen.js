@@ -23,17 +23,18 @@ export default function DMScreen ({ navigation, route}) {
 
     return (
         <SafeAreaView style={styles.body}>
-            <View style={styles.messageHeader}>
-            <Pressable onPress={() => navigation.goBack()}>
-                <AntDesign name="left" size={32} color="black"></AntDesign>
-            </Pressable>
-            
-                <Text style={styles.conversationWith}> Chat with </Text>
-                <Image style={styles.profilePic} 
+            <View style={styles.topBar}>
+                <Pressable style={styles.back} onPress={() => navigation.goBack()}>
+                    <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
+                </Pressable>
+                <View style={styles.messageHeader}>
+                    <Text style={styles.conversationWith}> Chat with </Text>
+                    <Image style={styles.profilePic} 
                             source={{
                                 uri: message.imageUrl,
                             }} />
-                <Text style={styles.name}>{message.name}</Text>
+                    <Text style={styles.name}>{message.name}</Text>
+                </View>
             </View>
             <View style={styles.messageDescriptionView}>
                 <Text style={styles.messageDescription}>{message.message}</Text>
@@ -70,8 +71,17 @@ const styles = StyleSheet.create({
     body: {
 
     },
+    topBar: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    back: {
+        width: 48,
+        height: 48,
+        marginLeft: 8,
+    },
     messageHeader: {
-        width: '100%',
+        width: '80%',
         height: 80,
         flexDirection: 'row',
         alignItems: 'center',
