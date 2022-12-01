@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
     messageDescription: {
         fontSize: 14,
         marginTop: 16,
+        marginHorizontal: 4,
         //backgroundColor: 'white',
     },
     messageDescriptionView: {
