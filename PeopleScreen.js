@@ -4,7 +4,6 @@ import DMScreen from './DMScreen';
 
 
 
-
 export default function PeopleScreen ({ navigation }) {
 
     const DATA = [
@@ -62,24 +61,35 @@ export default function PeopleScreen ({ navigation }) {
     // working code:
 
     const renderDM = ({ item }) => (
-        <View style={styles(item).messageContainer}>
-            <View style={styles(item).messageText}>
+        
                 <Pressable onPress={() => navigation.navigate('DMScreen', { message: item })}>
-                    <View style={styles(item).messageTitle}>
-                        <Text style={styles(item).messageTitle}>{item.name}</Text>
-                        <Text style={styles(item).messageDescription}>{item.message}</Text>
-                        <Text style={styles(item).exploreText}>{item.time}</Text>
+                    <View style={styles(item).messageContainer}>
+                    <View style={styles(item).picHalf}>
+                        <Image 
+                            style={styles(item).profilePic} 
+                            source={require('./assets/Images/luc-profile-pic.jpeg')}
+                        />
+                    </View>
+
+                    <View style={styles(item).textHalf}>
+                        <View style={styles(item).top}>
+                            <Text style={styles(item).messageTitle}>{item.name}</Text>
+                            <Text style={styles(item).exploreText}>{item.time}</Text>
+                        </View>
+                        <View style={styles(item).bottom}>
+                            <Text style={styles(item).messageDescription}>{item.message}</Text>
+                        </View>
+                    </View>
                     </View>
                 </Pressable>
-            </View>
-        </View>
+        
     );
 
     return (
         <SafeAreaView style={styles.container}>
             <View styles = {styles.chatHeader}>
                 <Text styles={styles.headerText}>
-                    Chat Header
+                    ANDREW PLZ PUT THE HEADER IN
                 </Text>
 
             </View>
@@ -107,31 +117,14 @@ const styles = (item) => StyleSheet.create({
         height: '80%',
     },
     messageContainer: {
-        width: 320,
+        width: '100%',
+        height: 100,
         flex: 1,
-        margin: 20,
-        borderRadius: 20,
-        borderWidth: 0.5,
+        borderTopWidth: 1,
+        borderBottomWidth: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         borderColor: item.read == 'true' ? 'grey' : 'blue',
-        backgroundColor: 'white',
-        shadowColor: 'darkgray',
-        shadowOpacity: 0.4,
-        shadowOffset: {
-            width: 5,
-            height: 5
-        },
-        shadowRadius: 5,
-    },
-    messageImage: {
-        width: 320,
-        height: 320,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-    },
-    messageText: {
-        flex: 1,
-        justifyContent: 'space-around',
-        marginHorizontal: 16,
     },
     messageTitle: {
         fontSize: 30,
@@ -152,5 +145,31 @@ const styles = (item) => StyleSheet.create({
         textTransform: 'uppercase',
         letterSpacing: 0.2,
         fontWeight: 'bold',
-    }
+    },
+    picHalf: {
+        width: '20%',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    profilePic: {
+        borderRadius: 32,
+        width: 64,
+        height: 64,
+    },
+    textHalf: {
+        paddingRight: '4%',
+        width: '80%',
+        height: 64,
+        justifyContent: 'space-between',
+        alignSelf: 'center',
+
+    },
+    top: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    bottom: {
+        
+    },
 });

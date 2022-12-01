@@ -1,4 +1,4 @@
-import { View, SafeAreaView, Text, ImageBackground, StyleSheet, Pressable, TextInput } from 'react-native';
+import { View, SafeAreaView, Image, Text, ImageBackground, StyleSheet, Pressable, TextInput } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import React, { useState } from 'react';
 
@@ -9,11 +9,14 @@ export default function DMScreen ({ navigation, route}) {
 
     return (
         <SafeAreaView style={styles.body}>
+            <View style={styles.messageHeader}>
             <Pressable onPress={() => navigation.goBack()}>
-                <AntDesign name="left" size={24} color="black">Messages</AntDesign>
+                <AntDesign name="left" size={32} color="black"></AntDesign>
             </Pressable>
-            <View style={styles.messageText}>
-                <Text style={styles.messageTitle}>{message.name}</Text>
+            
+                <Text style={styles.conversationWith}> Conversation With </Text>
+                <Image style={styles.profilePic} source={require('./assets/Images/luc-profile-pic.jpeg')} />
+                <Text style={styles.name}>{message.name}</Text>
             </View>
             <View style={styles.messageDescriptionView}>
                 <Text style={styles.messageDescription}>{message.message}</Text>
@@ -39,7 +42,6 @@ export default function DMScreen ({ navigation, route}) {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
       display: 'flex',
@@ -49,14 +51,29 @@ const styles = StyleSheet.create({
       height: '100%'
     },
     body: {
-        margin: 16,
+
     },
-    messageText: {
-        marginTop: 10,
-        padding: 16,
-        backgroundColor: 'white',
-        borderRadius: 8,
+    messageHeader: {
+        width: '100%',
+        height: 80,
+        flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'center',
+    },
+    profilePic: {
+        height: 64,
+        width: 64,
+        borderRadius: 32,
+    },
+    conversationWith: {
+        //fontWeight: 'bold',
+        fontSize: 16,
+        margin: 8,
+    },
+    name: {
+        fontWeight: 'bold',
+        fontSize: 20,
+        margin: 8
     },
     messageTitle: {
         fontSize: 40,
@@ -72,7 +89,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'lightgreen',
         borderRadius: 8,
         alignItems: 'center',
-        marginTop: 20,
+        margin: 16,
         paddingBottom: 10,
         width: '50%',
     },
@@ -87,7 +104,7 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         borderWidth: 1,
         alignItems: 'center',
-        marginTop: 20,
+        margin: 16,
         paddingBottom: 10,
         width: '80%',
     },
@@ -100,7 +117,7 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-end',
         borderRadius: 8,
         alignItems: 'center',
-        marginTop: 20,
+        margin: 16,
         paddingBottom: 10,
         width: '50%',
     },

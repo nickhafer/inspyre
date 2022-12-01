@@ -9,7 +9,6 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
  export default function RenderFeedItem ({ title, username, image }) {
     const navigation = useNavigation();
 
-    //  console.log(image)
      return(
         <View style={styles.item}>
             <View style={styles.postHeader}>
@@ -17,11 +16,13 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
                     source={require('./assets/Images/luc-profile-pic.jpeg')}
                     style={styles.profilePic}
                 />
+                <View style={styles.nameRating}>
                 <Text style={styles.username}> {username} </Text>
                 <Image 
                     source={require('./assets/Images/rating-green.png')}
                     style={styles.rating}
                 />
+                </View>
             </View>
             <Image
                 //source={require('./assets/Images/image1.png')}
@@ -47,20 +48,14 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
 
 
                 <View style={styles.iconsHalf}>
+                    
                     <Pressable 
-                        onPress={() => navigation.navigate('Chat')}
-                        style={({ pressed }) => [
-                            {
-                                backgroundColor: pressed
-                                ? 'rgb(210, 230, 255)'
-                                : 'white'
-                            },
-                            styles.wrapperCustom
-                        ]}>
+                        //INSERT LIKE FUNCTIONALITY
+                        >
                         <View style={styles.iconContainer}>
                             <Image
-                                source={require('./assets/Icons/chat-gray.png')}
-                                style={styles.chat} 
+                                source={require('./assets/Icons/like-gray.png')}
+                                style={styles.like} 
                             />
                         </View>
                     </Pressable>
@@ -76,8 +71,8 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
                         ]}>
                         <View style={styles.iconContainer}>
                             <Image
-                                source={require('./assets/Icons/like-gray.png')}
-                                style={styles.like} 
+                                source={require('./assets/Icons/chat-gray.png')}
+                                style={styles.chat} 
                             />
                         </View>
                     </Pressable>
@@ -117,6 +112,7 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
     username: {
         fontSize: 24,
         padding: 8,
+        fontWeight: 'bold',
     },
     inpsyreHeader: {
         width: '100%',
@@ -176,12 +172,13 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        margin: 12,
+        margin: 8,
         height: '10%',
     },
     bottomContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        margin: 8,
     },
     chat: {
         width: 64,
