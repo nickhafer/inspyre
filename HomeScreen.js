@@ -8,6 +8,7 @@ import CommunitiesScreen from './CommunitiesScreen';
 
 
 
+
 export default function HomeScreen() {
 
     const navigation = useNavigation();
@@ -18,6 +19,8 @@ export default function HomeScreen() {
             title: 'Broken Chair',
             username: 'Nick',
             image: 'image1',
+            profilePic: 'luc-profile-pic',
+
             // community: 'Stanford GSB',
             // distance: '1.2 miles',
             // rating: '5 stars',
@@ -50,12 +53,25 @@ export default function HomeScreen() {
 
     const Item = ({ title, username, image }) => (
         <View style={styles.item}>
-            <Text style={styles.title}>{title}</Text>
-            <Text style={styles.username}>{username}</Text>
+            <View style={styles.postHeader}>
+                <Image 
+                    source={require('./assets/Images/luc-profile-pic.jpeg')}
+                    style={styles.profilePic}
+                />
+                <Text style={styles.username}> {username} </Text>
+                <Image 
+                    source={require('./assets/Images/rating-green.png')}
+                    style={styles.rating}
+                />
+
+            </View>
             <Image
                 source={require('./assets/Images/image1.png')}
-                style={{ width: 200, height: 200 }}
+                style={styles.objectImage}
             />
+            <View style={styles.textHalf}>
+                
+            </View>
             <Pressable 
                 onPress={() => navigation.navigate('Chat')}
                 style={({ pressed }) => [
@@ -88,12 +104,56 @@ export default function HomeScreen() {
             </Pressable>
         </View>
     );
+
+    // const Item = ({ title, username, image }) => (
+    //     <View style={styles.item}>
+    //         <Text style={styles.title}>{title}</Text>
+    //         <Text style={styles.username}>{username}</Text>
+    //         <Image
+    //             source={require('./assets/Images/image1.png')}
+    //             style={{ width: 200, height: 200 }}
+    //         />
+    //         <Pressable 
+    //             onPress={() => navigation.navigate('Chat')}
+    //             style={({ pressed }) => [
+    //                 {
+    //                     backgroundColor: pressed
+    //                     ? 'rgb(210, 230, 255)'
+    //                     : 'white'
+    //                 },
+    //                 styles.wrapperCustom
+    //             ]}>
+    //             <View>
+    //                 <Ionicons name="paper-plane-outline" size={24} color="black" />
+    //                 <Text>Message</Text>
+    //             </View>
+    //         </Pressable>
+    //         <Pressable 
+    //             onPress={() => navigation.navigate('Chat')}
+    //             style={({ pressed }) => [
+    //                 {
+    //                     backgroundColor: pressed
+    //                     ? 'rgb(210, 230, 255)'
+    //                     : 'white'
+    //                 },
+    //                 styles.wrapperCustom
+    //             ]}>
+    //             <View>
+    //                 <Ionicons name="heart-outline" size={24} color="black" />
+    //                 <Text>Like</Text>
+    //             </View>
+    //         </Pressable>
+    //     </View>
+    // );
     
     const renderItem = ({ item }) => (
         <Item
             title={item.title} 
             username={item.username}
             image={item.image}
+
+            profilePic={item.profilePic}
+            rating={item.rating}
         />
     );
   
@@ -149,15 +209,13 @@ export default function HomeScreen() {
     },
     item: {
         backgroundColor: '#f9c2ff',
-        padding: 20,
-        marginVertical: 8,
-        marginHorizontal: 16,
     },
     title: {
         fontSize: 32,
     },
     username: {
-        fontSize: 16,
+        fontSize: 24,
+        padding: 8,
     },
     inpsyreHeader: {
         width: '100%',
@@ -169,6 +227,7 @@ export default function HomeScreen() {
         borderRadius: 8,
         padding: 6
     },
+<<<<<<< HEAD
     inspyreIcon: {
         width: '50%',
         height:'100%',
@@ -192,4 +251,28 @@ export default function HomeScreen() {
         height: '100%',
 
       },
+=======
+    profilePic: {
+        height: 50,
+        width: 50,
+        borderRadius: 25,
+    },
+    rating: {
+        width: 150,
+        resizeMode: 'contain',
+        marginLeft: 60,
+
+    },
+    objectImage: {
+        width: '100%',
+        resizeMode: 'stretch',
+        height: '70%',
+        backgroundColor: 'red',
+    },
+    postHeader: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+    }
+>>>>>>> 996c77a307aa94e47092e8505243a2f44aa694bd
 });
