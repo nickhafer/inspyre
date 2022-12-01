@@ -1,15 +1,11 @@
 import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, Image} from 'react-native';
-import { NavigationContainer, NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MessageScreen from './MessageScreen';
 import CommunitiesScreen from './CommunitiesScreen';
 import { useFonts } from 'expo-font';
 import InterBlack from './assets/Fonts/Inter-Black.ttf'
-import { Ionicons } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MessageScreen from './MessageScreen';
-import CommunitiesScreen from './CommunitiesScreen';
 import RenderFeedItem from './HomeFeedRender';
 
 
@@ -58,8 +54,6 @@ export default function HomeScreen() {
         },
     ];
 
-<<<<<<< HEAD
-=======
     const Item = ({ title, username, image }) => (
         <View style={styles.item}>
             <View style={styles.postHeader}>
@@ -133,7 +127,6 @@ export default function HomeScreen() {
             </View>
         </View>
     );
->>>>>>> b9490121b0d46403cbbcc33ccb2a5eff5e29d3ea
 
     // const Item = ({ title, username, image }) => (
     //     <View style={styles.item}>
