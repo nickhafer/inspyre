@@ -1,10 +1,20 @@
 import { Image, Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, TouchableHighlight, Pressable, Button, navigation } from 'react-native';
 
 import DMScreen from './DMScreen';
-
+import { useFonts } from 'expo-font';
 
 
 export default function PeopleScreen ({ navigation }) {
+
+    const [loaded] = useFonts({
+        InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
+        InterBold: require('./assets/Fonts/Inter-Bold.ttf'),
+        InterMedium: require('./assets/Fonts/Inter-Medium.ttf'),
+        InterSemiBold: require('./assets/Fonts/Inter-SemiBold.ttf'),
+        InterRegular: require('./assets/Fonts/Inter-Regular.ttf'),
+        InterLight: require('./assets/Fonts/Inter-Light.ttf'),
+      });
+    
 
     const DATA = [
         {
@@ -130,23 +140,26 @@ const styles = (item) => StyleSheet.create({
     },
     messageTitle: {
         fontSize: 30,
-        fontWeight: 'bold',
+        fontFamily: 'InterBold',
         marginBottom: 4,
     },
     messageDescription: {
         color: 'gray',
+        fontSize: 14,
+        fontFamily: 'InterRegular',
     },
     chatHeader: {
         backgroundColor: 'blue',
     },
     headerText: {
         fontSize: 42,
+        fontFamily: 'InterBlack',
     },
     exploreText: {
-        fontSize: 14,
+        fontSize: 16,
         textTransform: 'uppercase',
         letterSpacing: 0.2,
-        fontWeight: 'bold',
+        fontFamily: 'InterSemiBold',
     },
     picHalf: {
         width: '20%',
@@ -164,7 +177,6 @@ const styles = (item) => StyleSheet.create({
         height: 64,
         justifyContent: 'space-between',
         alignSelf: 'center',
-
     },
     top: {
         flexDirection: 'row',
