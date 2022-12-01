@@ -15,7 +15,10 @@ export default function DMScreen ({ navigation, route}) {
             </Pressable>
             
                 <Text style={styles.conversationWith}> Conversation With </Text>
-                <Image style={styles.profilePic} source={require('./assets/Images/luc-profile-pic.jpeg')} />
+                <Image style={styles.profilePic} 
+                            source={{
+                                uri: message.imageUrl,
+                            }} />
                 <Text style={styles.name}>{message.name}</Text>
             </View>
             <View style={styles.messageDescriptionView}>
