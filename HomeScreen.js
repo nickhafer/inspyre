@@ -6,6 +6,9 @@ import MessageScreen from './MessageScreen';
 import CommunitiesScreen from './CommunitiesScreen';
 import { useFonts } from 'expo-font';
 import InterBlack from './assets/Fonts/Inter-Black.ttf'
+import RenderFeedItem from './HomeFeedRender';
+
+
 
 
 export default function HomeScreen() {
@@ -17,7 +20,7 @@ export default function HomeScreen() {
             id: '1',
             title: 'Broken Chair',
             username: 'Nick',
-            image: 'image1',
+            image: './assets/Images/image1.png',
             profilePic: 'luc-profile-pic',
             location: 'Palo Alto, CA',
 
@@ -31,8 +34,7 @@ export default function HomeScreen() {
             id: '2',
             title: 'Used Towel',
             username: 'Andrew',
-            image: 'image2',
-            location: 'Palo Alto, CA',
+            image: 'https://i0.wp.com/www.supportyourtech.com/wp-content/uploads/2021/01/how-add-link-picture-google-docs-1.jpg?w=441&ssl=1',
             // community: 'Stanford GSB',
             // distance: '1.2 miles',
             // rating: '5 stars',
@@ -43,8 +45,7 @@ export default function HomeScreen() {
             id: '3',
             title: 'Old Water Bottle',
             username: 'Luc',
-            image: 'image3',
-            location: 'Palo Alto, CA',
+            image: 'https://reactnative.dev/img/tiny_logo.png',
             // community: 'Stanford GSB',
             // distance: '1.2 miles',
             // rating: '5 stars',
@@ -168,17 +169,17 @@ export default function HomeScreen() {
     //     </View>
     // );
     
-    const renderItem = ({ item }) => (
-        <Item
+    const renderItem = ({ item }) => {
+        return (
+        <RenderFeedItem
             title={item.title} 
             username={item.username}
             image={item.image}
-
             profilePic={item.profilePic}
             rating={item.rating}
-            location={item.location}
-        />
-    );
+            location={item.location}></RenderFeedItem>
+        );
+    };
   
     return (
       <SafeAreaView style={styles.container}>
