@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MessageScreen from './MessageScreen';
 import CommunitiesScreen from './CommunitiesScreen';
-
+import RenderFeedItem from './HomeFeedRender';
 
 
 
@@ -18,7 +18,7 @@ export default function HomeScreen() {
             id: '1',
             title: 'Broken Chair',
             username: 'Nick',
-            image: 'image1',
+            image: './assets/Images/image1.png',
             profilePic: 'luc-profile-pic',
             location: 'Palo Alto, CA',
 
@@ -32,7 +32,7 @@ export default function HomeScreen() {
             id: '2',
             title: 'Used Towel',
             username: 'Andrew',
-            image: 'image2',
+            image: 'https://i0.wp.com/www.supportyourtech.com/wp-content/uploads/2021/01/how-add-link-picture-google-docs-1.jpg?w=441&ssl=1',
             // community: 'Stanford GSB',
             // distance: '1.2 miles',
             // rating: '5 stars',
@@ -43,7 +43,7 @@ export default function HomeScreen() {
             id: '3',
             title: 'Old Water Bottle',
             username: 'Luc',
-            image: 'image3',
+            image: 'https://reactnative.dev/img/tiny_logo.png',
             // community: 'Stanford GSB',
             // distance: '1.2 miles',
             // rating: '5 stars',
@@ -52,66 +52,6 @@ export default function HomeScreen() {
         },
     ];
 
-    const Item = ({ title, username, image }) => (
-        <View style={styles.item}>
-            <View style={styles.postHeader}>
-                <Image 
-                    source={require('./assets/Images/luc-profile-pic.jpeg')}
-                    style={styles.profilePic}
-                />
-                <Text style={styles.username}> {username} </Text>
-                <Image 
-                    source={require('./assets/Images/rating-green.png')}
-                    style={styles.rating}
-                />
-
-            </View>
-            <Image
-                source={require('./assets/Images/image1.png')}
-                style={styles.objectImage}
-            />
-            <View style={styles.bottomContainer}>
-            <View style={styles.textHalf}>
-                <Text style={styles.title}> {title} </Text>
-                <Text style={styles.location}> Palo Alto, CA </Text>
-                <Text style={styles.distance}> 0.7mi away </Text>
-
-            </View>
-            <View style={styles.iconsHalf}>
-            <Pressable 
-                onPress={() => navigation.navigate('Chat')}
-                style={({ pressed }) => [
-                    {
-                        backgroundColor: pressed
-                        ? 'rgb(210, 230, 255)'
-                        : 'white'
-                    },
-                    styles.wrapperCustom
-                ]}>
-                <View>
-                    <Ionicons name="paper-plane-outline" size={24} color="black" />
-                    <Text>Message</Text>
-                </View>
-            </Pressable>
-            <Pressable 
-                onPress={() => navigation.navigate('Chat')}
-                style={({ pressed }) => [
-                    {
-                        backgroundColor: pressed
-                        ? 'rgb(210, 230, 255)'
-                        : 'white'
-                    },
-                    styles.wrapperCustom
-                ]}>
-                <View>
-                    <Ionicons name="heart-outline" size={24} color="black" />
-                    <Text>Like</Text>
-                </View>
-            </Pressable>
-            </View>
-            </View>
-        </View>
-    );
 
     // const Item = ({ title, username, image }) => (
     //     <View style={styles.item}>
@@ -154,17 +94,17 @@ export default function HomeScreen() {
     //     </View>
     // );
     
-    const renderItem = ({ item }) => (
-        <Item
+    const renderItem = ({ item }) => {
+        return (
+        <RenderFeedItem
             title={item.title} 
             username={item.username}
             image={item.image}
-
             profilePic={item.profilePic}
             rating={item.rating}
-            location={item.location}
-        />
-    );
+            location={item.location}></RenderFeedItem>
+        );
+    };
   
     return (
       <SafeAreaView style={styles.container}>
