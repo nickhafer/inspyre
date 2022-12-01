@@ -4,19 +4,16 @@
  */
 
 
-import { Text, View, FlatList, SafeAreaView, StyleSheet, StatusBar, Button, TouchableHighlight, Pressable } from 'react-native';
+import { StyleSheet, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import MessageScreen from './MessageScreen';
 import HomeScreen from './HomeScreen';
 import CommunitiesScreen from './CommunitiesScreen';
 import PostScreen from './PostScreen';
 import ProfileScreen from './ProfileScreen';
-
 import MessageStack from './MessageStack';
-
 
 
 const Tab = createBottomTabNavigator();

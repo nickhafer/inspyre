@@ -1,12 +1,5 @@
 import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, Image} from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MessageScreen from './MessageScreen';
-import CommunitiesScreen from './CommunitiesScreen';
-
-
-
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function HomeScreen() {
