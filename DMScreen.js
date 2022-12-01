@@ -1,11 +1,25 @@
 import { View, SafeAreaView, Image, Text, ImageBackground, StyleSheet, Pressable, TextInput } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import React, { useState } from 'react';
+import { useFonts } from 'expo-font';
 
 
 export default function DMScreen ({ navigation, route}) {
     const { message } = route.params;
     const [text, setText] = useState('');
+
+    const [loaded] = useFonts({
+        InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
+        InterBold: require('./assets/Fonts/Inter-Bold.ttf'),
+        InterMedium: require('./assets/Fonts/Inter-Medium.ttf'),
+        InterSemiBold: require('./assets/Fonts/Inter-SemiBold.ttf'),
+        InterRegular: require('./assets/Fonts/Inter-Regular.ttf'),
+        InterLight: require('./assets/Fonts/Inter-Light.ttf'),
+      });
+    
+      if (!loaded) {
+        return null;
+      }
 
     return (
         <SafeAreaView style={styles.body}>
@@ -14,7 +28,7 @@ export default function DMScreen ({ navigation, route}) {
                 <AntDesign name="left" size={32} color="black"></AntDesign>
             </Pressable>
             
-                <Text style={styles.conversationWith}> Conversation With </Text>
+                <Text style={styles.conversationWith}> Chat with </Text>
                 <Image style={styles.profilePic} 
                             source={{
                                 uri: message.imageUrl,
@@ -69,12 +83,12 @@ const styles = StyleSheet.create({
         borderRadius: 32,
     },
     conversationWith: {
-        //fontWeight: 'bold',
+        fontFamily: 'InterRegular',
         fontSize: 16,
         margin: 8,
     },
     name: {
-        fontWeight: 'bold',
+        fontFamily: 'InterBlack',
         fontSize: 20,
         margin: 8
     },
