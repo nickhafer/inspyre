@@ -6,6 +6,7 @@ import MessageScreen from './MessageScreen';
 import CommunitiesScreen from './CommunitiesScreen';
 import { useFonts } from 'expo-font';
 import InterBlack from './assets/Fonts/Inter-Black.ttf'
+import RenderFeedItem from './HomeFeedRender';
 
 
 export default function HomeScreen() {
@@ -17,7 +18,7 @@ export default function HomeScreen() {
             id: '1',
             title: 'Broken Chair',
             username: 'Nick',
-            image: 'image1',
+            image: 'https://i0.wp.com/www.supportyourtech.com/wp-content/uploads/2021/01/how-add-link-picture-google-docs-1.jpg?w=441&ssl=1',
             profilePic: 'luc-profile-pic',
             location: 'Palo Alto, CA',
 
@@ -31,7 +32,7 @@ export default function HomeScreen() {
             id: '2',
             title: 'Used Towel',
             username: 'Andrew',
-            image: 'image2',
+            image: './assets/Images/image2.png',
             location: 'Palo Alto, CA',
             // community: 'Stanford GSB',
             // distance: '1.2 miles',
@@ -43,7 +44,7 @@ export default function HomeScreen() {
             id: '3',
             title: 'Old Water Bottle',
             username: 'Luc',
-            image: 'image3',
+            image: './assets/Images/image3.png',
             location: 'Palo Alto, CA',
             // community: 'Stanford GSB',
             // distance: '1.2 miles',
@@ -53,123 +54,10 @@ export default function HomeScreen() {
         },
     ];
 
-    const Item = ({ title, username, image }) => (
-        <View style={styles.item}>
-            <View style={styles.postHeader}>
-                <Image 
-                    source={require('./assets/Images/luc-profile-pic.jpeg')}
-                    style={styles.profilePic}
-                />
-                <View style={styles.nameRating}>
-                <Text style={styles.username}> {username} </Text>
-                <Image 
-                    source={require('./assets/Images/rating-green.png')}
-                    style={styles.rating}
-                />
-                </View>
-
-            </View>
-            <Image
-                source={require('./assets/Images/image1.png')}
-                style={styles.objectImage}
-            />
-            <View style={styles.bottomContainer}>
-            <View style={styles.textHalf}>
-                <Text style={styles.title}> {title} </Text>
-                <View style={styles.locationLine}>
-                    <Image
-                        style={styles.pin}
-                        source={require('./assets/Icons/pin.png')}
-                    />
-                    <Text style={styles.location}> Palo Alto, CA </Text>
-                </View>
-                <Text style={styles.distance}> 0.7mi away </Text>
-                
-
-            </View>
-            <View style={styles.iconsHalf}>
-            <Pressable 
-                onPress={() => navigation.navigate('Chat')}
-                style={({ pressed }) => [
-                    {
-                        backgroundColor: pressed
-                        ? 'rgb(210, 230, 255)'
-                        : 'white'
-                    },
-                    styles.wrapperCustom
-                ]}>
-                <View style={styles.iconContainer}>
-                    <Image
-                        source={require('./assets/Icons/chat-gray.png')}
-                        style={styles.chat} 
-                    />
-                </View>
-            </Pressable>
-            <Pressable 
-                onPress={() => navigation.navigate('Chat')}
-                style={({ pressed }) => [
-                    {
-                        backgroundColor: pressed
-                        ? 'rgb(210, 230, 255)'
-                        : 'white'
-                    },
-                    styles.wrapperCustom
-                ]}>
-                <View style={styles.iconContainer}>
-                    <Image
-                        source={require('./assets/Icons/like-gray.png')}
-                        style={styles.like} 
-                    />
-                </View>
-            </Pressable>
-            </View>
-            </View>
-        </View>
-    );
-
-    // const Item = ({ title, username, image }) => (
-    //     <View style={styles.item}>
-    //         <Text style={styles.title}>{title}</Text>
-    //         <Text style={styles.username}>{username}</Text>
-    //         <Image
-    //             source={require('./assets/Images/image1.png')}
-    //             style={{ width: 200, height: 200 }}
-    //         />
-    //         <Pressable 
-    //             onPress={() => navigation.navigate('Chat')}
-    //             style={({ pressed }) => [
-    //                 {
-    //                     backgroundColor: pressed
-    //                     ? 'rgb(210, 230, 255)'
-    //                     : 'white'
-    //                 },
-    //                 styles.wrapperCustom
-    //             ]}>
-    //             <View>
-    //                 <Ionicons name="paper-plane-outline" size={24} color="black" />
-    //                 <Text>Message</Text>
-    //             </View>
-    //         </Pressable>
-    //         <Pressable 
-    //             onPress={() => navigation.navigate('Chat')}
-    //             style={({ pressed }) => [
-    //                 {
-    //                     backgroundColor: pressed
-    //                     ? 'rgb(210, 230, 255)'
-    //                     : 'white'
-    //                 },
-    //                 styles.wrapperCustom
-    //             ]}>
-    //             <View>
-    //                 <Ionicons name="heart-outline" size={24} color="black" />
-    //                 <Text>Like</Text>
-    //             </View>
-    //         </Pressable>
-    //     </View>
-    // );
+    
     
     const renderItem = ({ item }) => (
-        <Item
+        <RenderFeedItem
             title={item.title} 
             username={item.username}
             image={item.image}
