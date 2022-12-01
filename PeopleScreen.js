@@ -1,8 +1,4 @@
-import { Image, Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, TouchableHighlight, Pressable, Button, navigation } from 'react-native';
-
-import DMScreen from './DMScreen';
-
-
+import { Text, View, StyleSheet, SafeAreaView, FlatList, Pressable } from 'react-native';
 
 
 export default function PeopleScreen ({ navigation }) {
