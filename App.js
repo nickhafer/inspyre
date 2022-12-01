@@ -24,7 +24,7 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
+      <Tab.Navigator style={styles.screenContainer}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused }) => {
             let iconName;
@@ -54,7 +54,7 @@ export default function App() {
                 ? 'paper-plane'
                 : 'paper-plane-outline';
             }
-
+            
             return <Ionicons name={iconName} size={24} color="black" />;
           }
         })}>
@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'red',
   },
   screenText: {
     fontSize: 32,

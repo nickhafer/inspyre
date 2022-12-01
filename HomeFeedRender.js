@@ -100,7 +100,7 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    //backgroundColor: 'black',
+    backgroundColor: 'black',
     },
     screenText: {
         fontSize: 32,
