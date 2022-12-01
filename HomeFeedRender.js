@@ -4,10 +4,24 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
  import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
  import MessageScreen from './MessageScreen';
  import CommunitiesScreen from './CommunitiesScreen';
+ import { useFonts } from 'expo-font';
 
 
  export default function RenderFeedItem ({ title, username, image, profilePic, location, distance }) {
     const navigation = useNavigation();
+
+    const [loaded] = useFonts({
+        InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
+        InterBold: require('./assets/Fonts/Inter-Bold.ttf'),
+        InterMedium: require('./assets/Fonts/Inter-Medium.ttf'),
+        InterSemiBold: require('./assets/Fonts/Inter-SemiBold.ttf'),
+        InterRegular: require('./assets/Fonts/Inter-Regular.ttf'),
+        InterLight: require('./assets/Fonts/Inter-Light.ttf'),
+      });
+    
+      if (!loaded) {
+        return null;
+      }
 
      return(
         <View style={styles.item}>
@@ -27,12 +41,9 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
                 </View>
             </View>
             <Image
-                //source={require('./assets/Images/image1.png')}
-                //source = {{uri: image}}
                 source={{
                     uri: image,
                 }}
-                //source = {require('image')}
                 style={styles.objectImage}
             />
             <View style={styles.bottomContainer}>
@@ -103,18 +114,20 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
     },
     title: {
         fontSize: 32,
-        fontWeight: 'bold',
+        fontFamily: 'InterBold',
     },
     location: {
         fontSize: 24,
+        fontFamily: 'InterSemiBold',
     },
     distance: {
         fontSize: 16,
+        fontFamily: 'InterRegular',
     },
     username: {
         fontSize: 24,
         padding: 8,
-        fontWeight: 'bold',
+        fontFamily: 'InterBlack',
     },
     inpsyreHeader: {
         width: '100%',
