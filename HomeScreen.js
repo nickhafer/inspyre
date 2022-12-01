@@ -4,9 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MessageScreen from './MessageScreen';
 import CommunitiesScreen from './CommunitiesScreen';
-
-
-
+import { useFonts } from 'expo-font';
+import InterBlack from './assets/Fonts/Inter-Black.ttf'
 
 
 export default function HomeScreen() {
@@ -61,11 +60,13 @@ export default function HomeScreen() {
                     source={require('./assets/Images/luc-profile-pic.jpeg')}
                     style={styles.profilePic}
                 />
+                <View style={styles.nameRating}>
                 <Text style={styles.username}> {username} </Text>
                 <Image 
                     source={require('./assets/Images/rating-green.png')}
                     style={styles.rating}
                 />
+                </View>
 
             </View>
             <Image
@@ -75,8 +76,15 @@ export default function HomeScreen() {
             <View style={styles.bottomContainer}>
             <View style={styles.textHalf}>
                 <Text style={styles.title}> {title} </Text>
-                <Text style={styles.location}> Palo Alto, CA </Text>
+                <View style={styles.locationLine}>
+                    <Image
+                        style={styles.pin}
+                        source={require('./assets/Icons/pin.png')}
+                    />
+                    <Text style={styles.location}> Palo Alto, CA </Text>
+                </View>
                 <Text style={styles.distance}> 0.7mi away </Text>
+                
 
             </View>
             <View style={styles.iconsHalf}>
@@ -280,8 +288,12 @@ export default function HomeScreen() {
     rating: {
         width: 150,
         resizeMode: 'contain',
-        marginLeft: 60,
-
+    },
+    nameRating: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '80%',
     },
     objectImage: {
         width: '100%',
@@ -322,5 +334,12 @@ export default function HomeScreen() {
     iconContainer: {
         justifyContent: 'space-around',
         alignItems: 'center',
-    }
+    },
+    pin: {
+        height: 24,
+        width: 24,
+    },
+    locationLine: {
+        flexDirection: 'row',
+    },
 });
