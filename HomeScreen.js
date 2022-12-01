@@ -20,6 +20,7 @@ export default function HomeScreen() {
             username: 'Nick',
             image: 'image1',
             profilePic: 'luc-profile-pic',
+            location: 'Palo Alto, CA',
 
             // community: 'Stanford GSB',
             // distance: '1.2 miles',
@@ -69,9 +70,14 @@ export default function HomeScreen() {
                 source={require('./assets/Images/image1.png')}
                 style={styles.objectImage}
             />
+            <View style={styles.bottomContainer}>
             <View style={styles.textHalf}>
-                
+                <Text style={styles.title}> {title} </Text>
+                <Text style={styles.location}> Palo Alto, CA </Text>
+                <Text style={styles.distance}> 0.7mi away </Text>
+
             </View>
+            <View style={styles.iconsHalf}>
             <Pressable 
                 onPress={() => navigation.navigate('Chat')}
                 style={({ pressed }) => [
@@ -102,6 +108,8 @@ export default function HomeScreen() {
                     <Text>Like</Text>
                 </View>
             </Pressable>
+            </View>
+            </View>
         </View>
     );
 
@@ -154,6 +162,7 @@ export default function HomeScreen() {
 
             profilePic={item.profilePic}
             rating={item.rating}
+            location={item.location}
         />
     );
   
@@ -210,6 +219,13 @@ export default function HomeScreen() {
     },
     title: {
         fontSize: 32,
+        fontWeight: 'bold',
+    },
+    location: {
+        fontSize: 24,
+    },
+    distance: {
+        fontSize: 16,
     },
     username: {
         fontSize: 24,
@@ -263,12 +279,35 @@ export default function HomeScreen() {
     objectImage: {
         width: '100%',
         resizeMode: 'stretch',
-        height: '70%',
+        height: 400,
         backgroundColor: 'red',
     },
     postHeader: {
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
+        margin: 12,
+        height: '10%',
+    },
+    bottomContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    message: {
+
+    },
+    like: {
+
+    },
+    textHalf: {
+        margin: '2%',
+        width: '60%',
+    },
+    iconsHalf: {
+        margin: '2%',
+        width: '32%',
+        alignItems: 'flex-start',
+        flexDirection: 'row',
+        justifyContent: 'center',
     }
 });
