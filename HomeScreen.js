@@ -88,9 +88,11 @@ export default function HomeScreen() {
                     },
                     styles.wrapperCustom
                 ]}>
-                <View>
-                    <Ionicons name="paper-plane-outline" size={24} color="black" />
-                    <Text>Message</Text>
+                <View style={styles.iconContainer}>
+                    <Image
+                        source={require('./assets/Icons/chat-gray.png')}
+                        style={styles.chat} 
+                    />
                 </View>
             </Pressable>
             <Pressable 
@@ -103,9 +105,11 @@ export default function HomeScreen() {
                     },
                     styles.wrapperCustom
                 ]}>
-                <View>
-                    <Ionicons name="heart-outline" size={24} color="black" />
-                    <Text>Like</Text>
+                <View style={styles.iconContainer}>
+                    <Image
+                        source={require('./assets/Icons/like-gray.png')}
+                        style={styles.like} 
+                    />
                 </View>
             </Pressable>
             </View>
@@ -215,7 +219,7 @@ export default function HomeScreen() {
         marginTop: StatusBar.currentHeight || 0,
     },
     item: {
-        backgroundColor: '#f9c2ff',
+        backgroundColor: 'white',
     },
     title: {
         fontSize: 32,
@@ -293,11 +297,13 @@ export default function HomeScreen() {
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
-    message: {
-
+    chat: {
+        width: 64,
+        height: 64,
     },
     like: {
-
+        width: 64,
+        height: 64,
     },
     textHalf: {
         margin: '2%',
@@ -309,5 +315,9 @@ export default function HomeScreen() {
         alignItems: 'flex-start',
         flexDirection: 'row',
         justifyContent: 'center',
+    },
+    iconContainer: {
+        justifyContent: 'space-around',
+        alignItems: 'center',
     }
 });
