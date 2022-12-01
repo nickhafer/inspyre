@@ -18,6 +18,8 @@ export default function HomeScreen() {
             title: 'Broken Chair',
             username: 'Nick',
             image: 'image1',
+            //profilePic: 'luc-profile-pic',
+
             // community: 'Stanford GSB',
             // distance: '1.2 miles',
             // rating: '5 stars',
@@ -50,6 +52,11 @@ export default function HomeScreen() {
 
     const Item = ({ title, username, image }) => (
         <View style={styles.item}>
+            <View style={styles.postHeader}>
+                {/* <Image> {profilePic} </Image>
+                <Text> {username} </Text>
+                <Image> {rating} </Image> */}
+            </View>
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.username}>{username}</Text>
             <Image
@@ -88,12 +95,56 @@ export default function HomeScreen() {
             </Pressable>
         </View>
     );
+
+    // const Item = ({ title, username, image }) => (
+    //     <View style={styles.item}>
+    //         <Text style={styles.title}>{title}</Text>
+    //         <Text style={styles.username}>{username}</Text>
+    //         <Image
+    //             source={require('./assets/Images/image1.png')}
+    //             style={{ width: 200, height: 200 }}
+    //         />
+    //         <Pressable 
+    //             onPress={() => navigation.navigate('Chat')}
+    //             style={({ pressed }) => [
+    //                 {
+    //                     backgroundColor: pressed
+    //                     ? 'rgb(210, 230, 255)'
+    //                     : 'white'
+    //                 },
+    //                 styles.wrapperCustom
+    //             ]}>
+    //             <View>
+    //                 <Ionicons name="paper-plane-outline" size={24} color="black" />
+    //                 <Text>Message</Text>
+    //             </View>
+    //         </Pressable>
+    //         <Pressable 
+    //             onPress={() => navigation.navigate('Chat')}
+    //             style={({ pressed }) => [
+    //                 {
+    //                     backgroundColor: pressed
+    //                     ? 'rgb(210, 230, 255)'
+    //                     : 'white'
+    //                 },
+    //                 styles.wrapperCustom
+    //             ]}>
+    //             <View>
+    //                 <Ionicons name="heart-outline" size={24} color="black" />
+    //                 <Text>Like</Text>
+    //             </View>
+    //         </Pressable>
+    //     </View>
+    // );
     
     const renderItem = ({ item }) => (
         <Item
             title={item.title} 
             username={item.username}
             image={item.image}
+            
+            profilePic={item.profilePic}
+            rating={item.rating}
         />
     );
   
@@ -125,8 +176,6 @@ export default function HomeScreen() {
     item: {
         backgroundColor: '#f9c2ff',
         padding: 20,
-        marginVertical: 8,
-        marginHorizontal: 16,
     },
     title: {
         fontSize: 32,
