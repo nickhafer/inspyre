@@ -258,7 +258,9 @@ export default function HomeScreen() {
         borderRadius:7,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingRight: 10,
+        paddingRight: 5,
+        paddingLeft: 5,
+        paddingTop: 0,
         marginBottom:10,
       },
       SearchIcon: {
@@ -267,7 +269,6 @@ export default function HomeScreen() {
       SearchIconImage: {
         width: 50,
         height: '100%',
-
       },
     profilePic: {
         height: 50,
