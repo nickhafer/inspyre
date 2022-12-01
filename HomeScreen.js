@@ -18,7 +18,7 @@ export default function HomeScreen() {
             title: 'Broken Chair',
             username: 'Nick',
             image: 'image1',
-            //profilePic: 'luc-profile-pic',
+            profilePic: 'luc-profile-pic',
 
             // community: 'Stanford GSB',
             // distance: '1.2 miles',
@@ -53,9 +53,12 @@ export default function HomeScreen() {
     const Item = ({ title, username, image }) => (
         <View style={styles.item}>
             <View style={styles.postHeader}>
-                {/* <Image> {profilePic} </Image>
-                <Text> {username} </Text>
-                <Image> {rating} </Image> */}
+                <Image 
+                    source={require('./assets/Images/luc-profile-pic.jpeg')}
+                    style={styles.profilePic}
+                />
+                <Text style={styles.username}> {username} </Text>
+                {/* <Image> {rating} </Image> */}
             </View>
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.username}>{username}</Text>
@@ -142,7 +145,7 @@ export default function HomeScreen() {
             title={item.title} 
             username={item.username}
             image={item.image}
-            
+
             profilePic={item.profilePic}
             rating={item.rating}
         />
@@ -182,9 +185,19 @@ export default function HomeScreen() {
     },
     username: {
         fontSize: 16,
+        padding: 8,
     },
     wrapperCustom: {
         borderRadius: 8,
         padding: 6
     },
+    profilePic: {
+        height: 50,
+        width: 50,
+        borderRadius: 25,
+    },
+    postHeader: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    }
 });
