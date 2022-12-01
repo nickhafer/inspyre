@@ -155,7 +155,7 @@ export default function HomeScreen() {
         marginTop: StatusBar.currentHeight || 0,
     },
     item: {
-        backgroundColor: '#f9c2ff',
+        backgroundColor: 'white',
     },
     title: {
         fontSize: 32,
@@ -234,11 +234,13 @@ export default function HomeScreen() {
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
-    message: {
-
+    chat: {
+        width: 64,
+        height: 64,
     },
     like: {
-
+        width: 64,
+        height: 64,
     },
     textHalf: {
         margin: '2%',
@@ -250,5 +252,9 @@ export default function HomeScreen() {
         alignItems: 'flex-start',
         flexDirection: 'row',
         justifyContent: 'center',
+    },
+    iconContainer: {
+        justifyContent: 'space-around',
+        alignItems: 'center',
     }
 });
