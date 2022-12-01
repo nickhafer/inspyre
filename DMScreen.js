@@ -1,24 +1,37 @@
-import { View, SafeAreaView, Text, ImageBackground, StyleSheet, Pressable } from 'react-native';
+import { View, SafeAreaView, Text, ImageBackground, StyleSheet, Pressable, TextInput } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import React, { useState } from 'react';
 
 
 export default function DMScreen ({ navigation, route}) {
     const { message } = route.params;
+    const [text, setText] = useState('');
 
     return (
-    <ImageBackground source={message.image} style={styles.backgroundImage}>
         <SafeAreaView style={styles.body}>
-          <Pressable onPress={() => navigation.goBack()}>
-            <AntDesign name="left" size={24} color="black">Messages</AntDesign>
-          </Pressable>
-          <View style={styles.messageText}>
-            <Text style={styles.messageTitle}>{message.name}</Text>
+            <Pressable onPress={() => navigation.goBack()}>
+                <AntDesign name="left" size={24} color="black">Messages</AntDesign>
+            </Pressable>
+            <View style={styles.messageText}>
+                <Text style={styles.messageTitle}>{message.name}</Text>
             </View>
-            <View style = {styles.messageDescriptionView}>
-            <Text style={styles.messageDescription}>{message.message}</Text>
-          </View>
+            <View style={styles.messageDescriptionView}>
+                <Text style={styles.messageDescription}>{message.message}</Text>
+            </View>
+            <View style={styles.inputMessageView}>
+                <Text style={styles.messageDescription}>
+                    {text.split('').map((word) => word).join('')}
+                </Text>
+            </View>
+            <View style={styles.textInputView}>
+                <TextInput
+                    style={styles.textInput}
+                    placeholder="Type here to translate!"
+                    onChangeText={newText => setText(newText)}
+                    defaultValue={text}
+                />
+            </View>
         </SafeAreaView>
-      </ImageBackground>
     );
 }
 
@@ -56,6 +69,32 @@ const styles = StyleSheet.create({
         //backgroundColor: 'white',
     },
     messageDescriptionView: {
+        backgroundColor: 'lightgreen',
+        borderRadius: 8,
+        alignItems: 'center',
+        marginTop: 20,
+        paddingBottom: 10,
+        width: '50%',
+    },
+    textInput: {
+        fontSize: 14,
+        marginTop: 16,
+    },
+    textInputView: {
+        backgroundColor: 'lightgrey',
+        borderRadius: 8,
+        borderColor: 'black',
+        borderWidth: 1,
+        alignItems: 'center',
+        marginTop: 20,
+        paddingBottom: 10,
+        width: '80%',
+    },
+    // inputMessage: {
+    //     fontSize: 14,
+    //     marginTop: 16,
+    // },
+    inputMessageView: {
         backgroundColor: 'lightblue',
         borderRadius: 8,
         alignItems: 'center',
@@ -63,4 +102,5 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         width: '50%',
     },
+
   });
