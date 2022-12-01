@@ -8,6 +8,7 @@ import CommunitiesScreen from './CommunitiesScreen';
 
 
 
+
 export default function HomeScreen() {
 
     const navigation = useNavigation();
@@ -58,14 +59,19 @@ export default function HomeScreen() {
                     style={styles.profilePic}
                 />
                 <Text style={styles.username}> {username} </Text>
-                {/* <Image> {rating} </Image> */}
+                <Image 
+                    source={require('./assets/Images/rating-green.png')}
+                    style={styles.rating}
+                />
+
             </View>
-            <Text style={styles.title}>{title}</Text>
-            <Text style={styles.username}>{username}</Text>
             <Image
                 source={require('./assets/Images/image1.png')}
-                style={{ width: 200, height: 200 }}
+                style={styles.objectImage}
             />
+            <View style={styles.textHalf}>
+                
+            </View>
             <Pressable 
                 onPress={() => navigation.navigate('Chat')}
                 style={({ pressed }) => [
@@ -178,13 +184,12 @@ export default function HomeScreen() {
     },
     item: {
         backgroundColor: '#f9c2ff',
-        padding: 20,
     },
     title: {
         fontSize: 32,
     },
     username: {
-        fontSize: 16,
+        fontSize: 24,
         padding: 8,
     },
     wrapperCustom: {
@@ -196,7 +201,20 @@ export default function HomeScreen() {
         width: 50,
         borderRadius: 25,
     },
+    rating: {
+        width: 150,
+        resizeMode: 'contain',
+        marginLeft: 60,
+
+    },
+    objectImage: {
+        width: '100%',
+        resizeMode: 'stretch',
+        height: '70%',
+        backgroundColor: 'red',
+    },
     postHeader: {
+        flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
     }
