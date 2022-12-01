@@ -26,7 +26,7 @@ export default function DMScreen ({ navigation, route}) {
             <View style={styles.textInputView}>
                 <TextInput
                     style={styles.textInput}
-                    placeholder="Type here to translate!"
+                    placeholder="iMessage"
                     onChangeText={newText => setText(newText)}
                     defaultValue={text}
                 />

@@ -61,7 +61,6 @@ export default function HomeScreen() {
             title={item.title} 
             username={item.username}
             image={item.image}
-
             profilePic={item.profilePic}
             rating={item.rating}
             location={item.location}

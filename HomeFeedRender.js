@@ -9,70 +9,81 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
  export default function RenderFeedItem ({ title, username, image }) {
     const navigation = useNavigation();
 
-     console.log(image)
+    //  console.log(image)
      return(
-     <View style={styles.item}>
-         <View style={styles.postHeader}>
-             <Image 
-                 source={require('./assets/Images/luc-profile-pic.jpeg')}
-                 style={styles.profilePic}
-             />
-             <Text style={styles.username}> {username} </Text>
-             <Image 
-                 source={require('./assets/Images/rating-green.png')}
-                 style={styles.rating}
-             />
-         </View>
-         <Image
-             //source={require('./assets/Images/image1.png')}
-             //source = {{uri: image}}
-             source={{
-                 uri: image,
-               }}
-             //source = {require('image')}
-             style={styles.objectImage}
-         />
-         <View style={styles.bottomContainer}>
-         <View style={styles.textHalf}>
-             <Text style={styles.title}> {title} </Text>
-             <Text style={styles.location}> Palo Alto, CA </Text>
-             <Text style={styles.distance}> 0.7mi away </Text>
+        <View style={styles.item}>
+            <View style={styles.postHeader}>
+                <Image 
+                    source={require('./assets/Images/luc-profile-pic.jpeg')}
+                    style={styles.profilePic}
+                />
+                <Text style={styles.username}> {username} </Text>
+                <Image 
+                    source={require('./assets/Images/rating-green.png')}
+                    style={styles.rating}
+                />
+            </View>
+            <Image
+                //source={require('./assets/Images/image1.png')}
+                //source = {{uri: image}}
+                source={{
+                    uri: image,
+                }}
+                //source = {require('image')}
+                style={styles.objectImage}
+            />
+            <View style={styles.bottomContainer}>
+                <View style={styles.textHalf}>
+                    <Text style={styles.title}> {title} </Text>
+                    <View style={styles.locationLine}>
+                        <Image
+                            style={styles.pin}
+                            source={require('./assets/Icons/pin.png')}
+                        />
+                        <Text style={styles.location}> Palo Alto, CA </Text>
+                    </View>
+                    <Text style={styles.distance}> 0.7mi away </Text>
+                </View>
 
-         </View>
-         <View style={styles.iconsHalf}>
-         <Pressable 
-             onPress={() => navigation.navigate('Chat')}
-             style={({ pressed }) => [
-                 {
-                     backgroundColor: pressed
-                     ? 'rgb(210, 230, 255)'
-                     : 'white'
-                 },
-                 styles.wrapperCustom
-             ]}>
-             <View>
-                 <Ionicons name="paper-plane-outline" size={24} color="black" />
-                 <Text>Message</Text>
-             </View>
-         </Pressable>
-         <Pressable 
-             onPress={() => navigation.navigate('Chat')}
-             style={({ pressed }) => [
-                 {
-                     backgroundColor: pressed
-                     ? 'rgb(210, 230, 255)'
-                     : 'white'
-                 },
-                 styles.wrapperCustom
-             ]}>
-             <View>
-                 <Ionicons name="heart-outline" size={24} color="black" />
-                 <Text>Like</Text>
-             </View>
-         </Pressable>
-         </View>
-         </View>
-     </View>
+
+                <View style={styles.iconsHalf}>
+                    <Pressable 
+                        onPress={() => navigation.navigate('Chat')}
+                        style={({ pressed }) => [
+                            {
+                                backgroundColor: pressed
+                                ? 'rgb(210, 230, 255)'
+                                : 'white'
+                            },
+                            styles.wrapperCustom
+                        ]}>
+                        <View style={styles.iconContainer}>
+                            <Image
+                                source={require('./assets/Icons/chat-gray.png')}
+                                style={styles.chat} 
+                            />
+                        </View>
+                    </Pressable>
+                    <Pressable 
+                        onPress={() => navigation.navigate('Chat')}
+                        style={({ pressed }) => [
+                            {
+                                backgroundColor: pressed
+                                ? 'rgb(210, 230, 255)'
+                                : 'white'
+                            },
+                            styles.wrapperCustom
+                        ]}>
+                        <View style={styles.iconContainer}>
+                            <Image
+                                source={require('./assets/Icons/like-gray.png')}
+                                style={styles.like} 
+                            />
+                        </View>
+                    </Pressable>
+                </View>
+                </View>
+        </View>
      );
  };
 
