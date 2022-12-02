@@ -56,6 +56,7 @@ export default function DMScreen ({ navigation, route}) {
                         <Text style={styles.name}>{message.name}</Text>
                     </View>
                 </View>
+                <View style={styles.chatSection}>
                 <View style={styles.messageDescriptionView}>
                     <Text style={styles.messageDescription}>{message.message}</Text>
                 </View>
@@ -64,14 +65,8 @@ export default function DMScreen ({ navigation, route}) {
                         {text.split('').map((word) => word).join('')}
                     </Text>
                 </View>
-                <View style={styles.textInputView}>
-                    <TextInput
-                        style={styles.textInput}
-                        placeholder="iMessage"
-                        onChangeText={newText => setText(newText)}
-                        defaultValue={text}
-                    />
                 </View>
+                <View style={styles.chatBottom}>
                 <View style={styles.textInputView}>
                     <TextInput
                         style={styles.textInput}
@@ -79,6 +74,10 @@ export default function DMScreen ({ navigation, route}) {
                         onSubmitEditing={Keyboard.dismiss}
                     />
                     <Text style={styles.status}>{keyboardStatus}</Text>
+                </View>
+                <Image 
+                    style={styles.send} source={require('./assets/Icons/send-gray.png')} 
+                />
                 </View>
             </SafeAreaView>
         </View>
@@ -113,6 +112,10 @@ const styles = StyleSheet.create({
     body: {
         backgroundColor: 'white',
         height: '100%',
+        justifyContent: 'space-between',
+    },
+    chatSection: {
+        height: '70%',
     },
     topBar: {
         flexDirection: 'row',
@@ -152,47 +155,61 @@ const styles = StyleSheet.create({
     },
     messageDescription: {
         fontSize: 14,
-        marginTop: 16,
-        marginHorizontal: 4,
+        margin: 8,
+        fontFamily: 'InterRegular',
         //backgroundColor: 'white',
     },
     messageDescriptionView: {
-        backgroundColor: 'lightgreen',
         borderRadius: 8,
-        alignItems: 'center',
-        margin: 16,
+        borderWidth: 2,
+        borderRadius: 16,
+        margin: 8,
         paddingBottom: 10,
         width: '50%',
+        alignItems: 'flex-start',
+        justifyContent: 'center',
     },
     textInput: {
         fontSize: 14,
         marginTop: 16,
+        marginHorizontal: 8,
     },
     textInputView: {
-        backgroundColor: 'lightgrey',
-        alignSelf: 'flex-end',
-        borderRadius: 8,
+        alignSelf: 'flex-start',
+        borderRadius: 16,
         borderColor: 'black',
-        borderWidth: 1,
-        alignItems: 'center',
+        borderWidth: 2,
+        alignItems: 'flex-start',
         margin: 16,
         paddingBottom: 10,
-        width: '80%',
+        width: '75%',
     },
     // inputMessage: {
     //     fontSize: 14,
     //     marginTop: 16,
     // },
     inputMessageView: {
-        backgroundColor: 'lightblue',
+        backgroundColor: 'lightgray',
+        borderWidth: 2,
+        borderRadius: 16,
         alignSelf: 'flex-end',
         borderRadius: 8,
         alignItems: 'center',
-        margin: 16,
+        margin: 8,
         paddingBottom: 10,
         width: '50%',
     },
     wholeScreen: {
         backgroundColor: 'white',
+    },
+    chatBottom: {
+        flexDirection: 'row',
+        alignSelf: 'flex-start',
+        alignItems: 'center',
+    },
+    send: {
+        width: 48,
+        height: 48,
+
     },
   });
