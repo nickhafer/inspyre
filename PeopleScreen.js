@@ -153,9 +153,8 @@ export default function PeopleScreen ({ navigation }) {
         <SafeAreaView style={styles.container}>
             <View styles = {styles.chatHeader}>
                 <Text styles={styles.headerText}>
-                    ANDREW PLZ PUT THE HEADER IN
+                    ANDREW PLZ FIX THIS
                 </Text>
-
             </View>
             
             <View style={styles.listContainer}>
@@ -206,12 +205,16 @@ const styles = (item) => StyleSheet.create({
         fontFamily: 'InterRegular',
     },
     chatHeader: {
-        backgroundColor: 'white',
+        height: '10%',
+        justifyContent: 'center',
+        alignContent: 'center',
+        backgroundColor: 'red',
     },
     headerText: {
         fontSize: 42,
         fontFamily: 'InterBold',
-        backgroundColor: 'white',
+        alignSelf: 'center',
+        backgroundColor: 'red',
     },
     exploreText: {
         fontSize: 16,

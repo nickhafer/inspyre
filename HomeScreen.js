@@ -85,22 +85,10 @@ export default function HomeScreen() {
             style = {styles.inspyreIcon}
             source = {require('./FigmaIcons/Logo.png')}
           />
-          <Pressable 
-                onPress={() => navigation.navigate('Chat')}
-                style={({ pressed }) => [
-                    {
-                        backgroundColor: pressed
-                        ? 'rgb(210, 230, 255)'
-                        : 'white'
-                    },
-                    styles.wrapperCustom
-                ]}>
                     <Image
                     style = {styles.SearchIconImage}
                     source={require('./FigmaIcons/SearchButton.png')}>
                     </Image>
-                
-            </Pressable>
           </View>
         <FlatList 
           data={HOME_SCREEN_DATA}
@@ -175,7 +163,7 @@ export default function HomeScreen() {
         
       },
       SearchIconImage: {
-        width: 50,
+        width: 64,
         height: '100%',
       },
     profilePic: {
