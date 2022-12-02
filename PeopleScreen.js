@@ -155,11 +155,12 @@ const styles = (item) => StyleSheet.create({
         fontFamily: 'InterRegular',
     },
     chatHeader: {
-        backgroundColor: 'blue',
+        backgroundColor: 'white',
     },
     headerText: {
         fontSize: 42,
         fontFamily: 'InterBold',
+        backgroundColor: 'white',
     },
     exploreText: {
         fontSize: 16,
