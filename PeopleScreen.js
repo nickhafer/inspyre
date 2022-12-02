@@ -93,10 +93,9 @@ export default function PeopleScreen ({ navigation }) {
     return (
         <View style={styles.wholeScreen}>
             <SafeAreaView style={styles.container}>
-                <View style={styles.chatHeader}>
-                    <Text style={header_styles.headerText}>
-                        messages
-                    </Text>
+                <View style={header_styles.chatHeader}>
+                    <Image style={header_styles.headerText}
+                    source={require("./FigmaIcons/messages.png")} />
                 </View>
                 
                 <View style={styles.listContainer}>
@@ -116,13 +115,16 @@ const header_styles = StyleSheet.create({
         height: '10%',
         justifyContent: 'center',
         alignContent: 'center',
-        backgroundColor: '#f9c2ff',
+        // backgroundColor: '#f9c2ff',
     },
     headerText: {
-        fontSize: 40,
-        fontFamily: 'InterBold',
-        alignSelf: 'center',
-        backgroundColor: '#f9c2ff',
+        // fontSize: 40,
+        // fontFamily: 'InterBold',
+        alignSelf: 'flex-start',
+        marginBottom: 7,
+        // backgroundColor: '#f9c2ff',
+        height: "100%",
+        width: 250,
     },
 });
 
