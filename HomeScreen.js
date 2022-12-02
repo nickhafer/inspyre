@@ -16,7 +16,7 @@ export default function HomeScreen() {
     const HOME_SCREEN_DATA = [
         {
             id: '1',
-            title: 'Broken Chairrrr',
+            title: 'Broken Chair',
             username: 'Cody',
             image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
             profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
