@@ -42,7 +42,7 @@ export default function HomeScreen() {
             id: '3',
             title: 'Old Water Bottle',
             username: 'Martina',
-            image: 'https://www.outfit4events.com/runtime/cache/images/redesignProductFull/mh-mi0801-001.jpg',
+            image: 'https://i.etsystatic.com/13522559/r/il/ffa05d/3777517013/il_570xN.3777517013_6xjq.jpg',
             profilePic: 'https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg',
             location: 'Palo Alto, CA',
             distance: '1.2 miles',
@@ -79,23 +79,23 @@ export default function HomeScreen() {
     );
   
     return (
-      <SafeAreaView style={styles.container}>
-        <View style = {styles.HeaderView}>
-          <Image
-            style = {styles.inspyreIcon}
-            source = {require('./FigmaIcons/Logo.png')}
-          />
-                    <Image
+        <SafeAreaView style={styles.container}>
+            <View style = {styles.HeaderView}>
+                <Image
+                    style = {styles.inspyreIcon}
+                    source = {require('./FigmaIcons/Logo.png')}
+                />
+                <Image
                     style = {styles.SearchIconImage}
                     source={require('./FigmaIcons/SearchButton.png')}>
-                    </Image>
-          </View>
-        <FlatList 
-          data={HOME_SCREEN_DATA}
-          renderItem={renderItem}
-          keyExtractor={item => item.id}
-        />
-      </SafeAreaView>
+                </Image>
+            </View>
+            <FlatList 
+                data={HOME_SCREEN_DATA}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+            />
+        </SafeAreaView>
     );
   }
 
