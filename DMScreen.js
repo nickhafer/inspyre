@@ -1,6 +1,6 @@
-import { View, SafeAreaView, Image, Text, ImageBackground, StyleSheet, Pressable, TextInput } from 'react-native';
+import { View, SafeAreaView, Image, Text, Keyboard, StyleSheet, Pressable, TextInput } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import { useFonts } from 'expo-font';
 
 
@@ -15,56 +15,96 @@ export default function DMScreen ({ navigation, route}) {
         InterSemiBold: require('./assets/Fonts/Inter-SemiBold.ttf'),
         InterRegular: require('./assets/Fonts/Inter-Regular.ttf'),
         InterLight: require('./assets/Fonts/Inter-Light.ttf'),
-      });
-    
+    });
+
+    const [keyboardStatus, setKeyboardStatus] = useState(undefined);
+
+    useEffect(() => {
+        const showSubscription = Keyboard.addListener("keyboardDidShow", () => {
+            setKeyboardStatus("Keyboard Shown");
+        });
+        const hideSubscription = Keyboard.addListener("keyboardDidHide", () => {
+            setKeyboardStatus("Keyboard Hidden");
+        });
+
+        return () => {
+            showSubscription.remove();
+            hideSubscription.remove();
+        };
+    }, []);
+
     if (!loaded) {
         return null;
     }
 
+    
+
     return (
         <View style={styles.wholeScreen}>
-        <SafeAreaView style={styles.body}>
-            <View style={styles.topBar}>
-                <Pressable style={styles.back} onPress={() => navigation.goBack()}>
-                    <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
-                </Pressable>
-                <View style={styles.messageHeader}>
-                    <Text style={styles.conversationWith}>Chat with</Text>
-                    <Image style={styles.profilePic} 
-                            source={{
-                                uri: message.imageUrl,
-                            }} />
-                    <Text style={styles.name}>{message.name}</Text>
+            
+            <SafeAreaView style={styles.body}>
+                <View style={styles.topBar}>
+                    <Pressable style={styles.back} onPress={() => navigation.goBack()}>
+                        <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
+                    </Pressable>
+                    <View style={styles.messageHeader}>
+                        <Text style={styles.conversationWith}>Chat with</Text>
+                        <Image style={styles.profilePic} 
+                                source={{
+                                    uri: message.imageUrl,
+                                }} />
+                        <Text style={styles.name}>{message.name}</Text>
+                    </View>
                 </View>
-            </View>
-            <View style={styles.messageDescriptionView}>
-                <Text style={styles.messageDescription}>{message.message}</Text>
-            </View>
-            <View style={styles.inputMessageView}>
-                <Text style={styles.messageDescription}>
-                    {text.split('').map((word) => word).join('')}
-                </Text>
-            </View>
-            <View style={styles.textInputView}>
-                <TextInput
-                    style={styles.textInput}
-                    placeholder="iMessage"
-                    onChangeText={newText => setText(newText)}
-                    defaultValue={text}
-                />
-            </View>
-        </SafeAreaView>
+                <View style={styles.messageDescriptionView}>
+                    <Text style={styles.messageDescription}>{message.message}</Text>
+                </View>
+                <View style={styles.inputMessageView}>
+                    <Text style={styles.messageDescription}>
+                        {text.split('').map((word) => word).join('')}
+                    </Text>
+                </View>
+                <View style={styles.textInputView}>
+                    <TextInput
+                        style={styles.textInput}
+                        placeholder="iMessage"
+                        onChangeText={newText => setText(newText)}
+                        defaultValue={text}
+                    />
+                </View>
+                <View style={styles.textInputView}>
+                    <TextInput
+                        style={styles.textInput}
+                        placeholder='iMessage'
+                        onSubmitEditing={Keyboard.dismiss}
+                    />
+                    <Text style={styles.status}>{keyboardStatus}</Text>
+                </View>
+            </SafeAreaView>
         </View>
     );
 }
 
 
 const styles = StyleSheet.create({
+    // container: {
+    //   flex: 1,
+    //   alignItems: 'center',
+    //   justifyContent: 'center',
+    //   display: 'flex',
+    // },
     container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-      display: 'flex',
+        flex: 1,
+        padding: 36
+    },
+    input: {
+        padding: 10,
+        borderWidth: 0.5,
+        borderRadius: 4
+    },
+    status: {
+        padding: 10,
+        textAlign: "center"
     },
     backgroundImage: {
       width: '100%',
