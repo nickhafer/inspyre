@@ -68,7 +68,7 @@ export default function DMScreen ({ navigation, route}) {
                         <TextInput
                             style={styles.textInput}
                             placeholder='iMessage'
-                            // onSubmitEditing={Keyboard.dismiss}
+                            onSubmitEditing={Keyboard.dismiss}
                             // onSubmitEditing={newText => setText(newText)}
                             onChangeText={newText => setText(newText)}
                         />
