@@ -96,9 +96,9 @@ export default function HomeScreen() {
 
   const styles = StyleSheet.create({
     screenContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     screenText: {
         fontSize: 32,

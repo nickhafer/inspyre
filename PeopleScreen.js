@@ -95,7 +95,7 @@ export default function PeopleScreen ({ navigation }) {
             <SafeAreaView style={styles.container}>
                 <View style={styles.chatHeader}>
                     <Text style={header_styles.headerText}>
-                        ANDREW PLZ FIX THIS
+                        messages
                     </Text>
                 </View>
                 
@@ -112,82 +112,17 @@ export default function PeopleScreen ({ navigation }) {
 }
 
 const header_styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'white',
-    },
-    wholeScreen: {
-        backgroundColor: 'white',
-    },
-    listContainer: {
-        width: 360,
-        height: '80%',
-    },
-    messageContainer: {
-        width: '100%',
-        height: 100,
-        flex: 1,
-        borderTopWidth: 1,
-        borderBottomWidth: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        // borderColor: item.read == 'true' ? 'grey' : 'blue',
-        backgroundColor: 'white',
-    },
-    messageTitle: {
-        fontSize: 25,
-        fontFamily: 'InterBold',
-        marginBottom: 4,
-    },
-    messageDescription: {
-        color: 'gray',
-        fontSize: 14,
-        fontFamily: 'InterRegular',
-    },
     chatHeader: {
         height: '10%',
         justifyContent: 'center',
         alignContent: 'center',
-        backgroundColor: 'red',
+        backgroundColor: '#f9c2ff',
     },
     headerText: {
-        fontSize: 42,
+        fontSize: 40,
         fontFamily: 'InterBold',
         alignSelf: 'center',
-        backgroundColor: 'red',
-    },
-    exploreText: {
-        fontSize: 16,
-        // textTransform: 'uppercase',
-        letterSpacing: 0.2,
-        fontFamily: 'InterRegular',
-    },
-    picHalf: {
-        width: '20%',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    profilePic: {
-        borderRadius: 32,
-        width: 64,
-        height: 64,
-    },
-    textHalf: {
-        paddingRight: '4%',
-        width: '80%',
-        height: 64,
-        justifyContent: 'space-between',
-        alignSelf: 'center',
-    },
-    top: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-    bottom: {
-        
+        backgroundColor: '#f9c2ff',
     },
 });
 
