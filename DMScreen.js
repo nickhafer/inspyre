@@ -17,9 +17,9 @@ export default function DMScreen ({ navigation, route}) {
         InterLight: require('./assets/Fonts/Inter-Light.ttf'),
       });
     
-      if (!loaded) {
+    if (!loaded) {
         return null;
-      }
+    }
 
     return (
         <View style={styles.wholeScreen}>
