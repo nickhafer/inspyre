@@ -1,11 +1,5 @@
-import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, Image} from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MessageScreen from './MessageScreen';
-import CommunitiesScreen from './CommunitiesScreen';
-import { useFonts } from 'expo-font';
-import InterBlack from './assets/Fonts/Inter-Black.ttf'
+import { View, StyleSheet, SafeAreaView, FlatList, StatusBar, Image} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import RenderFeedItem from './HomeFeedRender';
 
 

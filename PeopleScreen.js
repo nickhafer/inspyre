@@ -1,4 +1,4 @@
-import { Image, Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, TouchableHighlight, Pressable, Button, navigation } from 'react-native';
+import { Image, Text, View, StyleSheet, SafeAreaView, FlatList, Pressable } from 'react-native';
 import { useFonts } from 'expo-font';
 
 
