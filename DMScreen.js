@@ -72,7 +72,7 @@ export default function DMScreen ({ navigation, route}) {
                             // onSubmitEditing={newText => setText(newText)}
                             onChangeText={newText => setText(newText)}
                         />
-                        <Text style={styles.status}>{keyboardStatus}</Text>
+                        {/* <Text style={styles.status}>{keyboardStatus}</Text> */}
                     </View>
                     <Image 
                         style={styles.send} source={require('./assets/Icons/send-gray.png')} 
