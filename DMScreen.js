@@ -2,11 +2,13 @@ import { View, SafeAreaView, Image, Text, Keyboard, StyleSheet, Pressable, TextI
 import { AntDesign } from '@expo/vector-icons';
 import React, { useState , useEffect } from 'react';
 import { useFonts } from 'expo-font';
+import { useKeyboard } from "@react-native-community/hooks"
 
 
 export default function DMScreen ({ navigation, route}) {
     const { message } = route.params;
     const [text, setText] = useState('');
+    const keyboard = useKeyboard()
 
     const [loaded] = useFonts({
         InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
