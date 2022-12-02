@@ -126,6 +126,7 @@ export default function MessageScreen() {
     container: {
       flex: 1,
       marginTop: StatusBar.currentHeight || 0,
+      backgroundColor: 'white',
     },
 
     itemTop: {

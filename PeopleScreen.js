@@ -98,6 +98,7 @@ export default function PeopleScreen ({ navigation }) {
     );
 
     return (
+        <View style={styles.wholeScreen}>
         <SafeAreaView style={styles.container}>
             <View styles = {styles.chatHeader}>
                 <Text styles={styles.headerText}>
@@ -114,6 +115,7 @@ export default function PeopleScreen ({ navigation }) {
                 />
             </View>
         </SafeAreaView>
+        </View>
     );
 }
 
@@ -122,6 +124,9 @@ const styles = (item) => StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'white',
+    },
+    wholeScreen: {
         backgroundColor: 'white',
     },
     listContainer: {

@@ -22,6 +22,7 @@ export default function DMScreen ({ navigation, route}) {
       }
 
     return (
+        <View style={styles.wholeScreen}>
         <SafeAreaView style={styles.body}>
             <View style={styles.topBar}>
                 <Pressable style={styles.back} onPress={() => navigation.goBack()}>
@@ -53,6 +54,7 @@ export default function DMScreen ({ navigation, route}) {
                 />
             </View>
         </SafeAreaView>
+        </View>
     );
 }
 
@@ -150,5 +152,7 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         width: '50%',
     },
-
+    wholeScreen: {
+        backgroundColor: 'white',
+    },
   });

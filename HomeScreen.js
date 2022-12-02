@@ -117,7 +117,6 @@ export default function HomeScreen() {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    //backgroundColor: 'black',
     },
     screenText: {
         fontSize: 32,
@@ -125,6 +124,7 @@ export default function HomeScreen() {
     container: {
         flex: 1,
         marginTop: StatusBar.currentHeight || 0,
+        backgroundColor: 'white',
     },
     item: {
         backgroundColor: 'white',
