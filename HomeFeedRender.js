@@ -50,11 +50,12 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
                 <View style={styles.textHalf}>
                     <Text style={styles.title}>{title}</Text>
                     <View style={styles.locationLine}>
+                        
+                        <Text style={styles.location}>{location}  </Text>
                         <Image
                             style={styles.pin}
                             source={require('./assets/Icons/pin.png')}
                         />
-                        <Text style={styles.location}>{location}</Text>
                     </View>
                     <Text style={styles.distance}>{distance}</Text>
                 </View>
@@ -113,12 +114,12 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
         backgroundColor: 'white',
     },
     title: {
-        fontSize: 32,
+        fontSize: 25,
         fontFamily: 'InterBlack',
         textAlign: 'left',
     },
     location: {
-        fontSize: 24,
+        fontSize: 20,
         fontFamily: 'InterSemiBold',
     },
     distance: {
@@ -145,7 +146,7 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
         alignContent: 'center',
         justifyContent: 'space-between',
       },
-      HeaderView: {
+    HeaderView: {
         backgroundColor: 'white',
         height: '8%',
         borderRadius:7,
@@ -155,14 +156,14 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Pressable, I
         paddingLeft: 5,
         paddingTop: 0,
         marginBottom:10,
-      },
-      SearchIcon: {
-        
-      },
-      SearchIconImage: {
+    },
+    SearchIcon: {
+    
+    },
+    SearchIconImage: {
         width: 50,
         height: '100%',
-      },
+    },
     profilePic: {
         height: 50,
         width: 50,

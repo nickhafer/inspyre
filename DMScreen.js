@@ -1,14 +1,11 @@
 import { View, SafeAreaView, Image, Text, Keyboard, StyleSheet, Pressable, TextInput } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
 import React, { useState , useEffect } from 'react';
 import { useFonts } from 'expo-font';
-import { useKeyboard } from "@react-native-community/hooks"
 
 
 export default function DMScreen ({ navigation, route}) {
     const { message } = route.params;
     const [text, setText] = useState('');
-    const keyboard = useKeyboard()
 
     const [loaded] = useFonts({
         InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
@@ -39,8 +36,6 @@ export default function DMScreen ({ navigation, route}) {
         return null;
     }
 
-    
-
     return (
         <View style={styles.wholeScreen}>
             
@@ -59,27 +54,29 @@ export default function DMScreen ({ navigation, route}) {
                     </View>
                 </View>
                 <View style={styles.chatSection}>
-                <View style={styles.messageDescriptionView}>
-                    <Text style={styles.messageDescription}>{message.message}</Text>
-                </View>
-                <View style={styles.inputMessageView}>
-                    <Text style={styles.messageDescription}>
-                        {text.split('').map((word) => word).join('')}
-                    </Text>
-                </View>
+                    <View style={styles.messageDescriptionView}>
+                        <Text style={styles.messageDescription}>{message.message}</Text>
+                    </View>
+                    <View style={styles.inputMessageView}>
+                        <Text style={styles.messageDescription}>
+                            {text.split('').map((word) => word).join('')}
+                        </Text>
+                    </View>
                 </View>
                 <View style={styles.chatBottom}>
-                <View style={styles.textInputView}>
-                    <TextInput
-                        style={styles.textInput}
-                        placeholder='iMessage'
-                        onSubmitEditing={Keyboard.dismiss}
+                    <View style={styles.textInputView}>
+                        <TextInput
+                            style={styles.textInput}
+                            placeholder='iMessage'
+                            // onSubmitEditing={Keyboard.dismiss}
+                            // onSubmitEditing={newText => setText(newText)}
+                            onChangeText={newText => setText(newText)}
+                        />
+                        <Text style={styles.status}>{keyboardStatus}</Text>
+                    </View>
+                    <Image 
+                        style={styles.send} source={require('./assets/Icons/send-gray.png')} 
                     />
-                    <Text style={styles.status}>{keyboardStatus}</Text>
-                </View>
-                <Image 
-                    style={styles.send} source={require('./assets/Icons/send-gray.png')} 
-                />
                 </View>
             </SafeAreaView>
         </View>

@@ -1,8 +1,5 @@
 import { Image, Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, TouchableHighlight, Pressable, Button, navigation } from 'react-native';
-
-import DMScreen from './DMScreen';
 import { useFonts } from 'expo-font';
-import HOME_SCREEN_DATA from './HomeScreen';
 
 
 export default function PeopleScreen ({ navigation }) {
@@ -14,60 +11,7 @@ export default function PeopleScreen ({ navigation }) {
         InterSemiBold: require('./assets/Fonts/Inter-SemiBold.ttf'),
         InterRegular: require('./assets/Fonts/Inter-Regular.ttf'),
         InterLight: require('./assets/Fonts/Inter-Light.ttf'),
-      });
-
-
-    const HOME_SCREEN_DATA = [
-        {
-            id: '1',
-            title: 'Broken Chair',
-            username: 'Cody',
-            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
-            profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
-            location: 'Palo Alto, CA',
-            distance: '1.2 miles',
-            // rating: '5 stars',
-            // num_likes: 32,
-            // liked: false
-        },
-        {
-            id: '2',
-            title: 'Used Towel',
-            username: 'Jen',
-            image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
-            profilePic: 'https://www.birmingham.ac.uk/Images/College-EPS-only/college/undergraduate/international/yangyi-shi-ee-student-2-compressed-Cropped-293x228.jpg',
-            location: 'Menlo Park, CA',
-            distance: '1.6 miles',
-            // rating: '5 stars',
-            // num_likes: 32,
-            // liked: false
-        },
-        {
-            id: '3',
-            title: 'Old Water Bottle',
-            username: 'Martina',
-            image: 'https://www.outfit4events.com/runtime/cache/images/redesignProductFull/mh-mi0801-001.jpg',
-            profilePic: 'https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg',
-            location: 'Palo Alto, CA',
-            distance: '1.2 miles',
-            // rating: '5 stars',
-            // num_likes: 32,
-            // liked: false
-        },
-        {
-            id: '4',
-            title: 'Old paintbrushes',
-            username: 'Amy',
-            image: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/old-paintbrushes-03-richard-nixon.jpg',
-            profilePic: 'https://images.squarespace-cdn.com/content/v1/58febac49f7456d3c6db76d2/1540838397271-DA3L16U7L6MLRG3XFGTV/KatherinexTA-16.jpg?format=1000w',
-            location: 'Stanford, CA',
-            distance: '0.7 miles',
-            // rating: '5 stars',
-            // num_likes: 32,
-            // liked: false
-        },
-    ];
-    
+      });    
 
     const PEOPLE_SCREEN_DATA = [
         {
@@ -195,7 +139,7 @@ const styles = (item) => StyleSheet.create({
         backgroundColor: 'white',
     },
     messageTitle: {
-        fontSize: 30,
+        fontSize: 25,
         fontFamily: 'InterBold',
         marginBottom: 4,
     },
@@ -218,7 +162,7 @@ const styles = (item) => StyleSheet.create({
     },
     exploreText: {
         fontSize: 16,
-        textTransform: 'uppercase',
+        // textTransform: 'uppercase',
         letterSpacing: 0.2,
         fontFamily: 'InterRegular',
     },
