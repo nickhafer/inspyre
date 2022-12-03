@@ -62,13 +62,14 @@ export default function HomeScreen() {
     
     const renderItem = ({ item }) => (
         <RenderFeedItem
-            title={item.title} 
-            username={item.username}
-            image={item.image}
-            profilePic={item.profilePic}
-            rating={item.rating}
-            location={item.location}
-            distance={item.distance}
+            // title={item.title} 
+            // username={item.username}
+            // image={item.image}
+            // profilePic={item.profilePic}
+            // rating={item.rating}
+            // location={item.location}
+            // distance={item.distance}
+            item={item}
         />
     );
   

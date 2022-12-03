@@ -15,6 +15,7 @@ import CommunitiesStack from './ComumunitiesStack'
 import PostScreen from './PostScreen';
 import ProfileScreen from './ProfileScreen';
 import MessageStack from './MessageStack';
+import HomeStack from './HomeStack';
 
 
 
@@ -58,7 +59,7 @@ export default function App() {
             // return <Image source={{ uri: iconName }}/>;
           }
         })}>
-        <Tab.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Home" component={HomeStack} options={{headerShown: false}}/>
         <Tab.Screen name="Community" component={CommunitiesStack} options={{headerShown: false}}/>
         <Tab.Screen name="Post" component={PostScreen} options={{headerShown: false}}/> 
         <Tab.Screen name="Chat" component={MessageStack} options={{headerShown: false}}/>
