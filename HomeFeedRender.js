@@ -1,35 +1,36 @@
 import { Text, View, StyleSheet, StatusBar, Pressable, Image} from 'react-native';
- import { useNavigation } from '@react-navigation/native';
- import { useFonts } from 'expo-font';
+import { useNavigation } from '@react-navigation/native';
+import { useFonts } from 'expo-font';
 
 
- export default function RenderFeedItem ({ title, username, image, profilePic, location, distance }) {
+export default function RenderFeedItem ({ item }) {
+
     const navigation = useNavigation();
 
     const [loaded] = useFonts({
-        InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
-        InterBold: require('./assets/Fonts/Inter-Bold.ttf'),
-        InterMedium: require('./assets/Fonts/Inter-Medium.ttf'),
-        InterSemiBold: require('./assets/Fonts/Inter-SemiBold.ttf'),
-        InterRegular: require('./assets/Fonts/Inter-Regular.ttf'),
-        InterLight: require('./assets/Fonts/Inter-Light.ttf'),
-      });
-    
-      if (!loaded) {
-        return null;
-      }
+            InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
+            InterBold: require('./assets/Fonts/Inter-Bold.ttf'),
+            InterMedium: require('./assets/Fonts/Inter-Medium.ttf'),
+            InterSemiBold: require('./assets/Fonts/Inter-SemiBold.ttf'),
+            InterRegular: require('./assets/Fonts/Inter-Regular.ttf'),
+            InterLight: require('./assets/Fonts/Inter-Light.ttf'),
+        });
 
-     return(
+    if (!loaded) {
+    return null;
+    }
+
+    return (
         <View style={styles.item}>
             <View style={styles.postHeader}>
                 <Image 
                     source={{
-                        uri: profilePic,
+                        uri: item.profilePic,
                     }}
                     style={styles.profilePic}
                 />
                 <View style={styles.nameRating}>
-                <Text style={styles.username}> {username} </Text>
+                <Text style={styles.username}> {item.username} </Text>
                 <Image 
                     source={require('./assets/Images/rating-green.png')}
                     style={styles.rating}
@@ -38,22 +39,22 @@ import { Text, View, StyleSheet, StatusBar, Pressable, Image} from 'react-native
             </View>
             <Image
                 source={{
-                    uri: image,
+                    uri: item.image,
                 }}
                 style={styles.objectImage}
             />
             <View style={styles.bottomContainer}>
                 <View style={styles.textHalf}>
-                    <Text style={styles.title}>{title}</Text>
+                    <Text style={styles.title}>{item.title}</Text>
                     <View style={styles.locationLine}>
                         
-                        <Text style={styles.location}>{location}  </Text>
+                        <Text style={styles.location}>{item.location}  </Text>
                         <Image
                             style={styles.pin}
                             source={require('./assets/Icons/pin.png')}
                         />
                     </View>
-                    <Text style={styles.distance}>{distance}</Text>
+                    <Text style={styles.distance}>{item.distance}</Text>
                 </View>
 
 
@@ -69,8 +70,10 @@ import { Text, View, StyleSheet, StatusBar, Pressable, Image} from 'react-native
                             />
                         </View>
                     </Pressable>
+
+                    {/* Insert stack navigator for messaging */}
                     <Pressable 
-                        onPress={() => navigation.navigate('Chat')}
+                        onPress={() => navigation.navigate('HomeDMScreen', { item: item })}
                         style={({ pressed }) => [
                             {
                                 backgroundColor: pressed
@@ -87,17 +90,17 @@ import { Text, View, StyleSheet, StatusBar, Pressable, Image} from 'react-native
                         </View>
                     </Pressable>
                 </View>
-                </View>
+            </View>
         </View>
-     );
- };
+    );
+};
 
    const styles = StyleSheet.create({
     screenContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'black',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'black',
     },
     screenText: {
         fontSize: 32,
