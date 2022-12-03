@@ -63,7 +63,7 @@ export default function CommunitiesScreen ({ navigation }) {
     const renderDM = ({ item }) => (
         
         <Pressable onPress={() => navigation.navigate('IndividualCommunityScreen', { message: item })}>
-            <View style={styles(item).messageContainer}>
+            <View style={styles(item).communityContainer}>
                 <View style={styles(item).picHalf}>
                     <Image 
                         style={styles(item).profilePic} 
@@ -92,16 +92,28 @@ export default function CommunitiesScreen ({ navigation }) {
                     <Image style={header_styles.headerText}
                     source={require("./FigmaIcons/messages.png")} />
                 </View>
+                <View style = {header_styles.communityTitle}>
+                    <Text style = {header_styles.communityTitleText}>
+                        Explore Communities
+                    </Text>
+                </View>
                 
-                <View style={styles.listContainer}>
-                    <FlatList
+                <View style={styles.communityContainer}>
+                    <FlatList 
+                        horizontal
                         data={MY_COMMUNITIES}
                         renderItem={renderDM}
                         keyExtractor={(item) => item.id}
                     />
                 </View>
-                <View style = {styles.listContainer}>
+                <View style = {header_styles.communityTitle}>
+                    <Text style = {header_styles.communityTitleText}>
+                        My Communities
+                    </Text>
+                </View>
+                <View style = {styles.communityContainer}>
                     <FlatList
+                        horizontal
                         data = {EXPLORE_COMMUNITIES}
                         renderItem={renderDM}
                         keyExtractor={(item) => item.id}
@@ -128,6 +140,17 @@ const header_styles = StyleSheet.create({
         height: "100%",
         width: 250,
     },
+    communityTitle: {
+        //backgroundColor: 'blue',
+        height: '5%',
+        justifyContent: 'center',
+
+    },
+    communityTitleText: {
+        fontFamily: 'InterBold',
+        fontSize: 30,
+
+    },
 });
 
 const styles = (item) => StyleSheet.create({
@@ -140,23 +163,23 @@ const styles = (item) => StyleSheet.create({
     wholeScreen: {
         backgroundColor: 'white',
     },
+    communityContainer: {
+        //width: '30%',
+        height: '40%',
+        //flex: 5,
+        //borderTopWidth: 1,
+        //borderBottomWidth: 1,
+        //flexDirection: 'row',
+        //justifyContent: 'space-between',
+        //borderColor: item.read == 'true' ? 'grey' : 'blue',
+        backgroundColor: 'blue',
+    },
     listContainer: {
         width: 360,
         height: '80%',
     },
-    messageContainer: {
-        width: '100%',
-        height: 100,
-        flex: 1,
-        borderTopWidth: 1,
-        borderBottomWidth: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        borderColor: item.read == 'true' ? 'grey' : 'blue',
-        backgroundColor: 'white',
-    },
     messageTitle: {
-        fontSize: 25,
+        fontSize: 15,
         fontFamily: 'InterBold',
         marginBottom: 4,
     },
