@@ -15,7 +15,7 @@ export default function PeopleScreen ({ navigation }) {
 
     const PEOPLE_SCREEN_DATA = [
         {
-            message: 'Yeah I still have that water bottle',
+            message: '',
             name: 'Martina',
             time: 'Just now',
             imageUrl: "https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg",
