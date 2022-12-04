@@ -3,7 +3,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 
 
-export default function SearchChairs ({ item }) {
+export default function SearchChairs () {
     return(
         <View>
             <Text> This should be a new feed with just chairs</Text>
