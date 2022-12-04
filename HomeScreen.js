@@ -1,6 +1,8 @@
 import { View, StyleSheet, SafeAreaView, FlatList, StatusBar, Image} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import RenderFeedItem from './HomeFeedRender';
+import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
+import HomeSearchScreen from './HomeSearchScreen';
 
 
 export default function HomeScreen() {
@@ -71,10 +73,12 @@ export default function HomeScreen() {
                     style = {styles.inspyreIcon}
                     source = {require('./FigmaIcons/Logo.png')}
                 />
+                <Pressable onPress={() => navigation.navigate('HomeSearchScreen')}>
                 <Image
                     style = {styles.SearchIconImage}
                     source={require('./FigmaIcons/SearchButton.png')}>
                 </Image>
+                </Pressable>
             </View>
             <FlatList 
                 data={HOME_SCREEN_DATA}
