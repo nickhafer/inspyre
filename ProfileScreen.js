@@ -49,7 +49,7 @@ export default function ProfileScreen() {
             {/* I'm not sure why this image isn't rendering PLZ FIX */}
             <Image
                 source={{ uri: item.image, }}
-                // style={styles.objectImage}
+                style={styles.objectImage}
             />
             <View style={styles.bottomContainer}>
                 <View style={styles.textHalf}>
@@ -192,5 +192,9 @@ const styles = StyleSheet.create({
     },
     yourArt: {
 
+    },
+    objectImage: {
+        width: 200,
+        height: 200,
     },
 });
