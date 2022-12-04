@@ -99,7 +99,7 @@ export default function CommunitiesScreen ({ navigation }) {
                             placeholder='Search'
                             onSubmitEditing={Keyboard.dismiss}
                             // onSubmitEditing={newText => setText(newText)}
-                            onChangeText={newText => setText(newText)}
+                            // onChangeText={newText => setText(newText)}
                         />
                         {/* <Text style={styles.status}>{keyboardStatus}</Text> */}
                     </View>
