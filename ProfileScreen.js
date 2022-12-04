@@ -34,6 +34,8 @@ export default function ProfileScreen() {
     const renderItem = ({ item }) => (
         <View style={styles.item}>
             {console.log(item.image)}
+            <Text>IMAGE NOT RENDERING PLZ FIX</Text>
+            {/* I'm not sure why this image isn't rendering PLZ FIX */}
             <Image
                 source={{ uri: item.image }}
                 // style={styles.objectImage}
@@ -92,6 +94,7 @@ export default function ProfileScreen() {
             </Pressable>
 
             {/* Conditional Flatlists will be here */}
+
             <FlatList 
                 data={PROFILE_SCREEN_DATA}
                 renderItem={renderItem}

@@ -96,12 +96,12 @@ export default function CommunitiesScreen ({ navigation }) {
                     <View style={header_styles.textInputView}>
                         <TextInput
                             style={header_styles.textInput}
-                            placeholder='Search'
+                            // FYI: There are hella spaces after "Search" to make the text hitbox larger 
+                            placeholder='Search                                                                          '
                             onSubmitEditing={Keyboard.dismiss}
                             // onSubmitEditing={newText => setText(newText)}
                             // onChangeText={newText => setText(newText)}
                         />
-                        {/* <Text style={styles.status}>{keyboardStatus}</Text> */}
                     </View>
                     <Image 
                         style={header_styles.search} source={require('./assets/Icons/send-gray.png')} 

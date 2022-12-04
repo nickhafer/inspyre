@@ -74,7 +74,6 @@ export default function PeopleScreen ({ navigation }) {
     ]
 
     const renderDM = ({ item }) => (
-        
         <Pressable onPress={() => navigation.navigate('DMScreen', { message: item })}>
             <View style={styles(item).messageContainer}>
                 <View style={styles(item).picHalf}>
