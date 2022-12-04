@@ -1,6 +1,7 @@
 import { View, SafeAreaView, Image, Text, Keyboard, StyleSheet, Pressable, TextInput } from 'react-native';
 import React, { useState , useEffect } from 'react';
 import { useFonts } from 'expo-font';
+import { back } from 'react-native/Libraries/Animated/Easing';
 
 
 export default function IndividualCommunityScreen ({ navigation, route}) {
@@ -44,40 +45,22 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                     <Pressable style={styles.back} onPress={() => navigation.goBack()}>
                         <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
                     </Pressable>
-                    <View style={styles.messageHeader}>
-                        <Text style={styles.conversationWith}>Chat with</Text>
-                        <Image style={styles.profilePic} 
+                    <View>
+                    <Image style={styles.profilePic} 
                                 source={{
                                     uri: message.imageUrl,
                                 }} />
-                        <Text style={styles.name}>{message.name}</Text>
+                        <View style={styles.messageHeader}>
+                            <Text style={styles.conversationWith}>Welcome To</Text>
+                            <Text style={styles.name}>{message.name}</Text>
+                        </View>
                     </View>
                 </View>
                 <View style={styles.chatSection}>
-                    <View style={styles.messageDescriptionView}>
-                        <Text style={styles.messageDescription}>{message.message}</Text>
-                    </View>
-                    <View style={styles.inputMessageView}>
-                        <Text style={styles.messageDescription}>
-                            {text.split('').map((word) => word).join('')}
-                        </Text>
-                    </View>
+                    
+                    
                 </View>
-                <View style={styles.chatBottom}>
-                    <View style={styles.textInputView}>
-                        <TextInput
-                            style={styles.textInput}
-                            placeholder='iMessage'
-                            onSubmitEditing={Keyboard.dismiss}
-                            // onSubmitEditing={newText => setText(newText)}
-                            onChangeText={newText => setText(newText)}
-                        />
-                        {/* <Text style={styles.status}>{keyboardStatus}</Text> */}
-                    </View>
-                    <Image 
-                        style={styles.send} source={require('./assets/Icons/send-gray.png')} 
-                    />
-                </View>
+                
             </SafeAreaView>
         </View>
     );
@@ -119,6 +102,7 @@ const styles = StyleSheet.create({
     topBar: {
         flexDirection: 'row',
         alignItems: 'center',
+        backgroundColor: 'blue',
     },
     back: {
         width: 48,
@@ -133,8 +117,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     profilePic: {
-        height: 64,
-        width: 64,
+        height: 300,
+        width: 300,
         borderRadius: 32,
     },
     conversationWith: {
