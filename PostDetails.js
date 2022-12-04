@@ -38,7 +38,7 @@ export default function PostDetails ({ navigation }) {
 
                         <Pressable
                         style={[styles.button, styles.buttonClose]}
-                        onPress={() => setModalVisible(!modalVisible)}
+                        onPress={() => {setModalVisible(!modalVisible), navigation.navigate('Profile')}}
                         >
                             <Text style={styles.textStyle}>Yeah take me back to my profile</Text>
                         </Pressable>

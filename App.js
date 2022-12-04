@@ -60,11 +60,11 @@ export default function App() {
             // return <Image source={{ uri: iconName }}/>;
           }
         })}>
-        <Tab.Screen name="Home" component={HomeStack} options={{headerShown: false}}/>
-        <Tab.Screen name="Community" component={CommunitiesStack} options={{headerShown: false}}/>
-        <Tab.Screen name="Post" component={PostStack} options={{headerShown: false}}/> 
-        <Tab.Screen name="Chat" component={MessageStack} options={{headerShown: false}}/>
-        <Tab.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}}/>
+        <Tab.Screen name="Home" component={HomeStack} options={{headerShown: false, unmountOnBlur: true}}/>
+        <Tab.Screen name="Community" component={CommunitiesStack} options={{headerShown: false, unmountOnBlur: true}}/>
+        <Tab.Screen name="Post" component={PostStack} options={{headerShown: false, unmountOnBlur: true}}/> 
+        <Tab.Screen name="Chat" component={MessageStack} options={{headerShown: false, unmountOnBlur: true}}/>
+        <Tab.Screen name="Profile" component={ProfileScreen} options={{headerShown: false, unmountOnBlur: true}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
