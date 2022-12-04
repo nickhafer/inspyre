@@ -3,9 +3,20 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
+import { useFonts } from 'expo-font';
 
 
 export default function ProfileScreen() {
+
+    const [loaded] = useFonts({
+        InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
+        InterExtraBold: require('./assets/Fonts/Inter-ExtraBold.ttf'),
+        InterBold: require('./assets/Fonts/Inter-Bold.ttf'),
+        InterMedium: require('./assets/Fonts/Inter-Medium.ttf'),
+        InterSemiBold: require('./assets/Fonts/Inter-SemiBold.ttf'),
+        InterRegular: require('./assets/Fonts/Inter-Regular.ttf'),
+        InterLight: require('./assets/Fonts/Inter-Light.ttf'),
+      });    
 
     const PROFILE_SCREEN_DATA = [
         {
@@ -37,7 +48,7 @@ export default function ProfileScreen() {
             <Text>IMAGE NOT RENDERING PLZ FIX</Text>
             {/* I'm not sure why this image isn't rendering PLZ FIX */}
             <Image
-                source={{ uri: item.image }}
+                source={{ uri: item.image, }}
                 // style={styles.objectImage}
             />
             <View style={styles.bottomContainer}>
@@ -58,26 +69,36 @@ export default function ProfileScreen() {
 
     return (
         <SafeAreaView style={styles.screenContainer}>
-            <Image 
-                style={styles.profilePic}
-                source={require('./assets/Images/luc-profile-pic.jpeg')}
-            />
-            <Text>Username</Text>
-            <Text>Location</Text>
-            <Text>Num Donated</Text>
-            <Text>Num Listings</Text>
-            <Image 
-                style={styles.rating}
-                source={require('./assets/Images/rating-green.png')} 
-            />
-            <Text>BioDescription</Text>
-            <Pressable>
+            <View style={styles.profileHeader}>
                 <Image 
-                    // Edit Profile Pic
-                    style={styles.editProfile}
-                    // source={require()}
+                    style={styles.profilePic}
+                    source={require('./assets/Images/luc-profile-pic.jpeg')}
                 />
-            </Pressable>
+                <View style={styles.profileInfo}> 
+                    <Text style={styles.username}>Luc</Text>
+                    <Text style={styles.userLocation}>Stanford, CA</Text>
+                    <View style={styles.exchangeInfo}>
+                        <Text style={styles.number}>22 </Text>
+                        <Text style={styles.word}>Donated    </Text>
+                        <Text style={styles.number}>4 </Text>
+                        <Text style={styles.word}>Listings</Text>
+                    </View>
+                    <Image 
+                        style={styles.rating}
+                        source={require('./assets/Images/rating-green.png')} 
+                    />
+                </View>
+            </View>
+            <View style={styles.bioSection}> 
+                <Text style={styles.bio}>Stanford undegrad clearing out my dorm room hoping to help out some artists</Text>
+                <Pressable>
+                    <Image 
+                        // Edit Profile Pic
+                        style={styles.editProfile}
+                        // source={require()}
+                    />
+                </Pressable>
+            </View>
             <Pressable>
                 <Image 
                     // Giving Away Pic
@@ -115,10 +136,53 @@ const styles = StyleSheet.create({
         fontSize: 32,
     },
     profilePic: {
-
+        width: 150,
+        height: 150,
+        borderRadius: 75,
     }, 
+    profileHeader: {
+        flexDirection: 'row', 
+        justifyContent: 'space-between',   
+    },
+    profileInfo: {
+        width: '50%',
+        height: 150,
+        marginHorizontal: '2%',
+        justifyContent: 'space-between',
+    },
     rating: {
-
+        width: 200,
+        resizeMode: 'contain',
+    },
+    username: {
+        fontFamily: 'InterBlack',
+        fontSize: 36,
+    },
+    userLocation: { 
+        fontFamily: 'InterSemiBold',
+        fontSize: 18,
+    },
+    exchangeInfo: {
+        flexDirection: 'row',
+        alignItems: 'flex-end',
+        justifyContent: 'flex-start',
+    },
+    number: {
+        fontFamily: 'InterExtraBold',
+        fontSize: 24,
+    },
+    word: {
+        fontFamily: 'InterLight',
+        fontSize: 16,
+    },
+    bioSection: {
+        width: '90%',
+        height: '10%',
+        margin: 8,
+    },
+    bio: {
+        fontFamily: 'InterRegular',
+        fontSize: 16,
     },
     editProfile: {
 
