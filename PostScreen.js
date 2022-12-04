@@ -5,18 +5,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 export default function PostScreen() {
+    
     return (
         <SafeAreaView style={styles.screenContainer}>
-        <Text style={styles.screenText}>Post!</Text>
+            <Text style={styles.screenText}>Post!</Text>
         </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
     screenContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     screenText: {
         fontSize: 32,
