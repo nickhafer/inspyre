@@ -1,6 +1,8 @@
 import { TextInput, Keyboard, Image, Text, View, StyleSheet, SafeAreaView, FlatList, Pressable } from 'react-native';
 import { useFonts } from 'expo-font';
 import CommunityScreen from './IndividualCommunityScreen';
+import StanfordSearch from './StanfordSearch';
+//import PeopleScreen from './PeopleScreen';
 
 export default function CommunitiesScreen ({ navigation }) {
 
@@ -103,9 +105,11 @@ export default function CommunitiesScreen ({ navigation }) {
                         />
                         {/* <Text style={styles.status}>{keyboardStatus}</Text> */}
                     </View>
+                    <Pressable onPress={() => navigation.navigate('StanfordSearch')}>
                     <Image 
                         style={header_styles.search} source={require('./assets/Icons/send-gray.png')} 
                     />
+                    </Pressable>
                 </View>
                 <View style = {header_styles.communityTitle}>
                     <Text style = {header_styles.communityTitleText}>
