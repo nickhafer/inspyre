@@ -47,7 +47,6 @@ export default function HomeProfileScreen ({ navigation, route}) {
             <Pressable style={styles.back} onPress={() => navigation.goBack()}>
                 {/* move this down so it's pressable */}
                 <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
-                <Text>Home Feed</Text>
             </Pressable>
             <Image style={styles.profilePic} 
                 source={{
@@ -55,8 +54,8 @@ export default function HomeProfileScreen ({ navigation, route}) {
                 }} />
             <Text>{user.username}</Text>
             <Text>{user.location}</Text>
-            <Text>{user.donated}</Text>
-            <Text>{user.listings}</Text>
+            <Text>{user.donated} items donated</Text>
+            <Text>{user.listings} listings</Text>
             <Image 
                 style={styles.rating}
                 source={require('./assets/Images/rating-green.png')} 

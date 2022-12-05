@@ -38,19 +38,25 @@ export default function DMScreen ({ navigation, route}) {
 
     return (
         <View style={styles.wholeScreen}>
-            
             <SafeAreaView style={styles.body}>
                 <View style={styles.topBar}>
                     <Pressable style={styles.back} onPress={() => navigation.goBack()}>
                         <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
                     </Pressable>
                     <View style={styles.messageHeader}>
-                        <Text style={styles.conversationWith}>Chat with</Text>
-                        <Image style={styles.profilePic} 
+                        <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: message })}>
+                            <Text style={styles.conversationWith}>Chat with</Text>
+                        </Pressable>
+                        <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: message })}>
+                            <Image style={styles.profilePic} 
                                 source={{
-                                    uri: message.imageUrl,
-                                }} />
-                        <Text style={styles.name}>{message.name}</Text>
+                                    uri: message.profilePic,
+                                }} 
+                            />
+                        </Pressable>
+                        <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: message })}>
+                            <Text style={styles.name}>{message.username}</Text>
+                        </Pressable>
                     </View>
                 </View>
                 <View style={styles.chatSection}>
