@@ -165,12 +165,10 @@ export default function ProfileScreen() {
             {/* Bio */}
             <View style={styles.bioSection}> 
                 <Text style={styles.bio}>Stanford undegrad clearing out my dorm room hoping to help out some artists</Text>
-                <Pressable>
-                    <Text>Edit Profile</Text>
+                <Pressable style={styles.editProfileBlock}>
                     <Image 
-                        // Edit Profile Pic
                         style={styles.editProfile}
-                        // source={require()}
+                        source={require('./assets/Icons/edit-profile-gray.png')}
                     />
                 </Pressable>
             </View>
@@ -217,9 +215,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    editProfile: {
+        width: 150,
+        resizeMode: 'contain',
+    },
     tabs: {
         flexDirection: 'row',
         alignItems: 'center',
+        marginTop: 16,
     },
     item: {
         width: '100%',
@@ -282,8 +285,9 @@ const styles = StyleSheet.create({
         fontFamily: 'InterRegular',
         fontSize: 16,
     },
-    editProfile: {
-
+    editProfileBlock: {
+        alignSelf: 'center',
+        margin: 8,
     },
     givingAway: {
         width: 108,
