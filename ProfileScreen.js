@@ -182,9 +182,8 @@ export default function ProfileScreen() {
                 >
                     <Text>Giving Away</Text>
                     <Image 
-                        // Giving Away Pic
                         style={styles.givingAway}
-                        // source={require()}
+                        source={require('./assets/Icons/giving-away-gray.png')}
                     />
                 </Pressable>
                 <Pressable
