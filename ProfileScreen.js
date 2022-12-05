@@ -210,7 +210,9 @@ export default function ProfileScreen() {
             </View>
 
             {/* Conditional Flatlist */}
-            {flatlist}
+            <View style={styles.bottomContainer}>
+                {flatlist}
+            </View>
         </SafeAreaView>
     );
 }
@@ -220,6 +222,13 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    item: {
+        width: '100%',
+    },
+    bottomContainer: {
+        width: '100%',
+        height: '60%',
     },
     screenText: {
         fontSize: 32,
@@ -287,8 +296,8 @@ const styles = StyleSheet.create({
 
     },
     objectImage: {
-        width: 200,
-        height: 200,
+        width: '100%',
+        aspectRatio: 1,
     },
     title: {
         fontSize: 25,
@@ -307,5 +316,8 @@ const styles = StyleSheet.create({
         height: 20,
         width: 20,
         marginRight: 4,
+    },
+    textHalf: {
+        margin: '4%',
     },
 });
