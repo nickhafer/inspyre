@@ -47,12 +47,12 @@ export default function RenderFeedItem ({ item }) {
                 <View style={styles.textHalf}>
                     <Text style={styles.title}>{item.title}</Text>
                     <View style={styles.locationLine}>
-                        
-                        <Text style={styles.location}>{item.location}  </Text>
-                        <Image
+                    <Image
                             style={styles.pin}
                             source={require('./assets/Icons/pin.png')}
                         />
+                        <Text style={styles.location}>{item.location}  </Text>
+                        
                     </View>
                     <Text style={styles.distance}>{item.distance}</Text>
                 </View>

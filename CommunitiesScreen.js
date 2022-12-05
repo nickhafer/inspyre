@@ -87,13 +87,8 @@ export default function CommunitiesScreen ({ navigation }) {
                     />
                 </View>
                 <View style={styles(item).textHalf}>
-                    <View style={styles(item).top}>
                         <Text style={styles(item).messageTitle}>{item.name}</Text>
-                        <Text style={styles(item).exploreText}>{item.time}</Text>
-                    </View>
-                    <View style={styles(item).bottom}>
                         <Text style={styles(item).messageDescription}>{item.location}</Text>
-                    </View>
                 </View>
             </View>
         </Pressable>
@@ -157,7 +152,7 @@ export default function CommunitiesScreen ({ navigation }) {
 
 const header_styles = StyleSheet.create({
     chatHeader: {
-        height: '10%',
+        height: '8%',
         justifyContent: 'center',
         alignContent: 'center',
         // backgroundColor: '#f9c2ff',
@@ -166,10 +161,9 @@ const header_styles = StyleSheet.create({
         // fontSize: 40,
         // fontFamily: 'InterBold',
         alignSelf: 'flex-start',
-        marginBottom: 7,
         // backgroundColor: '#f9c2ff',
         height: "100%",
-        width: 250,
+        width: 200,
     },
     communityTitle: {
         //backgroundColor: 'blue',
@@ -179,9 +173,9 @@ const header_styles = StyleSheet.create({
 
     },
     communityTitleText: {
-        fontFamily: 'InterBold',
+        fontFamily: 'InterBlack',
         fontSize: 30,
-
+        marginLeft: '2%',
     },
     input: {
         padding: 10,
@@ -199,7 +193,7 @@ const header_styles = StyleSheet.create({
     body: {
         backgroundColor: 'white',
         height: '100%',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
     },
     chatSection: {
         height: '70%',
@@ -223,7 +217,7 @@ const header_styles = StyleSheet.create({
     profilePic: {
         height: 64,
         width: 64,
-        borderRadius: 32,
+        resizeMode: 'cover',
     },
     conversationWith: {
         fontFamily: 'InterRegular',
@@ -258,7 +252,7 @@ const header_styles = StyleSheet.create({
     },
     textInput: {
         fontSize: 14,
-        marginTop: 16,
+        marginTop: 8,
         marginHorizontal: 8,
     },
     textInputView: {
@@ -267,24 +261,9 @@ const header_styles = StyleSheet.create({
         borderColor: 'black',
         borderWidth: 2,
         alignItems: 'flex-start',
-        margin: 16,
-        paddingBottom: 10,
-        width: '75%',
-    },
-    // inputMessage: {
-    //     fontSize: 14,
-    //     marginTop: 16,
-    // },
-    inputMessageView: {
-        backgroundColor: 'lightgray',
-        borderWidth: 2,
-        borderRadius: 16,
-        alignSelf: 'flex-end',
-        borderRadius: 8,
-        alignItems: 'center',
         margin: 8,
         paddingBottom: 10,
-        width: '50%',
+        width: '80%',
     },
     wholeScreen: {
         backgroundColor: 'white',
@@ -292,11 +271,13 @@ const header_styles = StyleSheet.create({
     chatBottom: {
         flexDirection: 'row',
         alignSelf: 'flex-start',
+        justifyContent: 'space-around',
         alignItems: 'center',
+        width: '100%',
     },
-    send: {
-        width: 40,
-        height: 40,
+    search: {
+        width: 50,
+        height: 50,
 
     },
 });
@@ -312,16 +293,9 @@ const styles = (item) => StyleSheet.create({
         backgroundColor: 'white',
     },
     communityContainer: {
-        //width: '30%',
-        marginTop:5,
-        height: '30%',
-        //flex: 5,
-        //borderTopWidth: 1,
-        //borderBottomWidth: 1,
-        //flexDirection: 'row',
-        //justifyContent: 'space-between',
-        //borderColor: item.read == 'true' ? 'grey' : 'blue',
-        backgroundColor: 'blue',
+        marginHorizontal: 5,
+        height: 250,
+        width: 150,
     },
     listContainer: {
         width: 360,
@@ -341,13 +315,11 @@ const styles = (item) => StyleSheet.create({
         height: '10%',
         justifyContent: 'center',
         alignContent: 'center',
-        backgroundColor: 'red',
     },
     headerText: {
         fontSize: 42,
         fontFamily: 'InterBold',
         alignSelf: 'center',
-        backgroundColor: 'red',
         //marginTop: 10,
     },
     exploreText: {
@@ -357,28 +329,27 @@ const styles = (item) => StyleSheet.create({
         fontFamily: 'InterRegular',
     },
     picHalf: {
-        width: '20%',
+        width: '100%',
+        height: 150,
         justifyContent: 'center',
         alignItems: 'center',
     },
     profilePic: {
-        borderRadius: 32,
-        width: 64,
-        height: 64,
+        height: 150,
+        width: 150,
     },
     textHalf: {
-        paddingRight: '4%',
-        width: '80%',
-        height: 64,
-        justifyContent: 'space-between',
-        alignSelf: 'center',
+        height: 100,
+        width: '100%',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
     },
-    top: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+    messageTitle: {
+        fontSize: 20,
+        fontFamily: 'InterBold',
     },
-    bottom: {
-        
+    messageDescription: {
+        fontSize: 16,
+        fontFamily: 'InterRegular',
     },
 });
