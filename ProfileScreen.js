@@ -181,12 +181,12 @@ export default function ProfileScreen() {
                     {tab === "givingAway" ?
                         <Image 
                             style={styles.givingAway}
-                            source={require('./assets/Icons/giving-away-green2.png')}
+                            source={require('./assets/Icons/giving-away-green.png')}
                         />
                     :
                         <Image 
                             style={styles.givingAway}
-                            source={require('./assets/Icons/giving-away-gray2.png')}
+                            source={require('./assets/Icons/giving-away-gray.png')}
                         />
                     }
                 </Pressable>
