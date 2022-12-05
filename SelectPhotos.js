@@ -8,6 +8,9 @@ export default function SelectPhotos ({ navigation }) {
                 <Text style={styles.screenText}>Pick a Photo</Text>
                 <Text style={styles.screenText}> Continue -&gt; </Text>
             </Pressable>
+            <Pressable onPress={() => navigation.navigate('PostDetails')}>
+                <Image />
+            </Pressable>
         </SafeAreaView>
     );
 }
