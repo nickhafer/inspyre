@@ -193,7 +193,6 @@ export default function ProfileScreen() {
                 <Pressable
                     onPress={()=>setTab("yourArt")}
                 >
-                    
                     {tab === "yourArt" ?
                         <Image 
                             style={styles.yourArt}
@@ -209,7 +208,6 @@ export default function ProfileScreen() {
                 <Pressable
                     onPress={()=>setTab("likedItems")}
                 >
-                    
                     {tab === "likedItems" ?
                         <Image 
                             style={styles.likedItems}
