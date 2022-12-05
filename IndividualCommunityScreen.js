@@ -60,8 +60,8 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                             <Text style={styles.location}>{message.location}</Text>
                          </View>
                          <View style={styles.rightText}>
-                            <Text style={styles.number}>{message.name}</Text>
-                            <Text style={styles.members}>{message.location}</Text>
+                            <Text style={styles.number}>{message.number}</Text>
+                            <Text style={styles.members}>Members</Text>
                          </View>
                     </View>
                 </View>
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     },
     name: {
         fontFamily: 'InterBlack',
-        fontSize: 24,
+        fontSize: 28,
     },
     location: {
         fontFamily: 'InterMedium',
@@ -141,20 +141,20 @@ const styles = StyleSheet.create({
     },
     number: {
         fontFamily: 'InterBlack',
-        fontSize: 24,
+        fontSize: 28,
     },
     members: {
         fontFamily: 'InterMedium',
-        fontSize: 24,
+        fontSize: 20,
     },
     leftText: {
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
-        width: '52%',
+        width: '64%',
         marginLeft: '4%',
     },
     rightText: {
-        width: '40%',
+        width: '28%',
         alignItems: 'flex-end',
         justifyContent: 'flex-start',
         marginRight: '4%',

@@ -21,21 +21,24 @@ export default function CommunitiesScreen ({ navigation }) {
             name: 'City of Palo Alto',
             imageUrl: "https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg",
             id: '17',
-            read: 'true'
+            read: 'true',
+            number: '155',
         },
         {
             location: 'Stanford, CA',
             name: 'West FloMo',
             imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8DUUfF_LxZQBVCj_aKb53zZD9czoEsy8A3g&usqp=CAU',
             id: '1',
-            read: 'true'
+            read: 'true',
+            number: '28',
         },
         {
             location: 'Stanford, CA',
             name: 'Stanford Club Sports',
             imageUrl: 'https://shotkit.com/wp-content/uploads/2021/06/cool-profile-pic-matheus-ferrero.jpeg',
             id: '2',
-            read: 'true'
+            read: 'true',
+            number: '97',
         },
     ]
     const EXPLORE_COMMUNITIES = [
