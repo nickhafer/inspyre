@@ -7,9 +7,8 @@ export default function IndividualItem ({ navigation, route}) {
     const { item } = route.params;
 
     return (
-        <View>
+        <SafeAreaView>
             <Pressable style={styles.back} onPress={() => navigation.goBack()}>
-                {/* move this down so it's pressable */}
                 <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
             </Pressable>
             <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
@@ -68,7 +67,7 @@ export default function IndividualItem ({ navigation, route}) {
                     </View>
                 </Pressable>
             </View>
-        </View>
+        </SafeAreaView>
     );
 }
 

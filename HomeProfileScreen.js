@@ -21,7 +21,7 @@ export default function HomeProfileScreen ({ navigation, route}) {
     }
 
     const renderItem = ({ item }) => (
-        <View style={styles.item}>
+        <SafeAreaView style={styles.item}>
             {/* <Pressable onPress={() => navigation.navigate('IndividualItem', { item: item })}> */}
             <Image
                 source={{ uri: item.image, }}
@@ -41,11 +41,11 @@ export default function HomeProfileScreen ({ navigation, route}) {
                     <Text style={styles.distance}>{item.distance}</Text>
                 </View>
             </View>
-        </View>
+        </SafeAreaView>
     );
 
     return (
-        <View>
+        <SafeAreaView>
             <Pressable style={styles.back} onPress={() => navigation.goBack()}>
                 {/* move this down so it's pressable */}
                 <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
@@ -100,7 +100,7 @@ export default function HomeProfileScreen ({ navigation, route}) {
                     />
                 }
             </View>
-        </View>
+        </SafeAreaView>
     );
 }
 
