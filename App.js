@@ -9,15 +9,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import HomeScreen from './HomeScreen';
-import CommunitiesScreen from './CommunitiesScreen';
 import CommunitiesStack from './ComumunitiesStack'
-import PostScreen from './PostScreen';
 import ProfileScreen from './ProfileScreen';
 import MessageStack from './MessageStack';
 import HomeStack from './HomeStack';
 import PostStack from './PostStack';
-
 
 
 const Tab = createBottomTabNavigator();
@@ -32,6 +28,10 @@ export default function App() {
 
             if (route.name === 'Home') {
               iconName = focused ? 'home' : 'home-outline';
+              // // return <Ionicons name={iconName} size={24} color="black" />;
+              // iconName = focused ? 'like-gray.png' : 'like-red.png'
+              // console.log(iconName)
+              // return <Image resizeMode='cover' source={{uri: iconName}} />;
             } 
             else if (route.name === 'Search') {
               iconName = focused ? 'search' : 'search-outline';

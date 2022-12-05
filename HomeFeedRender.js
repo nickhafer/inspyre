@@ -1,11 +1,14 @@
 import { Text, View, StyleSheet, StatusBar, Pressable, Image} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
+import React, { useState , useEffect } from 'react';
 
 
 export default function RenderFeedItem ({ item }) {
 
     const navigation = useNavigation();
+
+    const [tab, setTab] = useState('notLiked')
 
     const [loaded] = useFonts({
             InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
@@ -79,10 +82,22 @@ export default function RenderFeedItem ({ item }) {
                         //INSERT LIKE FUNCTIONALITY
                         >
                         <View style={styles.iconContainer}>
-                            <Image
-                                source={require('./assets/Icons/like-gray.png')}
-                                style={styles.like} 
-                            />
+                            {/* setTab("liked") */}
+                            <Pressable onPress={()=>{tab === "liked" ? setTab("notLiked") : setTab("liked")}}>
+                                {
+                                    tab === "liked" ?
+                                        <Image
+                                            source={require('./assets/Icons/like-red.png')}
+                                            style={styles.like} 
+                                        />
+                                    :
+                                        <Image
+                                            source={require('./assets/Icons/like-gray.png')}
+                                            style={styles.like} 
+                                        />
+                                }
+                            </Pressable>
+                            
                         </View>
                     </Pressable>
                     {/* DM Item Owner */}
