@@ -4,9 +4,12 @@ import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 import { useFonts } from 'expo-font';
+import { useState } from 'react';
 
 
 export default function ProfileScreen() {
+
+    const [tab, setTab] = useState('givingAway')
 
     const [loaded] = useFonts({
         InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
@@ -18,7 +21,7 @@ export default function ProfileScreen() {
         InterLight: require('./assets/Fonts/Inter-Light.ttf'),
       });    
 
-    const PROFILE_SCREEN_DATA = [
+    const GIVING_AWAY_DATA = [
         {
             id: '1',
             title: 'Broken Chair',
@@ -36,6 +39,54 @@ export default function ProfileScreen() {
         {
             id: '3',
             title: 'Water bottle',
+            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            location: 'Palo Alto, CA',
+            distance: '1.2 miles',
+        },
+    ]
+
+    const YOUR_ART_DATA = [
+        {
+            id: '2',
+            title: 'Used Towel',
+            image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+            location: 'Palo Alto, CA',
+            distance: '1.2 miles',
+        },
+        {
+            id: '1',
+            title: 'Broken Chair',
+            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            location: 'Palo Alto, CA',
+            distance: '1.2 miles',
+        },
+        {
+            id: '3',
+            title: 'Water bottle',
+            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            location: 'Palo Alto, CA',
+            distance: '1.2 miles',
+        },
+    ]
+
+    const LIKED_ITEMS_DATA = [
+        {
+            id: '3',
+            title: 'Water bottle',
+            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            location: 'Palo Alto, CA',
+            distance: '1.2 miles',
+        },
+        {
+            id: '2',
+            title: 'Used Towel',
+            image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+            location: 'Palo Alto, CA',
+            distance: '1.2 miles',
+        },
+        {
+            id: '1',
+            title: 'Broken Chair',
             image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
             location: 'Palo Alto, CA',
             distance: '1.2 miles',
@@ -64,8 +115,32 @@ export default function ProfileScreen() {
         </View>
     );
 
+    // Determine which flatlist to show:
+    // givingAway, yourArt, likedItems
+    let flatlist;
+    if (tab === "givingAway") {
+        flatlist = <FlatList 
+                data={GIVING_AWAY_DATA}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+                />
+    } else if (tab === "yourArt") {
+        flatlist = <FlatList 
+                data={YOUR_ART_DATA}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+                />
+    } else {
+        flatlist = <FlatList 
+                data={LIKED_ITEMS_DATA}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+                />
+    }
+
     return (
         <SafeAreaView style={styles.screenContainer}>
+            {/* Header */}
             <View style={styles.profileHeader}>
                 <Image 
                     style={styles.profilePic}
@@ -86,6 +161,8 @@ export default function ProfileScreen() {
                     />
                 </View>
             </View>
+
+            {/* Bio */}
             <View style={styles.bioSection}> 
                 <Text style={styles.bio}>Stanford undegrad clearing out my dorm room hoping to help out some artists</Text>
                 <Pressable>
@@ -97,8 +174,12 @@ export default function ProfileScreen() {
                     />
                 </Pressable>
             </View>
+
+            {/* Tabs */}
             <View>
-                <Pressable>
+                <Pressable
+                    onPress={()=>setTab("givingAway")}
+                >
                     <Text>Giving Away</Text>
                     <Image 
                         // Giving Away Pic
@@ -106,7 +187,9 @@ export default function ProfileScreen() {
                         // source={require()}
                     />
                 </Pressable>
-                <Pressable>
+                <Pressable
+                    onPress={()=>setTab("yourArt")}
+                >
                     <Text>Your Art</Text>
                     <Image 
                         // Your Art Pic
@@ -114,17 +197,20 @@ export default function ProfileScreen() {
                         // source={require()}
                     />
                 </Pressable>
+                <Pressable
+                    onPress={()=>setTab("likedItems")}
+                >
+                    <Text>Liked Items</Text>
+                    <Image 
+                        // Your Art Pic
+                        style={styles.likedItems}
+                        // source={require()}
+                    />
+                </Pressable>
             </View>
-            
 
-            {/* Conditional Flatlists will be here */}
-
-            <FlatList 
-                data={PROFILE_SCREEN_DATA}
-                renderItem={renderItem}
-                keyExtractor={item => item.id}
-            />
-
+            {/* Conditional Flatlist */}
+            {flatlist}
         </SafeAreaView>
     );
 }
@@ -195,6 +281,9 @@ const styles = StyleSheet.create({
 
     },
     yourArt: {
+
+    },
+    likedItems: {
 
     },
     objectImage: {
