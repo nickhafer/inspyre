@@ -43,15 +43,21 @@ export default function HomeDMScreen ({ navigation, route}) {
                 <View style={styles.topBar}>
                     <Pressable style={styles.back} onPress={() => navigation.goBack()}>
                         <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
-                        <Text>Home Feed</Text>
+                        {/* <Text>Home Feed</Text> */}
                     </Pressable>
                     <View style={styles.messageHeader}>
-                        <Text style={styles.conversationWith}>Chat with</Text>
-                        <Image style={styles.profilePic} 
-                            source={{
-                                uri: item.profilePic,
+                        <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
+                            <Text style={styles.conversationWith}>Chat with</Text>
+                        </Pressable>
+                        <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
+                            <Image style={styles.profilePic} 
+                                source={{
+                                    uri: item.profilePic,
                             }} />
-                        <Text style={styles.name}>{item.username}</Text>
+                        </Pressable>
+                        <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
+                            <Text style={styles.name}>{item.username}</Text>
+                        </Pressable>
                     </View>
                 </View>
                 <View style={styles.chatSection}>

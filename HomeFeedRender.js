@@ -22,7 +22,9 @@ export default function RenderFeedItem ({ item }) {
 
     return (
         <View style={styles.item}>
+            {/* Item Header */}
             <View style={styles.postHeader}>
+                {/* Profile Pic */}
                 <Pressable
                     onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}
                 >
@@ -33,6 +35,7 @@ export default function RenderFeedItem ({ item }) {
                         style={styles.profilePic}
                     />
                 </Pressable>
+                {/* Username & Rating */}
                 <Pressable
                     onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}
                 >
@@ -45,12 +48,16 @@ export default function RenderFeedItem ({ item }) {
                     </View>
                 </Pressable>
             </View>
-            <Image
-                source={{
-                    uri: item.image,
-                }}
-                style={styles.objectImage}
-            />
+            {/* Image */}
+            <Pressable onPress={() => navigation.navigate('IndividualItem', { item: item })}>
+                <Image
+                    source={{
+                        uri: item.image,
+                    }}
+                    style={styles.objectImage}
+                />
+            </Pressable>
+            {/* Item Footer */}
             <View style={styles.bottomContainer}>
                 <View style={styles.textHalf}>
                     <Text style={styles.title}>{item.title}</Text>
@@ -67,7 +74,7 @@ export default function RenderFeedItem ({ item }) {
 
 
                 <View style={styles.iconsHalf}>
-                    
+                    {/* Like Action */}
                     <Pressable 
                         //INSERT LIKE FUNCTIONALITY
                         >
@@ -78,8 +85,7 @@ export default function RenderFeedItem ({ item }) {
                             />
                         </View>
                     </Pressable>
-
-                    {/* Insert stack navigator for messaging */}
+                    {/* DM Item Owner */}
                     <Pressable 
                         onPress={() => navigation.navigate('HomeDMScreen', { item: item })}
                         style={({ pressed }) => [
