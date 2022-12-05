@@ -89,6 +89,7 @@ export default function ProfileScreen() {
             <View style={styles.bioSection}> 
                 <Text style={styles.bio}>Stanford undegrad clearing out my dorm room hoping to help out some artists</Text>
                 <Pressable>
+                    <Text>Edit Profile</Text>
                     <Image 
                         // Edit Profile Pic
                         style={styles.editProfile}
@@ -96,20 +97,25 @@ export default function ProfileScreen() {
                     />
                 </Pressable>
             </View>
-            <Pressable>
-                <Image 
-                    // Giving Away Pic
-                    style={styles.givingAway}
-                    // source={require()}
-                />
-            </Pressable>
-            <Pressable>
-                <Image 
-                    // Your Art Pic
-                    style={styles.yourArt}
-                    // source={require()}
-                />
-            </Pressable>
+            <View>
+                <Pressable>
+                    <Text>Giving Away</Text>
+                    <Image 
+                        // Giving Away Pic
+                        style={styles.givingAway}
+                        // source={require()}
+                    />
+                </Pressable>
+                <Pressable>
+                    <Text>Your Art</Text>
+                    <Image 
+                        // Your Art Pic
+                        style={styles.yourArt}
+                        // source={require()}
+                    />
+                </Pressable>
+            </View>
+            
 
             {/* Conditional Flatlists will be here */}
 
