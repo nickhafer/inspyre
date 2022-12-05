@@ -82,7 +82,7 @@ export default function PostDetails ({ route: { params }, navigation }) {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => setModalVisible(true)}
       >
-          <Text style={styles.textStyle}>Post!</Text>
+          <Image source={require('./assets/Icons/post-gray.png')} style={styles.postFirst} />
       </Pressable>
     </SafeAreaView>
       
@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
+        backgroundColor: 'white',
     },
     header: {
       width: '100%',
@@ -157,8 +158,9 @@ const styles = StyleSheet.create({
     margin: 8,
     elevation: 2
   },
-  buttonOpen: {
-    backgroundColor: "#F194FF",
+  postFirst: {
+    width: 120,
+    resizeMode: 'contain',
   },
   buttonClose: {
     backgroundColor: "#2196F3",
