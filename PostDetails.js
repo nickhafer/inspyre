@@ -1,10 +1,11 @@
-import { Image, Text, View, StyleSheet, SafeAreaView, FlatList, Pressable, Modal, Alert } from 'react-native';
+import { Image, Text, View, StyleSheet, SafeAreaView, FlatList, Pressable, Modal, Alert, TextInput, Keyboard } from 'react-native';
 import React, { useState } from "react";
 
-export default function PostDetails ({ route, navigation }) {
-  const { image } = route.params;
+export default function PostDetails ({ route: { params }, navigation }) {
+  const { image } = params;
+
+
   const [modalVisible, setModalVisible] = useState(false);
-  // console.log(image);
 
   return (
     <SafeAreaView style={styles.screenContainer}>
@@ -17,9 +18,32 @@ export default function PostDetails ({ route, navigation }) {
       
       <View>
         <Image
-          style={{ width: 100, height: 100}}
-          source={navigation.getParam(image)}
+          style={{ width: 300, height: 300}}
+          source={{ uri: image }}
         />
+      </View>
+
+      <View>
+        <TextInput 
+          placeholder='add title...                               '
+          onSubmitEditing={Keyboard.dismiss}
+        />
+        <TextInput 
+          placeholder='add location...                            '
+          onSubmitEditing={Keyboard.dismiss}
+        />
+        <TextInput 
+          placeholder='add story... any memories with the item?   '
+          onSubmitEditing={Keyboard.dismiss}
+        />
+        <TextInput 
+          placeholder='add exchange details... time? location?    '
+          onSubmitEditing={Keyboard.dismiss}
+        />
+        <View>
+          <Text>post to:</Text>
+          {/* Placeholder for group selection */}
+        </View>
       </View>
       
       <View>

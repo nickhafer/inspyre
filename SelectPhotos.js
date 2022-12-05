@@ -9,81 +9,92 @@ export default function SelectPhotos ({ navigation }) {
             </View>
             <View style={styles.imageContainer}>
                 <Pressable onPress={() => navigation.navigate('PostDetails', 
-                    {image: require('./assets/Images/luc-profile-pic.jpeg')})}>
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
                     <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
                         style={styles.objectImage}
                     />
                 </Pressable>
-                <Pressable onPress={() => navigation.navigate('PostDetails')}>
+                <Pressable onPress={() => navigation.navigate('PostDetails', 
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
                     <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
                         style={styles.objectImage}
                     />
                 </Pressable>
-                <Pressable onPress={() => navigation.navigate('PostDetails')}>
+                <Pressable onPress={() => navigation.navigate('PostDetails', 
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
                     <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
-                        style={styles.objectImage}
-                    />
-                </Pressable>
-            </View>
-            <View style={styles.imageContainer}>
-                <Pressable onPress={() => navigation.navigate('PostDetails')}>
-                    <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
-                        style={styles.objectImage}
-                    />
-                </Pressable>
-                <Pressable onPress={() => navigation.navigate('PostDetails')}>
-                    <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
-                        style={styles.objectImage}
-                    />
-                </Pressable>
-                <Pressable onPress={() => navigation.navigate('PostDetails')}>
-                    <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
                         style={styles.objectImage}
                     />
                 </Pressable>
             </View>
             <View style={styles.imageContainer}>
-                <Pressable onPress={() => navigation.navigate('PostDetails')}>
+                <Pressable onPress={() => navigation.navigate('PostDetails', 
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
                     <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
                         style={styles.objectImage}
                     />
                 </Pressable>
-                <Pressable onPress={() => navigation.navigate('PostDetails')}>
+                <Pressable onPress={() => navigation.navigate('PostDetails', 
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
                     <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
                         style={styles.objectImage}
                     />
                 </Pressable>
-                <Pressable onPress={() => navigation.navigate('PostDetails')}>
+                <Pressable onPress={() => navigation.navigate('PostDetails', 
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
                     <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
                         style={styles.objectImage}
                     />
                 </Pressable>
             </View>
             <View style={styles.imageContainer}>
-                <Pressable onPress={() => navigation.navigate('PostDetails')}>
+                <Pressable onPress={() => navigation.navigate('PostDetails', 
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
                     <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
                         style={styles.objectImage}
                     />
                 </Pressable>
-                <Pressable onPress={() => navigation.navigate('PostDetails')}>
+                <Pressable onPress={() => navigation.navigate('PostDetails', 
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
                     <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
                         style={styles.objectImage}
                     />
                 </Pressable>
-                <Pressable onPress={() => navigation.navigate('PostDetails')}>
+                <Pressable onPress={() => navigation.navigate('PostDetails', 
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
                     <Image 
-                        source={require('./assets/Images/luc-profile-pic.jpeg')}
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
+                        style={styles.objectImage}
+                    />
+                </Pressable>
+            </View>
+            <View style={styles.imageContainer}>
+                <Pressable onPress={() => navigation.navigate('PostDetails', 
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
+                    <Image 
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
+                        style={styles.objectImage}
+                    />
+                </Pressable>
+                <Pressable onPress={() => navigation.navigate('PostDetails', 
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
+                    <Image 
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
+                        style={styles.objectImage}
+                    />
+                </Pressable>
+                <Pressable onPress={() => navigation.navigate('PostDetails', 
+                    {image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'})}>
+                    <Image 
+                        source={{ uri: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg'}}
                         style={styles.objectImage}
                     />
                 </Pressable>
