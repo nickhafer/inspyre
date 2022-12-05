@@ -181,12 +181,12 @@ export default function ProfileScreen() {
                     {tab === "givingAway" ?
                         <Image 
                             style={styles.givingAway}
-                            source={require('./assets/Icons/giving-away-green2.png')}
+                            source={require('./assets/Icons/giving-away-green.png')}
                         />
                     :
                         <Image 
                             style={styles.givingAway}
-                            source={require('./assets/Icons/giving-away-gray2.png')}
+                            source={require('./assets/Icons/giving-away-gray.png')}
                         />
                     }
                 </Pressable>
@@ -196,12 +196,12 @@ export default function ProfileScreen() {
                     {tab === "yourArt" ?
                         <Image 
                             style={styles.yourArt}
-                            source={require('./assets/Icons/your-art-green2.png')}
+                            source={require('./assets/Icons/your-art-green.png')}
                         />
                     :
                         <Image 
                             style={styles.yourArt}
-                            source={require('./assets/Icons/your-art-gray2.png')}
+                            source={require('./assets/Icons/your-art-gray.png')}
                         />
                     }
                 </Pressable>
