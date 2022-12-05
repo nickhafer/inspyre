@@ -176,11 +176,10 @@ export default function ProfileScreen() {
             </View>
 
             {/* Tabs */}
-            <View>
+            <View style={styles.tabs}>
                 <Pressable
                     onPress={()=>setTab("givingAway")}
                 >
-                    <Text>Giving Away</Text>
                     <Image 
                         style={styles.givingAway}
                         source={require('./assets/Icons/giving-away-gray.png')}
@@ -189,21 +188,17 @@ export default function ProfileScreen() {
                 <Pressable
                     onPress={()=>setTab("yourArt")}
                 >
-                    <Text>Your Art</Text>
                     <Image 
-                        // Your Art Pic
                         style={styles.yourArt}
-                        // source={require()}
+                        source={require('./assets/Icons/your-art-gray.png')}
                     />
                 </Pressable>
                 <Pressable
                     onPress={()=>setTab("likedItems")}
                 >
-                    <Text>Liked Items</Text>
                     <Image 
-                        // Your Art Pic
                         style={styles.likedItems}
-                        // source={require()}
+                        source={require('./assets/Icons/liked-items-gray.png')}
                     />
                 </Pressable>
             </View>
@@ -222,8 +217,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    tabs: {
+        flexDirection: 'row',
+    },
     item: {
         width: '100%',
+        height: '35%',
     },
     bottomContainer: {
         width: '100%',
@@ -286,13 +285,17 @@ const styles = StyleSheet.create({
 
     },
     givingAway: {
-
+        width: 100,
+        resizeMode: 'contain',
+        backgroundColor: 'red',
     },
     yourArt: {
-
+        width: 100,
+        backgroundColor: 'red',
     },
     likedItems: {
-
+        width: 100,
+        backgroundColor: 'red',
     },
     objectImage: {
         width: '100%',
