@@ -182,7 +182,7 @@ export default function ProfileScreen() {
                 >
                     <Image 
                         style={styles.givingAway}
-                        source={require('./assets/Icons/giving-away-gray.png')}
+                        source={require('./assets/Icons/giving-away-gray2.png')}
                     />
                 </Pressable>
                 <Pressable
@@ -190,7 +190,7 @@ export default function ProfileScreen() {
                 >
                     <Image 
                         style={styles.yourArt}
-                        source={require('./assets/Icons/your-art-gray.png')}
+                        source={require('./assets/Icons/your-art-gray2.png')}
                     />
                 </Pressable>
                 <Pressable
@@ -198,7 +198,7 @@ export default function ProfileScreen() {
                 >
                     <Image 
                         style={styles.likedItems}
-                        source={require('./assets/Icons/liked-items-gray.png')}
+                        source={require('./assets/Icons/liked-items-gray2.png')}
                     />
                 </Pressable>
             </View>
@@ -219,6 +219,7 @@ const styles = StyleSheet.create({
     },
     tabs: {
         flexDirection: 'row',
+        alignItems: 'center',
     },
     item: {
         width: '100%',
@@ -285,17 +286,19 @@ const styles = StyleSheet.create({
 
     },
     givingAway: {
-        width: 100,
+        width: 108,
         resizeMode: 'contain',
-        backgroundColor: 'red',
+        marginHorizontal: 8,
     },
     yourArt: {
-        width: 100,
-        backgroundColor: 'red',
+        width: 108,
+        resizeMode: 'contain',
+        marginHorizontal: 8,
     },
     likedItems: {
-        width: 100,
-        backgroundColor: 'red',
+        width: 108,
+        resizeMode: 'contain',
+        marginHorizontal: 8,
     },
     objectImage: {
         width: '100%',
