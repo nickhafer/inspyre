@@ -23,19 +23,27 @@ export default function RenderFeedItem ({ item }) {
     return (
         <View style={styles.item}>
             <View style={styles.postHeader}>
-                <Image 
-                    source={{
-                        uri: item.profilePic,
-                    }}
-                    style={styles.profilePic}
-                />
-                <View style={styles.nameRating}>
-                <Text style={styles.username}> {item.username} </Text>
-                <Image 
-                    source={require('./assets/Images/rating-green.png')}
-                    style={styles.rating}
-                />
-                </View>
+                <Pressable
+                    onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}
+                >
+                    <Image 
+                        source={{
+                            uri: item.profilePic,
+                        }}
+                        style={styles.profilePic}
+                    />
+                </Pressable>
+                <Pressable
+                    onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}
+                >
+                    <View style={styles.nameRating}>
+                        <Text style={styles.username}> {item.username} </Text>
+                        <Image 
+                            source={require('./assets/Images/rating-green.png')}
+                            style={styles.rating}
+                        />
+                    </View>
+                </Pressable>
             </View>
             <Image
                 source={{

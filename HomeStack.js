@@ -4,6 +4,7 @@ import HomeSearchScreen from './HomeSearchScreen';
 import HomeScreen from './HomeScreen';
 import HomeDMScreen from './HomeDMScreen';
 import SearchChairs from './SearchChairs';
+import HomeProfileScreen from './HomeProfileScreen';
 
 
 export default function HomeStack ({}) {
@@ -18,6 +19,7 @@ export default function HomeStack ({}) {
             <Stack.Screen name="HomeDMScreen" component={HomeDMScreen} />
             <Stack.Screen name="HomeSearchScreen" component={HomeSearchScreen}/>
             <Stack.Screen name="SearchChairs" component={SearchChairs}/>
+            <Stack.Screen name="HomeProfileScreen" component={HomeProfileScreen}/>
         </Stack.Navigator>
     );
 };

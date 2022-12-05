@@ -48,9 +48,9 @@ export default function HomeDMScreen ({ navigation, route}) {
                     <View style={styles.messageHeader}>
                         <Text style={styles.conversationWith}>Chat with</Text>
                         <Image style={styles.profilePic} 
-                                source={{
-                                    uri: item.profilePic,
-                                }} />
+                            source={{
+                                uri: item.profilePic,
+                            }} />
                         <Text style={styles.name}>{item.username}</Text>
                     </View>
                 </View>
