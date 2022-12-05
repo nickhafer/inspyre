@@ -44,9 +44,6 @@ export default function ProfileScreen() {
 
     const renderItem = ({ item }) => (
         <View style={styles.item}>
-            {console.log(item.image)}
-            <Text>IMAGE NOT RENDERING PLZ FIX</Text>
-            {/* I'm not sure why this image isn't rendering PLZ FIX */}
             <Image
                 source={{ uri: item.image, }}
                 style={styles.objectImage}
@@ -55,11 +52,11 @@ export default function ProfileScreen() {
                 <View style={styles.textHalf}>
                     <Text style={styles.title}>{item.title}</Text>
                     <View style={styles.locationLine}>
-                        <Text style={styles.location}>{item.location}  </Text>
-                        <Image
-                            style={styles.pin}
-                            source={require('./assets/Icons/pin.png')}
-                        />
+                    <Image
+                        style={styles.pin}
+                        source={require('./assets/Icons/pin.png')}
+                    />
+                    <Text style={styles.location}>{item.location}  </Text>  
                     </View>
                     <Text style={styles.distance}>{item.distance}</Text>
                 </View>
@@ -143,6 +140,7 @@ const styles = StyleSheet.create({
     profileHeader: {
         flexDirection: 'row', 
         justifyContent: 'space-between',   
+        marginTop: 8,
     },
     profileInfo: {
         width: '50%',
@@ -196,5 +194,23 @@ const styles = StyleSheet.create({
     objectImage: {
         width: 200,
         height: 200,
+    },
+    title: {
+        fontSize: 25,
+        fontFamily: 'InterBlack',
+        textAlign: 'left',
+    },
+    location: {
+        fontSize: 20,
+        fontFamily: 'InterSemiBold',
+    },
+    locationLine: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    pin: {
+        height: 20,
+        width: 20,
+        marginRight: 4,
     },
 });

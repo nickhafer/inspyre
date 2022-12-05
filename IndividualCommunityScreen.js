@@ -1,4 +1,4 @@
-import { View, SafeAreaView, Image, Text, Keyboard, StyleSheet, Pressable, TextInput } from 'react-native';
+import { View, SafeAreaView, Image, ImageBackground, Text, Keyboard, StyleSheet, Pressable, TextInput } from 'react-native';
 import React, { useState , useEffect } from 'react';
 import { useFonts } from 'expo-font';
 import { back } from 'react-native/Libraries/Animated/Easing';
@@ -39,26 +39,31 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
 
     return (
         <View style={styles.wholeScreen}>
-            
             <SafeAreaView style={styles.body}>
                 <View style={styles.topBar}>
-                    <Pressable style={styles.back} onPress={() => navigation.goBack()}>
-                        <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
-                    </Pressable>
+                    
                     <View>
-                    <Image style={styles.profilePic} 
-                                source={{
-                                    uri: message.imageUrl,
-                                }} />
-                        <View style={styles.messageHeader}>
-                            <Text style={styles.conversationWith}>Welcome To</Text>
-                            <Text style={styles.name}>{message.name}</Text>
-                        </View>
+                    <ImageBackground style={styles.backgroundImage} 
+                        source={{
+                            uri: message.imageUrl,
+                        }}>
+                             <Pressable style={styles.back} onPress={() => navigation.goBack()}>
+                                <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
+                             </Pressable>
+                    </ImageBackground>
                     </View>
                 </View>
-                <View style={styles.chatSection}>
-                    
-                    
+                <View style={styles.textSection}>
+                    <View style={styles.mainInfo}>
+                        <View style={styles.leftText}>
+                            <Text style={styles.name}>{message.name}</Text>
+                            <Text style={styles.location}>{message.location}</Text>
+                         </View>
+                         <View style={styles.rightText}>
+                            <Text style={styles.number}>{message.name}</Text>
+                            <Text style={styles.members}>{message.location}</Text>
+                         </View>
+                    </View>
                 </View>
                 
             </SafeAreaView>
@@ -89,32 +94,32 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
       width: '100%',
-      height: '100%'
+      aspectRatio: 1,
     },
     body: {
         backgroundColor: 'white',
         height: '100%',
         justifyContent: 'space-between',
     },
-    chatSection: {
+    textSection: {
         height: '70%',
+        justifyContent: 'flex-start',
     },
     topBar: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: 'blue',
     },
     back: {
         width: 48,
         height: 48,
-        marginLeft: 8,
+        margin: 8,
     },
-    messageHeader: {
-        width: '80%',
-        height: 80,
+    mainInfo: {
+        width: '100%',
+        height: '20%',
         flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'flex-start',
+        justifyContent: 'space-between',
     },
     profilePic: {
         height: 300,
@@ -128,8 +133,31 @@ const styles = StyleSheet.create({
     },
     name: {
         fontFamily: 'InterBlack',
+        fontSize: 24,
+    },
+    location: {
+        fontFamily: 'InterMedium',
         fontSize: 20,
-        margin: 8
+    },
+    number: {
+        fontFamily: 'InterBlack',
+        fontSize: 24,
+    },
+    members: {
+        fontFamily: 'InterMedium',
+        fontSize: 24,
+    },
+    leftText: {
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+        width: '52%',
+        marginLeft: '4%',
+    },
+    rightText: {
+        width: '40%',
+        alignItems: 'flex-end',
+        justifyContent: 'flex-start',
+        marginRight: '4%',
     },
     messageTitle: {
         fontSize: 40,
