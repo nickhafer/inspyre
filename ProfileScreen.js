@@ -197,12 +197,12 @@ export default function ProfileScreen() {
                     {tab === "yourArt" ?
                         <Image 
                             style={styles.yourArt}
-                            source={require('./assets/Icons/your-art-green2.png')}
+                            source={require('./assets/Icons/your-art-green.png')}
                         />
                     :
                         <Image 
                             style={styles.yourArt}
-                            source={require('./assets/Icons/your-art-gray2.png')}
+                            source={require('./assets/Icons/your-art-gray.png')}
                         />
                     }
                 </Pressable>
