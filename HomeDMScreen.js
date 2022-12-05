@@ -41,10 +41,12 @@ export default function HomeDMScreen ({ navigation, route}) {
             
             <SafeAreaView style={styles.body}>
                 <View style={styles.topBar}>
+                    <View>
                     <Pressable style={styles.back} onPress={() => navigation.goBack()}>
                         <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
                         {/* <Text>Home Feed</Text> */}
                     </Pressable>
+                    </View>
                     <View style={styles.messageHeader}>
                         <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
                             <Text style={styles.conversationWith}>Chat with</Text>

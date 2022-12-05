@@ -4,12 +4,17 @@ import { useFonts } from 'expo-font';
 import { back } from 'react-native/Libraries/Animated/Easing';
 import { render } from 'react-dom';
 import SearchChairs from './SearchChairs';
+import HomeScreen from './HomeScreen';
 
 
 
-export default function HomeSearchScreen() {
+export default function HomeSearchScreen({navigation}) {
     return (
         <View style={styles.chatBottom}>
+                    <Pressable style={styles.back} onPress={() => navigation.goBack()}>
+                        <Image style={styles.back} source={require('./assets/Icons/back-gray.png')}/>
+                        <Text>Home Feed</Text>
+                    </Pressable>
                     <View style={styles.textInputView}>
                         <TextInput
                             style={styles.textInput}
