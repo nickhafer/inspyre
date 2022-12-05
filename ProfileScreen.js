@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     },
     number: {
-        fontFamily: 'InterExtraBold',
+        fontFamily: 'InterSemiBold',
         fontSize: 24,
     },
     word: {
