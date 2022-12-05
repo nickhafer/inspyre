@@ -60,17 +60,17 @@ export default function PostDetails ({ route: { params }, navigation }) {
               <View style={styles.modalView}>
                   <Text style={styles.modalText}>Are you sure you want to post this?</Text>
                   <Pressable
-                  style={[styles.buttonEdit, styles.buttonClose]}
-                  onPress={() => setModalVisible(!modalVisible)}
+                    style={[styles.buttonEdit, styles.buttonClose]}
+                    onPress={() => setModalVisible(!modalVisible)}
                   >
-                      <Text style={styles.textStyle}>Keep editing</Text>
+                    <Text style={styles.textStyle}>Keep editing</Text>
                   </Pressable>
 
                   <Pressable
-                  style={[styles.buttonPost, styles.buttonClose]}
-                  onPress={() => {setModalVisible(!modalVisible), navigation.navigate('Profile')}}
+                    style={[styles.buttonPost, styles.buttonClose]}
+                    onPress={() => {setModalVisible(!modalVisible), navigation.navigate('Profile')}}
                   >
-                      <Text style={styles.textStyle}>Post</Text>
+                    <Text style={styles.textStyle}>Post</Text>
                   </Pressable>
               </View>
           </View>

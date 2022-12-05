@@ -131,7 +131,7 @@ const header_styles = StyleSheet.create({
         marginBottom: 7,
         // backgroundColor: '#f9c2ff',
         height: "100%",
-        width: 250,
+        width: 265,
     },
 });
 
