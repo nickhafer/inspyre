@@ -23,6 +23,7 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '17',
             read: 'true',
             number: '155',
+            description: 'this is a placeholder for the description.'
         },
         {
             location: 'Stanford, CA',
@@ -31,6 +32,7 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '1',
             read: 'true',
             number: '28',
+            description: 'this is a placeholder for the description.'
         },
         {
             location: 'Stanford, CA',
@@ -39,6 +41,7 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '2',
             read: 'true',
             number: '97',
+            description: 'this is a placeholder for the description.'
         },
     ]
     const EXPLORE_COMMUNITIES = [
@@ -47,21 +50,27 @@ export default function CommunitiesScreen ({ navigation }) {
             name: 'Palo Alto High School',
             imageUrl: "https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg",
             id: '17',
-            read: 'true'
+            read: 'true',
+            number: '44',
+            description: 'this is a placeholder for the description.'
         },
         {
             location: 'Menlo Park, CA',
             name: 'Menlo Thrifters',
             imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8DUUfF_LxZQBVCj_aKb53zZD9czoEsy8A3g&usqp=CAU',
             id: '1',
-            read: 'true'
+            read: 'true',
+            number: '256',
+            description: 'this is a placeholder for the description.'
         },
         {
             location: 'Palo Alto, CA',
             name: 'Bay Bird Watchers',
             imageUrl: 'https://shotkit.com/wp-content/uploads/2021/06/cool-profile-pic-matheus-ferrero.jpeg',
             id: '2',
-            read: 'true'
+            read: 'true',
+            number: '17',
+            description: 'this is a placeholder for the description.'
         },
     ]
 

@@ -64,6 +64,14 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                             <Text style={styles.members}>Members</Text>
                          </View>
                     </View>
+                    <View style={styles.bottomSection}>
+                        <Text style={styles.description}> {message.description} </Text>
+                        <Image 
+                            source={require('./assets/Icons/request-to-join.png')}
+                            style={styles.join} 
+                        />
+                        {/* INSERT FUNCTIONALITY TO MAKE PRESSABLE AND JOIN COMMUNITY */}
+                    </View>
                 </View>
                 
             </SafeAreaView>
@@ -222,5 +230,21 @@ const styles = StyleSheet.create({
         width: 48,
         height: 48,
 
+    },
+    bottomSection: {
+        height: '40%',
+        width: '100%',
+        justifyContent: 'space-evenly',
+    },
+    description: {
+        fontFamily: 'InterRegular',
+        fontSize: 16,
+        margin: '4%',
+    },
+    join: {
+        alignSelf: 'center',
+        width: 600,
+        height: 60,
+        resizeMode: 'contain',
     },
   });
