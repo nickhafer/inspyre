@@ -5,7 +5,7 @@ export default function SelectPhotos ({ navigation }) {
     return (
         <SafeAreaView style={styles.screenContainer}>
             <View style={styles.header}>
-                <Text style={styles.screenText}>Select a Photo!</Text>
+                <Text style={styles.cameraRoll}>Your Camera Roll</Text>
             </View>
             <View style={styles.imageContainer}>
                 <Pressable onPress={() => navigation.navigate('PostDetails', 
@@ -109,8 +109,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    screenText: {
+    cameraRoll: {
         fontSize: 32,
+        fontFamily: 'InterBlack',
     },
     objectImage: {
         width: 143,
@@ -120,8 +121,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     header: {
-        backgroundColor: 'red',
-        margin: 10,
         padding: 10,
     }
 });
