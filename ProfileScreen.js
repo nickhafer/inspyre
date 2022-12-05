@@ -178,26 +178,49 @@ export default function ProfileScreen() {
                 <Pressable
                     onPress={()=>setTab("givingAway")}
                 >
-                    <Image 
-                        style={styles.givingAway}
-                        source={require('./assets/Icons/giving-away-gray2.png')}
-                    />
+                    {tab === "givingAway" ?
+                        <Image 
+                            style={styles.givingAway}
+                            source={require('./assets/Icons/giving-away-green2.png')}
+                        />
+                    :
+                        <Image 
+                            style={styles.givingAway}
+                            source={require('./assets/Icons/giving-away-gray2.png')}
+                        />
+                    }
                 </Pressable>
                 <Pressable
                     onPress={()=>setTab("yourArt")}
                 >
-                    <Image 
-                        style={styles.yourArt}
-                        source={require('./assets/Icons/your-art-gray2.png')}
-                    />
+                    
+                    {tab === "yourArt" ?
+                        <Image 
+                            style={styles.yourArt}
+                            source={require('./assets/Icons/your-art-green2.png')}
+                        />
+                    :
+                        <Image 
+                            style={styles.yourArt}
+                            source={require('./assets/Icons/your-art-gray2.png')}
+                        />
+                    }
                 </Pressable>
                 <Pressable
                     onPress={()=>setTab("likedItems")}
                 >
-                    <Image 
-                        style={styles.likedItems}
-                        source={require('./assets/Icons/liked-items-gray2.png')}
-                    />
+                    
+                    {tab === "likedItems" ?
+                        <Image 
+                            style={styles.likedItems}
+                            source={require('./assets/Icons/liked-items-green2.png')}
+                        />
+                    :
+                        <Image 
+                            style={styles.likedItems}
+                            source={require('./assets/Icons/liked-items-gray2.png')}
+                        />
+                    }
                 </Pressable>
             </View>
 
