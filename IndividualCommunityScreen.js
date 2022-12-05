@@ -64,6 +64,10 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                             <Text style={styles.members}>Members</Text>
                          </View>
                     </View>
+                    <View style={styles.bottomSection}>
+                        <Text style={styles.description}> {message.description} </Text>
+                        <Image> source={require('./assets/Icons/request-to-join') </Image>
+                    </View>
                 </View>
                 
             </SafeAreaView>
