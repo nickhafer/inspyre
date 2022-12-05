@@ -4,7 +4,7 @@ import { useFonts } from 'expo-font';
 import { back } from 'react-native/Libraries/Animated/Easing';
 import { render } from 'react-dom';
 import SearchChairs from './SearchChairs';
-import HomeScreen from './HomeScreen';
+
 
 
 

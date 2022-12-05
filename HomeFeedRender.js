@@ -36,9 +36,7 @@ export default function RenderFeedItem ({ item }) {
                     />
                 </Pressable>
                 {/* Username & Rating */}
-                <Pressable
-                    onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}
-                >
+                <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
                     <View style={styles.nameRating}>
                         <Text style={styles.username}> {item.username} </Text>
                         <Image 
@@ -60,16 +58,18 @@ export default function RenderFeedItem ({ item }) {
             {/* Item Footer */}
             <View style={styles.bottomContainer}>
                 <View style={styles.textHalf}>
-                    <Text style={styles.title}>{item.title}</Text>
-                    <View style={styles.locationLine}>
-                    <Image
-                            style={styles.pin}
-                            source={require('./assets/Icons/pin.png')}
-                        />
-                        <Text style={styles.location}>{item.location}  </Text>
-                        
-                    </View>
-                    <Text style={styles.distance}>{item.distance}</Text>
+                    <Pressable onPress={() => navigation.navigate('IndividualItem', { item: item })}>
+                        <Text style={styles.title}>{item.title}</Text>
+                        <View style={styles.locationLine}>
+                        <Image
+                                style={styles.pin}
+                                source={require('./assets/Icons/pin.png')}
+                            />
+                            <Text style={styles.location}>{item.location}  </Text>
+                        </View>
+                        <Text style={styles.distance}>{item.distance}</Text>
+                    </Pressable>
+                    
                 </View>
 
 

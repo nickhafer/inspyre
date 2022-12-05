@@ -12,10 +12,14 @@ export default function IndividualItem ({ navigation, route}) {
                 {/* move this down so it's pressable */}
                 <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
             </Pressable>
-            <Image style={styles.profilePic} 
-                source={{
-                    uri: item.profilePic,
-                }} />
+            <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
+                <Image style={styles.profilePic} 
+                    source={{
+                        uri: item.profilePic,
+                    }} 
+                />
+            </Pressable>
+            
             <Text>{item.username}</Text>
             <Image 
                 style={styles.rating}

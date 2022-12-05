@@ -2,7 +2,7 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar, Image} from 
 import { useNavigation } from '@react-navigation/native';
 import RenderFeedItem from './HomeFeedRender';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
-import HomeSearchScreen from './HomeSearchScreen';
+
 
 
 export default function HomeScreen() {
