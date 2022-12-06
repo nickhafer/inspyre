@@ -110,12 +110,13 @@ export default function StanfordSearch ({ navigation }) {
         <View style={styles.wholeScreen}>
             <SafeAreaView style={styles.container}>
                 <View style={header_styles.chatHeader}>
+                <Pressable style={header_styles.back} onPress={() => navigation.goBack()}>
+                        <Image style={header_styles.back} source={require('./assets/Icons/back-gray.png')} />
+                    </Pressable>
                     <Image style={header_styles.headerText}
                     source={require("./FigmaIcons/community.png")} />
                 </View>
-                <Pressable style={styles.back} onPress={() => navigation.goBack()}>
-                        <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
-                    </Pressable>
+               
                 
                 <View style={styles.listContainer}>
                     <FlatList
@@ -132,8 +133,8 @@ export default function StanfordSearch ({ navigation }) {
 const header_styles = StyleSheet.create({
     chatHeader: {
         height: '10%',
-        justifyContent: 'center',
-        alignContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
         // backgroundColor: '#f9c2ff',
     },
     headerText: {
@@ -143,7 +144,12 @@ const header_styles = StyleSheet.create({
         marginBottom: 7,
         // backgroundColor: '#f9c2ff',
         height: "100%",
-        width: 400,
+        resizeMode: 'contain',
+        width: 250,
+    },
+    back: {
+        height: 48,
+        width: 48,
     },
 });
 
