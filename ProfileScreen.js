@@ -340,7 +340,7 @@ export default function ProfileScreen() {
             </View>
 
             {/* Conditional Flatlist */}
-            <View style={styles.bottomContainer}>
+            <View style={styles.flatlistContainer}>
                 {flatlist}
             </View>
         </SafeAreaView>
@@ -364,11 +364,10 @@ const styles = StyleSheet.create({
     },
     item: {
         width: '100%',
-        height: '35%',
     },
-    bottomContainer: {
+    flatlistContainer: {
         width: '100%',
-        height: '60%',
+        flex: 1,
     },
     screenText: {
         fontSize: 32,
