@@ -36,7 +36,7 @@ export default function CommunitiesScreen ({ navigation }) {
         },
         {
             location: 'Stanford, CA',
-            name: 'Stanford Club Sports',
+            name: 'Stanford Clubs',
             imageUrl: 'https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/stanfordrec.sidearmsports.com/images/2021/9/19/Club_Sports_graphics_slider_tablet.jpg',
             id: '2',
             read: 'true',
