@@ -2,9 +2,11 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, Image, Pressable } from
 import { useNavigation } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { useState } from 'react';
+import PROFILEPICTURE from './assets/Images/luc-profile-pic.jpeg';
 
 
 export default function ProfileScreen() {
+    const profilePicture = PROFILEPICTURE;
     const navigation = useNavigation();
     const [tab, setTab] = useState('givingAway');
     const [tabLike, setTabLike] = useState('liked');
@@ -103,7 +105,7 @@ export default function ProfileScreen() {
     const renderItem = ({ item }) => (
         <View style={styles.item}>
             <Image
-                source={{ uri: item.image, }}
+                source={{ uri: item.image }}
                 style={styles.objectImage}
             />
             <View style={styles.bottomContainer}>
@@ -311,9 +313,9 @@ export default function ProfileScreen() {
             </View>
 
             {/* Conditional Flatlist */}
-            <SafeAreaView>
+            <View style={styles.bottomContainer}>
                 {flatlist}
-            </SafeAreaView>
+            </View>
         </SafeAreaView>
     );
 }
@@ -321,7 +323,7 @@ export default function ProfileScreen() {
 const styles = StyleSheet.create({
     screenContainer: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
     },
     editProfile: {
