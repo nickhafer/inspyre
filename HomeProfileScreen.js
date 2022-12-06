@@ -90,14 +90,19 @@ export default function HomeProfileScreen ({ navigation, route}) {
                     }
                 </Pressable>
                 <Pressable
-                    onPress={()=>setTab("yourArt")}
+                    onPress={()=>setTab("theirArt")}
                 >
-                    <Text>{user.username}'s Art</Text>
-                    <Image 
-                        // Your Art Pic
-                        style={styles.yourArt}
-                        // source={require()}
-                    />
+                    {tab === "theirArt" ?
+                        <Image 
+                            style={styles.theirArt}
+                            source={require('./assets/Icons/their-art-green.png')}
+                        />
+                    :
+                        <Image 
+                            style={styles.theirArt}
+                            source={require('./assets/Icons/their-art-gray.png')}
+                        />
+                    }
                 </Pressable>
             </View>
             <View>
@@ -209,17 +214,12 @@ const styles = StyleSheet.create({
         margin: 8,
     },
     givingAway: {
-        width: 108,
+        width: 124,
         resizeMode: 'contain',
         marginHorizontal: 8,
     },
-    yourArt: {
-        width: 108,
-        resizeMode: 'contain',
-        marginHorizontal: 8,
-    },
-    likedItems: {
-        width: 108,
+    theirArt: {
+        width: 124,
         resizeMode: 'contain',
         marginHorizontal: 8,
     },
