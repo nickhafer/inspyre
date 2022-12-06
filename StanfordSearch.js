@@ -19,7 +19,7 @@ export default function StanfordSearch ({ navigation }) {
             number: '50',
             location: "Stanford, CA",
             name: 'Stanford Frosh',
-            imageUrl: "https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg",
+            imageUrl: "https://advising.stanford.edu/sites/g/files/sbiybj20621/files/styles/card_1900x950/public/media/image/convocation_2012_0.jpg?h=2d2fbf65&itok=sGCgU476",
             id: '17',
             description: 'Welcome to the Stanford Frosh group. If you are a current freshman at Stanford, we would love to have you join the group!',
         },
@@ -64,7 +64,7 @@ export default function StanfordSearch ({ navigation }) {
             message: 'Members: 98',
             number: '98',
             name: 'Stanford Sustainability',
-            lcoation: "Stanford, CA",
+            location: "Stanford, CA",
             imageUrl: 'https://content.fortune.com/wp-content/uploads/2022/06/20210910_Stanford_Educational_Farm_N6A0359.jpg',
             id: '5',
             description: 'Open to all! Join us in helping reduce waste by upcycling your items. We are mostly a community of people on campus, but are open to all!'
@@ -160,6 +160,7 @@ const styles = (item) => StyleSheet.create({
     listContainer: {
         width: 360,
         height: '80%',
+        flex: 1
     },
     messageContainer: {
         width: '100%',
