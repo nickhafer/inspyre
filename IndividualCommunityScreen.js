@@ -66,10 +66,12 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                     </View>
                     <View style={styles.bottomSection}>
                         <Text style={styles.description}> {message.description} </Text>
-                        <Image 
-                            source={require('./assets/Icons/request-to-join.png')}
-                            style={styles.join} 
-                        />
+                        <Pressable onPress={() => navigation.navigate('CommunitiesScreen')}>
+                            <Image 
+                                source={require('./assets/Icons/request-to-join.png')}
+                                style={styles.join} 
+                            />
+                        </Pressable>
                         {/* INSERT FUNCTIONALITY TO MAKE PRESSABLE AND JOIN COMMUNITY */}
                     </View>
                 </View>
@@ -235,6 +237,7 @@ const styles = StyleSheet.create({
         height: '40%',
         width: '100%',
         justifyContent: 'space-evenly',
+        //backgroundColor:'blue',
     },
     description: {
         fontFamily: 'InterRegular',
@@ -245,6 +248,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         width: 600,
         height: 60,
+        marginLeft: 100,
         resizeMode: 'contain',
     },
   });
