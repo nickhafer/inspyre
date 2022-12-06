@@ -156,7 +156,7 @@ export default function RenderFeedItem ({ item }) {
     },
     username: {
         fontSize: 24,
-        padding: 8,
+        margin: 8,
         fontFamily: 'InterBlack',
     },
     inpsyreHeader: {
@@ -200,6 +200,7 @@ export default function RenderFeedItem ({ item }) {
     rating: {
         width: 150,
         resizeMode: 'contain',
+        alignSelf: 'flex-end',
     },
     nameRating: {
         flexDirection: 'row',
@@ -218,6 +219,7 @@ export default function RenderFeedItem ({ item }) {
         alignItems: 'center',
         margin: 8,
         height: '10%',
+        width: '100%',
     },
     bottomContainer: {
         flexDirection: 'row',
