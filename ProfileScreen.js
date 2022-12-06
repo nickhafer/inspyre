@@ -484,5 +484,6 @@ const styles = StyleSheet.create({
     bottomContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        flex: 1
     },
 });

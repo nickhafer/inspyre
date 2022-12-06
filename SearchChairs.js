@@ -255,7 +255,6 @@ export default function HomeScreen() {
             <View style = {styles.HeaderView}>
                 <Pressable style={styles.back} onPress={() => navigation.goBack()}>
                         <Image style={styles.back} source={require('./assets/Icons/back-gray.png')}/>
-                        <Text>Home Feed</Text>
                     </Pressable>
                 <Image
                     style = {styles.inspyreIcon}
