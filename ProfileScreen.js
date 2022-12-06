@@ -25,21 +25,21 @@ export default function ProfileScreen() {
             title: 'Broken Chair',
             image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
             location: 'Palo Alto, CA',
-            distance: '1.2 miles',
+            distance: '0 miles',
         },
         {
             id: '2',
             title: 'Used Towel',
             image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
             location: 'Palo Alto, CA',
-            distance: '1.2 miles',
+            distance: '0 miles',
         },
         {
             id: '3',
             title: 'Water bottle',
             image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
             location: 'Palo Alto, CA',
-            distance: '1.2 miles',
+            distance: '0 miles',
         },
     ]
 
@@ -49,21 +49,21 @@ export default function ProfileScreen() {
             title: 'Used Towel',
             image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
             location: 'Palo Alto, CA',
-            distance: '1.2 miles',
+            distance: '0 miles',
         },
         {
             id: '1',
             title: 'Broken Chair',
             image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
             location: 'Palo Alto, CA',
-            distance: '1.2 miles',
+            distance: '0 miles',
         },
         {
             id: '3',
             title: 'Water bottle',
             image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
             location: 'Palo Alto, CA',
-            distance: '1.2 miles',
+            distance: '0 miles',
         },
     ]
 
