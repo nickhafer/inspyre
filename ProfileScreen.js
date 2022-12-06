@@ -22,8 +22,8 @@ export default function ProfileScreen() {
     const GIVING_AWAY_DATA = [
         {
             id: '1',
-            title: 'Broken Chair',
-            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            title: 'Old shoes',
+            image: 'https://images.unsplash.com/photo-1616119547809-588a65fdc7e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
@@ -36,8 +36,8 @@ export default function ProfileScreen() {
         },
         {
             id: '3',
-            title: 'Water bottle',
-            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            title: 'Body spray',
+            image: 'https://images.unsplash.com/photo-1621265010303-a793d1017307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
@@ -46,22 +46,22 @@ export default function ProfileScreen() {
     const YOUR_ART_DATA = [
         {
             id: '2',
-            title: 'Used Towel',
-            image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+            title: 'Fist With Nails',
+            image: 'https://images.unsplash.com/photo-1615650949849-37db4f2c67db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1760&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
         {
             id: '1',
-            title: 'Broken Chair',
-            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            title: 'Simple Flowers',
+            image: 'https://images.unsplash.com/photo-1570361269465-290e1149df5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1801&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
         {
             id: '3',
-            title: 'Water bottle',
-            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            title: 'Some Ceramics',
+            image: 'https://images.unsplash.com/photo-1603697486934-686e0b3c9f06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2719&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },

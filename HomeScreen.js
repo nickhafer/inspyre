@@ -72,9 +72,9 @@ export default function HomeScreen() {
         },
         {
             id: '2',
-            title: 'Used Towel',
+            title: 'Tea Kettle',
             username: 'Jen',
-            image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+            image: 'https://images.unsplash.com/photo-1614628408704-7a3b0bc768a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1760&q=80',
             profilePic: 'https://www.birmingham.ac.uk/Images/College-EPS-only/college/undergraduate/international/yangyi-shi-ee-student-2-compressed-Cropped-293x228.jpg',
             location: 'Menlo Park, CA',
             story: 'this is a placeholder for a story about this item',
