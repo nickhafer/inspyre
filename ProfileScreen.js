@@ -1,15 +1,13 @@
-import { Text, View, StyleSheet, SafeAreaView, FlatList, Image } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
+import { Text, View, StyleSheet, SafeAreaView, FlatList, Image, Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { useState } from 'react';
 
 
 export default function ProfileScreen() {
-
-    const [tab, setTab] = useState('givingAway')
+    const navigation = useNavigation();
+    const [tab, setTab] = useState('givingAway');
+    const [tabLike, setTabLike] = useState('liked');
 
     const [loaded] = useFonts({
         InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
@@ -76,6 +74,9 @@ export default function ProfileScreen() {
             image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
             location: 'Palo Alto, CA',
             distance: '1.2 miles',
+            username: 'Max',
+            profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
+
         },
         {
             id: '2',
@@ -83,6 +84,9 @@ export default function ProfileScreen() {
             image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
             location: 'Palo Alto, CA',
             distance: '1.2 miles',
+            username: 'placeholder1',
+            profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
+
         },
         {
             id: '1',
@@ -90,6 +94,9 @@ export default function ProfileScreen() {
             image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
             location: 'Palo Alto, CA',
             distance: '1.2 miles',
+            username: 'placeholder2',
+            profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
+
         },
     ]
 
@@ -115,6 +122,87 @@ export default function ProfileScreen() {
         </View>
     );
 
+    const renderLiked = ({ item }) => (
+        <View style={styles.item}>
+            <View>
+                <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
+                    {/* Profile Pic */}
+                    <Image 
+                        source={{
+                            uri: item.profilePic,
+                        }}
+                        style={styles.profilePic}
+                    />
+                </Pressable>
+                <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
+                    {/* Username & rating */}
+                    <View style={styles.nameRating}>
+                        <Text style={styles.username}> {item.username} </Text>
+                        <Image 
+                            source={require('./assets/Images/rating-green.png')}
+                            style={styles.rating}
+                        />
+                    </View>
+                </Pressable>
+            </View>
+            {/* Item Image */}
+            <Pressable onPress={() => navigation.navigate('IndividualItem', { item: item })}>
+                <Image
+                    source={{ uri: item.image, }}
+                    style={styles.objectImage}
+                />
+            </Pressable>
+            
+            <View style={styles.bottomContainer}>
+                <View style={styles.textHalf}>
+                    <Pressable onPress={() => navigation.navigate('IndividualItem', { item: item })}>
+                        <Text style={styles.title}>{item.title}</Text>
+                        <View style={styles.locationLine}>
+                            <Image
+                                style={styles.pin}
+                                source={require('./assets/Icons/pin.png')}
+                            />
+                            <Text style={styles.location}>{item.location}  </Text>  
+                        </View>
+                        <Text style={styles.distance}>{item.distance}</Text>
+                    </Pressable>
+                    
+                </View>
+
+                <View style={styles.iconsHalf}>
+                    {/* Like Action */}
+                    <View style={styles.iconContainer}>
+                        {/* setTab("liked") */}
+                        <Pressable onPress={()=>{tabLike === "liked" ? setTabLike("notLiked") : setTabLike("liked")}}>
+                            {
+                                tabLike === "liked" ?
+                                    <Image
+                                        source={require('./assets/Icons/like-red.png')}
+                                        style={styles.like} 
+                                    />
+                                :
+                                    <Image
+                                        source={require('./assets/Icons/like-gray.png')}
+                                        style={styles.like} 
+                                    />
+                            }
+                        </Pressable>
+                    </View>
+                    {/* DM Item Owner */}
+                    <Pressable 
+                        onPress={() => navigation.navigate('HomeDMScreen', { item: item })}>
+                        <View style={styles.iconContainer}>
+                            <Image
+                                source={require('./assets/Icons/chat-gray.png')}
+                                style={styles.chat} 
+                            />
+                        </View>
+                    </Pressable>
+                </View>
+            </View>
+        </View>
+    );
+
     // Determine which flatlist to show:
     // givingAway, yourArt, likedItems
     let flatlist;
@@ -133,7 +221,7 @@ export default function ProfileScreen() {
     } else {
         flatlist = <FlatList 
                 data={LIKED_ITEMS_DATA}
-                renderItem={renderItem}
+                renderItem={renderLiked}
                 keyExtractor={item => item.id}
                 />
     }
