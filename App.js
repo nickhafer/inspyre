@@ -10,7 +10,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import CommunitiesStack from './ComumunitiesStack'
-import ProfileScreen from './ProfileScreen';
+import ProfileStack from './ProfileStack';
 import MessageStack from './MessageStack';
 import HomeStack from './HomeStack';
 import PostStack from './PostStack';
@@ -60,7 +60,7 @@ export default function App() {
         <Tab.Screen name="Community" component={CommunitiesStack} options={{headerShown: false, unmountOnBlur: true}}/>
         <Tab.Screen name="Post" component={PostStack} options={{headerShown: false, unmountOnBlur: true}}/> 
         <Tab.Screen name="Chat" component={MessageStack} options={{headerShown: false, unmountOnBlur: true}}/>
-        <Tab.Screen name="Profile" component={ProfileScreen} options={{headerShown: false, unmountOnBlur: true}}/>
+        <Tab.Screen name="Profile" component={ProfileStack} options={{headerShown: false, unmountOnBlur: true}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
