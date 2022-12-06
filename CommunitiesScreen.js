@@ -19,63 +19,77 @@ export default function CommunitiesScreen ({ navigation }) {
         {
             location: 'Palo Alto, CA',
             name: 'City of Palo Alto',
-            locked_status: 'https://cdn-icons-png.flaticon.com/512/102/102288.png',
-            imageUrl: "https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg",
+            imageUrl: "https://www.ca-ilg.org/sites/main/files/imagecache/lightbox/main-images/photos__City_Seal_jpg.jpg",
             id: '17',
             read: 'true',
-            number: '155',
-            description: 'this is a placeholder for the description.'
+            number: '209',
+            description: 'Welcome to the official City of Palo Alto inspyre community! If you live nearby please join our cause and help spread awareness about sustainability and art. Have a great day!'
         },
         {
             location: 'Stanford, CA',
             name: 'West FloMo',
+<<<<<<< HEAD
             locked_status: 'https://cdn-icons-png.flaticon.com/512/61/61457.png',
             imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8DUUfF_LxZQBVCj_aKb53zZD9czoEsy8A3g&usqp=CAU',
+=======
+            imageUrl: 'https://resed.stanford.edu/sites/g/files/sbiybj18956/files/styles/breakpoint_2xl_2x/public/media/image/flomo-alt_0.webp?itok=lKwTT0Yo',
+>>>>>>> 5f2e29a2ed4f4cea374cd876d8eab30bae36bff6
             id: '1',
             read: 'true',
             number: '28',
-            description: 'this is a placeholder for the description.'
+            description: 'Hey fellow Stanford students. This community is only for the coolest students living in West Flo right now. Bet you wish you could be a part of this community!'
         },
         {
             location: 'Stanford, CA',
             name: 'Stanford Club Sports',
-            locked_status: 'https://cdn-icons-png.flaticon.com/512/61/61457.png',
-            imageUrl: 'https://shotkit.com/wp-content/uploads/2021/06/cool-profile-pic-matheus-ferrero.jpeg',
+            imageUrl: 'https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/stanfordrec.sidearmsports.com/images/2021/9/19/Club_Sports_graphics_slider_tablet.jpg',
             id: '2',
             read: 'true',
             number: '97',
-            description: 'this is a placeholder for the description.'
+            description: 'Welcome non-varsity Stanford athletes! Here you\'ll find all the recycled athletic gear you need. From frisbees to footballs, track spikes to soccer balls, we\'ve got you covered!'
         },
     ]
     const MY_COMMUNITIES = [
         {
             location: 'Palo Alto, CA',
             name: 'Palo Alto High School',
-            imageUrl: "https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg",
+            imageUrl: "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/782/2021/05/19191830/A8ECC043-9B24-4AFB-9646-C678C1A05D36.jpg",
             id: '17',
             read: 'true',
             number: '44',
-            description: 'this is a placeholder for the description.'
+            description: 'Official inspyre home of the Palo Vikes! We host afternoon thrifting events once per week. Help us spread the word to get people upcycling. Sko\' Vikes!!'
         },
         {
+<<<<<<< HEAD
             location: 'Menlo Park, CA',
             name: 'Menlo Thrifters',
             locked_status: 'https://cdn-icons-png.flaticon.com/512/61/61457.png',
             imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8DUUfF_LxZQBVCj_aKb53zZD9czoEsy8A3g&usqp=CAU',
+=======
+            location: 'Redwood City, CA',
+            name: '5th Ave Family Thrift',
+            imageUrl: 'https://cdn.businessyab.com/assets/uploads2/14a39eee5f778b8a16384bd5924b2155_-united-states-california-san-mateo-county-redwood-city-south-fair-oaks-fifth-avenue-110-5th-avenue-family-thrift-mart-650-361-9400.jpg',
+>>>>>>> 5f2e29a2ed4f4cea374cd876d8eab30bae36bff6
             id: '1',
             read: 'true',
             number: '256',
-            description: 'this is a placeholder for the description.'
+            description: 'Family-owned thrift store trying to give you the best deals on the best clothes! Come on down and say hey!'
         },
         {
+<<<<<<< HEAD
             location: 'Palo Alto, CA',
             name: 'Bay Bird Watchers',
             imageUrl: 'https://shotkit.com/wp-content/uploads/2021/06/cool-profile-pic-matheus-ferrero.jpeg',
             locked_status: 'https://cdn-icons-png.flaticon.com/512/61/61457.png',
+=======
+            location: 'San Francisco, CA',
+            name: 'Golden Gate Audubon Society',
+            imageUrl: 'https://goldengateaudubon.org/wp-content/uploads/2020/09/GGAS-logo-bw-trans.png',
+>>>>>>> 5f2e29a2ed4f4cea374cd876d8eab30bae36bff6
             id: '2',
             read: 'true',
             number: '17',
-            description: 'this is a placeholder for the description.'
+            description: 'We try to share our bird watching gear with those who can\'t afford it. Feel free to come to one of our meet ups on Saturdays and Sundays.'
         },
     ]
 
