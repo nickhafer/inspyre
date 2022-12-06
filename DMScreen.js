@@ -60,39 +60,14 @@ export default function DMScreen ({ navigation, route}) {
                     </View>
                 </View>
                 <View style={styles.chatSection}>
-                    {message.username === "Tia" ?
-                        <></>
-                    :
-                        <>
-                            <View style={styles.messageDescriptionView}>
-                                <Text style={styles.messageDescription}>{message.message}</Text>
-                            </View>
-                            <View style={styles.inputMessageView}>
-                                <Text style={styles.messageDescription}>
-                                    {text.split('').map((word) => word).join('')}
-                                </Text>
-                            </View>
-                        </>
-                    }
-                    {text === "sent" ?
-                        <View style={styles.inputMessageView}>
-                            <Text style={styles.messageDescription}>
-                                {/* {text.split('').map((word) => word).join('')} */}
-                                this is a test message
-                            </Text>
-                        </View>
-                    :
-                        <>
-                            {/* <View style={styles.messageDescriptionView}>
-                                <Text style={styles.messageDescription}>{message.message}</Text>
-                            </View>
-                            <View style={styles.inputMessageView}>
-                                <Text style={styles.messageDescription}>
-                                    {text.split('').map((word) => word).join('')}
-                                </Text>
-                            </View> */}
-                        </>
-                    }
+                    <View style={styles.messageDescriptionView}>
+                        <Text style={styles.messageDescription}>{message.message}</Text>
+                    </View>
+                    <View style={styles.inputMessageView}>
+                        <Text style={styles.messageDescription}>
+                            {text.split('').map((word) => word).join('')}
+                        </Text>
+                    </View>
                 </View>
                 <View style={styles.chatBottom}>
                     <View style={styles.textInputView}>
