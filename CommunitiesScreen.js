@@ -28,12 +28,7 @@ export default function CommunitiesScreen ({ navigation }) {
         {
             location: 'Stanford, CA',
             name: 'West FloMo',
-<<<<<<< HEAD
-            locked_status: 'https://cdn-icons-png.flaticon.com/512/61/61457.png',
-            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8DUUfF_LxZQBVCj_aKb53zZD9czoEsy8A3g&usqp=CAU',
-=======
             imageUrl: 'https://resed.stanford.edu/sites/g/files/sbiybj18956/files/styles/breakpoint_2xl_2x/public/media/image/flomo-alt_0.webp?itok=lKwTT0Yo',
->>>>>>> 5f2e29a2ed4f4cea374cd876d8eab30bae36bff6
             id: '1',
             read: 'true',
             number: '28',
@@ -60,32 +55,18 @@ export default function CommunitiesScreen ({ navigation }) {
             description: 'Official inspyre home of the Palo Vikes! We host afternoon thrifting events once per week. Help us spread the word to get people upcycling. Sko\' Vikes!!'
         },
         {
-<<<<<<< HEAD
-            location: 'Menlo Park, CA',
-            name: 'Menlo Thrifters',
-            locked_status: 'https://cdn-icons-png.flaticon.com/512/61/61457.png',
-            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8DUUfF_LxZQBVCj_aKb53zZD9czoEsy8A3g&usqp=CAU',
-=======
             location: 'Redwood City, CA',
             name: '5th Ave Family Thrift',
             imageUrl: 'https://cdn.businessyab.com/assets/uploads2/14a39eee5f778b8a16384bd5924b2155_-united-states-california-san-mateo-county-redwood-city-south-fair-oaks-fifth-avenue-110-5th-avenue-family-thrift-mart-650-361-9400.jpg',
->>>>>>> 5f2e29a2ed4f4cea374cd876d8eab30bae36bff6
             id: '1',
             read: 'true',
             number: '256',
             description: 'Family-owned thrift store trying to give you the best deals on the best clothes! Come on down and say hey!'
         },
         {
-<<<<<<< HEAD
-            location: 'Palo Alto, CA',
-            name: 'Bay Bird Watchers',
-            imageUrl: 'https://shotkit.com/wp-content/uploads/2021/06/cool-profile-pic-matheus-ferrero.jpeg',
-            locked_status: 'https://cdn-icons-png.flaticon.com/512/61/61457.png',
-=======
             location: 'San Francisco, CA',
             name: 'Golden Gate Audubon Society',
             imageUrl: 'https://goldengateaudubon.org/wp-content/uploads/2020/09/GGAS-logo-bw-trans.png',
->>>>>>> 5f2e29a2ed4f4cea374cd876d8eab30bae36bff6
             id: '2',
             read: 'true',
             number: '17',
