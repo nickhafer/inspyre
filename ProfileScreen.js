@@ -70,8 +70,8 @@ export default function ProfileScreen() {
     const LIKED_ITEMS_DATA = [
         {
             id: '3',
-            title: 'Water bottle',
-            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            title: 'Old Converse',
+            image: 'https://images.unsplash.com/photo-1597405490028-282bac40f64c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1646&q=80',
             location: 'Palo Alto, CA',
             distance: '1.2 miles',
             username: 'Max',
@@ -80,22 +80,21 @@ export default function ProfileScreen() {
         },
         {
             id: '2',
-            title: 'Used Towel',
-            image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
-            location: 'Palo Alto, CA',
-            distance: '1.2 miles',
-            username: 'placeholder1',
-            profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
-
+            title: 'Converse High Top',
+            image: 'https://everydayrecycler.com/wp-content/uploads/2020/09/Old-Shoes.jpg',
+            location: 'Stanford, CA',
+            distance: '0.3 miles',
+            username: 'Caroline',
+            profilePic: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1760&q=80',
         },
         {
             id: '1',
-            title: 'Broken Chair',
-            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
-            location: 'Palo Alto, CA',
-            distance: '1.2 miles',
-            username: 'placeholder2',
-            profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
+            title: 'Old Vans',
+            image: 'https://i.pinimg.com/originals/56/98/44/569844f4fdb836afd1d96bd7aa586dd5.jpg',
+            location: 'Redwood City, CA',
+            distance: '3.1 miles',
+            username: 'Leio',
+            profilePic: 'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1760&q=80',
 
         },
     ]
@@ -252,7 +251,7 @@ export default function ProfileScreen() {
 
             {/* Bio */}
             <View style={styles.bioSection}> 
-                <Text style={styles.bio}>Stanford undegrad clearing out my dorm room hoping to help out some artists</Text>
+                <Text style={styles.bio}>Stanford undergrad clearing out my dorm room hoping to help out some artists</Text>
                 <Pressable style={styles.editProfileBlock}>
                     <Image 
                         style={styles.editProfile}
