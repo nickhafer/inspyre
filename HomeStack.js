@@ -8,7 +8,7 @@ import HomeProfileScreen from './HomeProfileScreen';
 import IndividualItem from './IndividualItem';
 
 
-export default function HomeStack ({}) {
+export default function ProfileStack ({}) {
     const Stack = createStackNavigator();
 
     return (
