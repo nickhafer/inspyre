@@ -124,23 +124,23 @@ export default function ProfileScreen() {
 
     const renderLiked = ({ item }) => (
         <View style={styles.item}>
-            <View>
+            <View style={styles.topBar}>
                 <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
                     {/* Profile Pic */}
                     <Image 
                         source={{
                             uri: item.profilePic,
                         }}
-                        style={styles.profilePic}
+                        style={styles.miniProf}
                     />
                 </Pressable>
                 <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
                     {/* Username & rating */}
                     <View style={styles.nameRating}>
-                        <Text style={styles.username}> {item.username} </Text>
+                        <Text style={styles.miniUsername}> {item.username} </Text>
                         <Image 
                             source={require('./assets/Images/rating-green.png')}
-                            style={styles.rating}
+                            style={styles.miniRating}
                         />
                     </View>
                 </Pressable>
@@ -279,21 +279,6 @@ export default function ProfileScreen() {
                     }
                 </Pressable>
                 <Pressable
-                    onPress={()=>setTab("yourArt")}
-                >
-                    {tab === "yourArt" ?
-                        <Image 
-                            style={styles.yourArt}
-                            source={require('./assets/Icons/your-art-green.png')}
-                        />
-                    :
-                        <Image 
-                            style={styles.yourArt}
-                            source={require('./assets/Icons/your-art-gray.png')}
-                        />
-                    }
-                </Pressable>
-                <Pressable
                     onPress={()=>setTab("likedItems")}
                 >
                     {tab === "likedItems" ?
@@ -305,6 +290,21 @@ export default function ProfileScreen() {
                         <Image 
                             style={styles.likedItems}
                             source={require('./assets/Icons/liked-items-gray2.png')}
+                        />
+                    }
+                </Pressable>
+                <Pressable
+                    onPress={()=>setTab("yourArt")}
+                >
+                    {tab === "yourArt" ?
+                        <Image 
+                            style={styles.yourArt}
+                            source={require('./assets/Icons/your-art-green.png')}
+                        />
+                    :
+                        <Image 
+                            style={styles.yourArt}
+                            source={require('./assets/Icons/your-art-gray.png')}
                         />
                     }
                 </Pressable>
@@ -441,5 +441,47 @@ const styles = StyleSheet.create({
     },
     textHalf: {
         margin: '4%',
+    },
+    miniProf: {
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+    },
+    miniUsername: {
+        fontFamily: 'InterBlack',
+        fontSize: 24,
+        marginLeft: 8,
+    },
+    miniRating: {
+        width: 150,
+        resizeMode: 'contain',
+    },
+    nameRating: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '80%',
+    },
+    topBar: {
+        flexDirection: 'row',
+        margin: 8,
+    },
+    locationLine: {
+        flexDirection: 'row',
+    },
+    iconsHalf: {
+        margin: '2%',
+        width: '32%',
+        alignItems: 'flex-start',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    iconContainer: {
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    },
+    bottomContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
 });

@@ -15,7 +15,7 @@ export default function CommunitiesScreen ({ navigation }) {
         InterLight: require('./assets/Fonts/Inter-Light.ttf'),
       });    
 
-    const MY_COMMUNITIES = [
+    const EXPLORE_COMMUNITIES = [
         {
             location: 'Palo Alto, CA',
             name: 'City of Palo Alto',
@@ -36,7 +36,7 @@ export default function CommunitiesScreen ({ navigation }) {
         },
         {
             location: 'Stanford, CA',
-            name: 'Stanford Club Sports',
+            name: 'Stanford Clubs',
             imageUrl: 'https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/stanfordrec.sidearmsports.com/images/2021/9/19/Club_Sports_graphics_slider_tablet.jpg',
             id: '2',
             read: 'true',
@@ -44,7 +44,7 @@ export default function CommunitiesScreen ({ navigation }) {
             description: 'Welcome non-varsity Stanford athletes! Here you\'ll find all the recycled athletic gear you need. From frisbees to footballs, track spikes to soccer balls, we\'ve got you covered!'
         },
     ]
-    const EXPLORE_COMMUNITIES = [
+    const MY_COMMUNITIES = [
         {
             location: 'Palo Alto, CA',
             name: 'Palo Alto High School',
@@ -84,7 +84,7 @@ export default function CommunitiesScreen ({ navigation }) {
                         source={{
                             uri: item.imageUrl,
                         }}
-                    />
+                    />    
                 </View>
                 <View style={styles(item).textHalf}>
                         <Text style={styles(item).messageTitle}>{item.name}</Text>
@@ -220,6 +220,7 @@ const header_styles = StyleSheet.create({
         height: 64,
         width: 64,
         resizeMode: 'cover',
+        position: 'absolute',
     },
     conversationWith: {
         fontFamily: 'InterRegular',
@@ -354,5 +355,21 @@ const styles = (item) => StyleSheet.create({
     messageDescription: {
         fontSize: 16,
         fontFamily: 'InterRegular',
+    },
+    lockedStatus: {
+        height: '50%',
+        width: '50%',
+        borderRadius:20,
+        position:'absolute',
+        //paddingBottom:10,
+        marginTop: 100,
+    },
+    LockedView: {
+        width: '50%',
+        height: '50%',
+        marginLeft: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor:'blue',
     },
 });
