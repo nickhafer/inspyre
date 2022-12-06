@@ -15,10 +15,11 @@ export default function CommunitiesScreen ({ navigation }) {
         InterLight: require('./assets/Fonts/Inter-Light.ttf'),
       });    
 
-    const MY_COMMUNITIES = [
+    const EXPLORE_COMMUNITIES = [
         {
             location: 'Palo Alto, CA',
             name: 'City of Palo Alto',
+            locked_status: 'https://cdn-icons-png.flaticon.com/512/102/102288.png',
             imageUrl: "https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg",
             id: '17',
             read: 'true',
@@ -28,6 +29,7 @@ export default function CommunitiesScreen ({ navigation }) {
         {
             location: 'Stanford, CA',
             name: 'West FloMo',
+            locked_status: 'https://cdn-icons-png.flaticon.com/512/61/61457.png',
             imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8DUUfF_LxZQBVCj_aKb53zZD9czoEsy8A3g&usqp=CAU',
             id: '1',
             read: 'true',
@@ -37,6 +39,7 @@ export default function CommunitiesScreen ({ navigation }) {
         {
             location: 'Stanford, CA',
             name: 'Stanford Club Sports',
+            locked_status: 'https://cdn-icons-png.flaticon.com/512/61/61457.png',
             imageUrl: 'https://shotkit.com/wp-content/uploads/2021/06/cool-profile-pic-matheus-ferrero.jpeg',
             id: '2',
             read: 'true',
@@ -44,7 +47,7 @@ export default function CommunitiesScreen ({ navigation }) {
             description: 'this is a placeholder for the description.'
         },
     ]
-    const EXPLORE_COMMUNITIES = [
+    const MY_COMMUNITIES = [
         {
             location: 'Palo Alto, CA',
             name: 'Palo Alto High School',
@@ -57,6 +60,7 @@ export default function CommunitiesScreen ({ navigation }) {
         {
             location: 'Menlo Park, CA',
             name: 'Menlo Thrifters',
+            locked_status: 'https://cdn-icons-png.flaticon.com/512/61/61457.png',
             imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8DUUfF_LxZQBVCj_aKb53zZD9czoEsy8A3g&usqp=CAU',
             id: '1',
             read: 'true',
@@ -67,6 +71,7 @@ export default function CommunitiesScreen ({ navigation }) {
             location: 'Palo Alto, CA',
             name: 'Bay Bird Watchers',
             imageUrl: 'https://shotkit.com/wp-content/uploads/2021/06/cool-profile-pic-matheus-ferrero.jpeg',
+            locked_status: 'https://cdn-icons-png.flaticon.com/512/61/61457.png',
             id: '2',
             read: 'true',
             number: '17',
@@ -84,7 +89,7 @@ export default function CommunitiesScreen ({ navigation }) {
                         source={{
                             uri: item.imageUrl,
                         }}
-                    />
+                    />    
                 </View>
                 <View style={styles(item).textHalf}>
                         <Text style={styles(item).messageTitle}>{item.name}</Text>
@@ -220,6 +225,7 @@ const header_styles = StyleSheet.create({
         height: 64,
         width: 64,
         resizeMode: 'cover',
+        position: 'absolute',
     },
     conversationWith: {
         fontFamily: 'InterRegular',
@@ -354,5 +360,21 @@ const styles = (item) => StyleSheet.create({
     messageDescription: {
         fontSize: 16,
         fontFamily: 'InterRegular',
+    },
+    lockedStatus: {
+        height: '50%',
+        width: '50%',
+        borderRadius:20,
+        position:'absolute',
+        //paddingBottom:10,
+        marginTop: 100,
+    },
+    LockedView: {
+        width: '50%',
+        height: '50%',
+        marginLeft: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor:'blue',
     },
 });
