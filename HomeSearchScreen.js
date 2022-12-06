@@ -36,7 +36,7 @@ export default function HomeSearchScreen({navigation}) {
             </View>
             <View style = {styles.searchDesignView}>
                 <Image style = {styles.searchgraphic}
-                source = {require('./FigmaIcons/Searching2.png')}>
+                source = {require('./FigmaIcons/Searching3.png')}>
                     
 
                 </Image>
