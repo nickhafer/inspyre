@@ -2,9 +2,11 @@ import { Text, View, StyleSheet, SafeAreaView, FlatList, Image, Pressable } from
 import { useNavigation } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { useState } from 'react';
+import PROFILEPICTURE from './assets/Images/luc-profile-pic.jpeg';
 
 
 export default function ProfileScreen() {
+    const profilePicture = PROFILEPICTURE;
     const navigation = useNavigation();
     const [tab, setTab] = useState('givingAway');
     const [tabLike, setTabLike] = useState('liked');
@@ -22,15 +24,15 @@ export default function ProfileScreen() {
     const GIVING_AWAY_DATA = [
         {
             id: '1',
-            title: 'Old shoes',
+            title: 'Old Nikes',
             image: 'https://images.unsplash.com/photo-1616119547809-588a65fdc7e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
         {
             id: '2',
-            title: 'Used Towel',
-            image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+            title: 'White Towels',
+            image: 'https://images.unsplash.com/photo-1643240911047-64ddd7ebd51a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dG93ZWx8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
@@ -102,7 +104,7 @@ export default function ProfileScreen() {
     const renderItem = ({ item }) => (
         <View style={styles.item}>
             <Image
-                source={{ uri: item.image, }}
+                source={{ uri: item.image }}
                 style={styles.objectImage}
             />
             <View style={styles.bottomContainer}>
@@ -310,9 +312,9 @@ export default function ProfileScreen() {
             </View>
 
             {/* Conditional Flatlist */}
-            <SafeAreaView>
+            <View style={styles.bottomContainer}>
                 {flatlist}
-            </SafeAreaView>
+            </View>
         </SafeAreaView>
     );
 }
@@ -320,7 +322,7 @@ export default function ProfileScreen() {
 const styles = StyleSheet.create({
     screenContainer: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
     },
     editProfile: {
