@@ -28,10 +28,6 @@ export default function App() {
 
             if (route.name === 'Home') {
               iconName = focused ? 'home' : 'home-outline';
-              // // return <Ionicons name={iconName} size={24} color="black" />;
-              // iconName = focused ? 'like-gray.png' : 'like-red.png'
-              // console.log(iconName)
-              // return <Image resizeMode='cover' source={{uri: iconName}} />;
             } 
             else if (route.name === 'Search') {
               iconName = focused ? 'search' : 'search-outline';
