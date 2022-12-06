@@ -62,13 +62,19 @@ export default function HomeDMScreen ({ navigation, route}) {
                         </Pressable>
                     </View>
                 </View>
-                <View style={styles.chatSection}>
-                    <View style={styles.inputMessageView}>
-                        <Text style={styles.messageDescription}>
-                            {text.split('').map((word) => word).join('')}
-                        </Text>
+                {text === "sent" ?
+                    <View style={styles.chatSection}>
+                        <View style={styles.inputMessageView}>
+                            <Text style={styles.messageDescription}>
+                                Hey Tia, do you still have that cool rustic water bottle?
+                            </Text>
+                        </View>
                     </View>
-                </View>
+                :
+                    <></>
+                }
+                
+                
                 <View style={styles.chatBottom}>
                     <View style={styles.textInputView}>
                         <TextInput
@@ -76,12 +82,14 @@ export default function HomeDMScreen ({ navigation, route}) {
                             placeholder='iMessage'
                             onSubmitEditing={Keyboard.dismiss}
                             // onSubmitEditing={newText => setText(newText)}
-                            onChangeText={newText => setText(newText)}
+                            // onChangeText={newText => setText(newText)}
                         />
                     </View>
-                    <Image 
-                        style={styles.send} source={require('./assets/Icons/send-gray.png')} 
-                    />
+                    <Pressable onPress={()=>setText("sent")}>
+                        <Image 
+                            style={styles.send} source={require('./assets/Icons/send-gray.png')} 
+                        />
+                    </Pressable>
                 </View>
             </SafeAreaView>
         </View>

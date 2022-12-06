@@ -47,7 +47,6 @@ export default function HomeProfileScreen ({ navigation, route}) {
     return (
         <SafeAreaView>
             <Pressable style={styles.back} onPress={() => navigation.goBack()}>
-                {/* move this down so it's pressable */}
                 <Image style={styles.back} source={require('./assets/Icons/back-gray.png')} />
             </Pressable>
             <View style={styles.profileHeader}>
