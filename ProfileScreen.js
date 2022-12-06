@@ -22,15 +22,15 @@ export default function ProfileScreen() {
     const GIVING_AWAY_DATA = [
         {
             id: '1',
-            title: 'Old shoes',
+            title: 'Old Nikes',
             image: 'https://images.unsplash.com/photo-1616119547809-588a65fdc7e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
         {
             id: '2',
-            title: 'Used Towel',
-            image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+            title: 'White Towels',
+            image: 'https://images.unsplash.com/photo-1643240911047-64ddd7ebd51a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dG93ZWx8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
