@@ -90,6 +90,7 @@ export default function CommunitiesScreen ({ navigation }) {
                         <Text style={styles(item).messageTitle}>{item.name}</Text>
                         <Text style={styles(item).messageDescription}>{item.location}</Text>
                 </View>
+                <Image source={require("./FigmaIcons/join.png")}/>
             </View>
         </Pressable>
     );
@@ -99,7 +100,7 @@ export default function CommunitiesScreen ({ navigation }) {
             <SafeAreaView style={styles.container}>
                 <View style={header_styles.chatHeader}>
                     <Image style={header_styles.headerText}
-                    source={require("./FigmaIcons/messages.png")} />
+                    source={require("./FigmaIcons/community.png")} />
                 </View>
                 <View style={header_styles.chatBottom}>
                     <View style={header_styles.textInputView}>
@@ -154,16 +155,17 @@ const header_styles = StyleSheet.create({
     chatHeader: {
         height: '8%',
         justifyContent: 'center',
+        //backgroundColor: 'blue',
         alignContent: 'center',
         // backgroundColor: '#f9c2ff',
     },
     headerText: {
         // fontSize: 40,
         // fontFamily: 'InterBold',
-        alignSelf: 'flex-start',
-        // backgroundColor: '#f9c2ff',
+        alignSelf: 'center',
+        //backgroundColor: '#f9c2ff',
         height: "100%",
-        width: 200,
+        width: 300,
     },
     communityTitle: {
         //backgroundColor: 'blue',
@@ -337,6 +339,7 @@ const styles = (item) => StyleSheet.create({
     profilePic: {
         height: 150,
         width: 150,
+        borderRadius:20,
     },
     textHalf: {
         height: 100,
