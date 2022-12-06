@@ -1,10 +1,11 @@
-import { View, SafeAreaView, Image, ImageBackground, Text, Keyboard, StyleSheet, Pressable, TextInput } from 'react-native';
+import { modalVisible, Modal, View, SafeAreaView, Image, ImageBackground, Text, Keyboard, StyleSheet, Pressable, TextInput } from 'react-native';
 import React, { useState , useEffect } from 'react';
 import { useFonts } from 'expo-font';
 import { back } from 'react-native/Libraries/Animated/Easing';
 
 
 export default function IndividualCommunityScreen ({ navigation, route}) {
+    const [modalVisible, setModalVisible] = useState(false);
     const { message } = route.params;
     const [text, setText] = useState('');
 
@@ -66,12 +67,37 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                     </View>
                     <View style={styles.bottomSection}>
                         <Text style={styles.description}> {message.description} </Text>
-                        <Pressable onPress={() => navigation.navigate('CommunitiesScreen')}>
-                            <Image 
-                                source={require('./assets/Icons/request-to-join.png')}
-                                style={styles.join} 
-                            />
-                        </Pressable>
+                        <View>
+                            <Modal
+                            animationType="fade"
+                            transparent={true}
+                            visible={modalVisible}
+                            onRequestClose={() => {
+                                Alert.alert("Modal has been closed.");
+                                setModalVisible(!modalVisible);
+                            }}
+                            >
+                            <View style={styles.centeredView}>
+                                <View style={styles.modalView}>
+                                    <Text style={styles.modalText}>You just joined this group! Do you want to keep exploring?</Text>
+                                    <Pressable
+                                        style={[styles.buttonPost, styles.buttonClose]}
+                                        onPress={() => {setModalVisible(!modalVisible), navigation.navigate('CommunitiesScreen')}}
+                                    >
+                                        <Text style={styles.textStyle}>Continue Exploring</Text>
+                                    </Pressable>
+                                </View>
+                            </View>
+                            </Modal>
+                        </View>
+      
+
+      <Pressable
+          style={[styles.button, styles.buttonOpen]}
+          onPress={() => setModalVisible(true)}
+      >
+          <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
+      </Pressable>
                         {/* INSERT FUNCTIONALITY TO MAKE PRESSABLE AND JOIN COMMUNITY */}
                     </View>
                 </View>
@@ -251,4 +277,124 @@ const styles = StyleSheet.create({
         marginLeft: 100,
         resizeMode: 'contain',
     },
+        screenContainer: {
+            flex: 1,
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            backgroundColor: 'white',
+        },
+        header: {
+          width: '100%',
+          height: '10%',
+        },
+        clickable: {
+          flexDirection: 'row',
+          alignItems: 'center',
+        },
+        backButton: {
+          width: 48,
+          height: 48,
+          margin: 8,
+        },
+        screenText: {
+            fontSize: 32,
+        },
+        details: {
+          fontSize: 24,
+          fontFamily: 'InterBlack',
+          marginLeft: 60,
+        },
+        centeredView: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 22
+      },
+      image: {
+        width: '100%',
+        aspectRatio: 1,
+      },
+      modalView: {
+        margin: 20,
+        backgroundColor: "white",
+        borderRadius: 20,
+        padding: 35,
+        alignItems: "center",
+        justifyContent: 'center',
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5
+      },
+      buttonEdit: {
+        borderRadius: 20,
+        width: 200,
+        paddingVertical: 12,
+        margin: 8,
+        elevation: 2,
+        backgroundColor: '#81BBA4',
+      },
+      buttonPost: {
+        borderRadius: 20,
+        width: 200,
+        paddingVertical: 12,
+        margin: 8,
+        elevation: 2
+      },
+      postFirst: {
+        width: 120,
+        resizeMode: 'contain',
+      },
+      buttonClose: {
+        backgroundColor: "#2196F3",
+      },
+      textStyle: {
+        fontFamily: 'InterBold',
+        textAlign: "center",
+        fontSize: 16,
+      },
+      modalText: {
+        marginBottom: 15,
+        textAlign: "center"
+      },
+      addTitle: {
+        fontFamily: 'InterBlack',
+        fontSize: 24,
+        marginVertical: 8,
+      },
+      addLoc: {
+        fontFamily: 'InterBold',
+        fontSize: 18,
+        marginVertical: 6,
+      },
+      addStory: {
+        fontFamily: 'InterRegular',
+        fontSize: 14,
+        marginVertical: 8,
+      },
+      addDetails: {
+        fontFamily: 'InterRegular',
+        fontSize: 14,
+        marginVertical: 8,
+      },
+      postTo: {
+        fontFamily: 'InterBold',
+        fontSize: 16,
+        marginVertical: 8,
+      },
+      textInputs: {
+        width: '80%',
+        justifyContent: 'center',
+      },
+      modalText: {
+        justifyContent: 'center',
+        textAlign: 'center',
+        margin: 8,
+        fontFamily: 'InterSemiBold',
+        fontSize: 20,
+      },
   });
