@@ -155,7 +155,7 @@ const styles = (item) => StyleSheet.create({
         borderBottomWidth: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        borderColor: item.read == 'true' ? 'grey' : 'blue',
+        borderColor: item.read == 'true' ? 'grey' : 'grey',
         backgroundColor: 'white',
     },
     messageTitle: {
