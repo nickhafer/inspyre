@@ -4,42 +4,90 @@ import { useFonts } from 'expo-font';
 import { back } from 'react-native/Libraries/Animated/Easing';
 import { render } from 'react-dom';
 import SearchChairs from './SearchChairs';
+import { withSafeAreaInsets } from 'react-native-safe-area-context';
 
 
 
 
 export default function HomeSearchScreen({navigation}) {
     return (
-        <View style={styles.chatBottom}>
-                    <Pressable style={styles.back} onPress={() => navigation.goBack()}>
-                        <Image style={styles.back} source={require('./assets/Icons/back-gray.png')}/>
-                        <Text>Home Feed</Text>
-                    </Pressable>
-                    <View style={styles.textInputView}>
-                        <TextInput
-                            style={styles.textInput}
-                            // FYI: There are hella spaces after "Search" to make the text hitbox larger 
-                            placeholder='Search                                                                          '
-                            onSubmitEditing={Keyboard.dismiss}
-                            // onSubmitEditing={newText => setText(newText)}
-                            // onChangeText={newText => setText(newText)}
+        <View style = {styles.container}>
+            <View style={styles.chatBottom}>
+                        <Pressable style={styles.back} onPress={() => navigation.goBack()}>
+                            <Image style={styles.back} source={require('./assets/Icons/back-gray.png')}/>
+                        </Pressable>
+                        <View style={styles.textInputView}>
+                            <TextInput
+                                style={styles.textInput}
+                                // FYI: There are hella spaces after "Search" to make the text hitbox larger 
+                                placeholder='Search                                                                          '
+                                onSubmitEditing={Keyboard.dismiss}
+                                // onSubmitEditing={newText => setText(newText)}
+                                // onChangeText={newText => setText(newText)}
+                            />
+                        </View>
+                        <View style = {styles.SearchButton}>
+                        <Pressable onPress={() => navigation.navigate('SearchChairs')}>
+                        <Image 
+                            style={styles.search} source={require('./assets/Icons/send-gray.png')} 
                         />
-                    </View>
-                    <Pressable onPress={() => navigation.navigate('SearchChairs')}>
-                    <Image 
-                        style={styles.search} source={require('./assets/Icons/send-gray.png')} 
-                    />
-                    </Pressable>
+                        </Pressable>
+                        </View>
+            </View>
+            <View style = {styles.searchDesignView}>
+                <Image style = {styles.searchgraphic}
+                source = {require('./FigmaIcons/Searching2.png')}>
+                    
+
+                </Image>
+                <View style = {styles.searchText}>
+                    <Text styles={styles.text}>
+                    </Text>
+                <Text>
+                </Text>
                 </View>
+            </View>
+        </View>
+        
     );
 }
 
 const styles = StyleSheet.create({
+    container: {
+        backgroundColor:'white',
+        flex:1,
+
+    },
+    text: {
+        color: 'gray',
+        fontSize: 30,
+
+    },
+    searchgraphic: {
+        width:'100%',
+        height: 300,
+        resizeMode: 'contain',
+
+    },
+    searchDesignView: {
+        //backgroundColor: 'blue',
+        marginTop: 80,
+        alignItems: 'center',
+        //paddingLeft: 300,
+        width: '100%',
+        height: "60%",
+        //backgroundColor: 'red',
+    },
+    searchText: {
+        //backgroundColor: 'blue',
+        marginTop: 25,
+        fontSize:22,
+    },
     chatHeader: {
         height: '10%',
         justifyContent: 'center',
         alignContent: 'center',
-        // backgroundColor: '#f9c2ff',
+        //backgroundColor: '#f9c2ff',
     },
     headerText: {
         // fontSize: 40,
@@ -139,6 +187,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         marginTop: 16,
         marginHorizontal: 8,
+        
     },
     textInputView: {
         alignSelf: 'flex-start',
@@ -148,7 +197,8 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',
         margin: 16,
         paddingBottom: 10,
-        width: '75%',
+        width: '65%',
+        //backgroundColor:'red',
     },
     // inputMessage: {
     //     fontSize: 14,
@@ -164,6 +214,7 @@ const styles = StyleSheet.create({
         margin: 8,
         paddingBottom: 10,
         width: '50%',
+        //backgroundColor:'red',
     },
     wholeScreen: {
         backgroundColor: 'white',
@@ -172,10 +223,22 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignSelf: 'flex-start',
         alignItems: 'center',
+        marginTop:50,
+        //backgroundColor:'blue',
     },
     send: {
         width: 40,
         height: 40,
 
+    },
+    SearchButton: {
+        //backgroundColor:'blue',
+        width:40,
+        height:40
+
+    },
+    search: {
+        width:'100%',
+        height:"100%",
     },
 });
