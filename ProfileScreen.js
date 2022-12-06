@@ -22,8 +22,8 @@ export default function ProfileScreen() {
     const GIVING_AWAY_DATA = [
         {
             id: '1',
-            title: 'Broken Chair',
-            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            title: 'Old shoes',
+            image: 'https://images.unsplash.com/photo-1616119547809-588a65fdc7e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
@@ -36,8 +36,8 @@ export default function ProfileScreen() {
         },
         {
             id: '3',
-            title: 'Water bottle',
-            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            title: 'Body spray',
+            image: 'https://images.unsplash.com/photo-1621265010303-a793d1017307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
@@ -46,22 +46,22 @@ export default function ProfileScreen() {
     const YOUR_ART_DATA = [
         {
             id: '2',
-            title: 'Used Towel',
-            image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+            title: 'Fist With Nails',
+            image: 'https://images.unsplash.com/photo-1615650949849-37db4f2c67db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1760&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
         {
             id: '1',
-            title: 'Broken Chair',
-            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            title: 'Simple Flowers',
+            image: 'https://images.unsplash.com/photo-1570361269465-290e1149df5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1801&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
         {
             id: '3',
-            title: 'Water bottle',
-            image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+            title: 'Some Ceramics',
+            image: 'https://images.unsplash.com/photo-1603697486934-686e0b3c9f06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2719&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
         },
@@ -124,23 +124,23 @@ export default function ProfileScreen() {
 
     const renderLiked = ({ item }) => (
         <View style={styles.item}>
-            <View>
+            <View style={styles.topBar}>
                 <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
                     {/* Profile Pic */}
                     <Image 
                         source={{
                             uri: item.profilePic,
                         }}
-                        style={styles.profilePic}
+                        style={styles.miniProf}
                     />
                 </Pressable>
                 <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
                     {/* Username & rating */}
                     <View style={styles.nameRating}>
-                        <Text style={styles.username}> {item.username} </Text>
+                        <Text style={styles.miniUsername}> {item.username} </Text>
                         <Image 
                             source={require('./assets/Images/rating-green.png')}
-                            style={styles.rating}
+                            style={styles.miniRating}
                         />
                     </View>
                 </Pressable>
@@ -279,21 +279,6 @@ export default function ProfileScreen() {
                     }
                 </Pressable>
                 <Pressable
-                    onPress={()=>setTab("yourArt")}
-                >
-                    {tab === "yourArt" ?
-                        <Image 
-                            style={styles.yourArt}
-                            source={require('./assets/Icons/your-art-green.png')}
-                        />
-                    :
-                        <Image 
-                            style={styles.yourArt}
-                            source={require('./assets/Icons/your-art-gray.png')}
-                        />
-                    }
-                </Pressable>
-                <Pressable
                     onPress={()=>setTab("likedItems")}
                 >
                     {tab === "likedItems" ?
@@ -308,12 +293,27 @@ export default function ProfileScreen() {
                         />
                     }
                 </Pressable>
+                <Pressable
+                    onPress={()=>setTab("yourArt")}
+                >
+                    {tab === "yourArt" ?
+                        <Image 
+                            style={styles.yourArt}
+                            source={require('./assets/Icons/your-art-green.png')}
+                        />
+                    :
+                        <Image 
+                            style={styles.yourArt}
+                            source={require('./assets/Icons/your-art-gray.png')}
+                        />
+                    }
+                </Pressable>
             </View>
 
             {/* Conditional Flatlist */}
-            <View style={styles.bottomContainer}>
+            <SafeAreaView>
                 {flatlist}
-            </View>
+            </SafeAreaView>
         </SafeAreaView>
     );
 }
@@ -441,5 +441,47 @@ const styles = StyleSheet.create({
     },
     textHalf: {
         margin: '4%',
+    },
+    miniProf: {
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+    },
+    miniUsername: {
+        fontFamily: 'InterBlack',
+        fontSize: 24,
+        marginLeft: 8,
+    },
+    miniRating: {
+        width: 150,
+        resizeMode: 'contain',
+    },
+    nameRating: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '80%',
+    },
+    topBar: {
+        flexDirection: 'row',
+        margin: 8,
+    },
+    locationLine: {
+        flexDirection: 'row',
+    },
+    iconsHalf: {
+        margin: '2%',
+        width: '32%',
+        alignItems: 'flex-start',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    iconContainer: {
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    },
+    bottomContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
 });
