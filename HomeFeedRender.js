@@ -28,7 +28,9 @@ export default function RenderFeedItem ({ item }) {
             {/* Item Header */}
             <View style={styles.postHeader}>
                 {/* Profile Pic */}
-                <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
+                <Pressable
+                    onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}
+                >
                     <Image 
                         source={{
                             uri: item.profilePic,
@@ -70,30 +72,45 @@ export default function RenderFeedItem ({ item }) {
                         </View>
                         <Text style={styles.distance}>{item.distance}</Text>
                     </Pressable>
+                    
                 </View>
+
 
                 <View style={styles.iconsHalf}>
                     {/* Like Action */}
-                    <View style={styles.iconContainer}>
-                        {/* setTab("liked") */}
-                        <Pressable onPress={()=>{tab === "liked" ? setTab("notLiked") : setTab("liked")}}>
-                            {
-                                tab === "liked" ?
-                                    <Image
-                                        source={require('./assets/Icons/like-red.png')}
-                                        style={styles.like} 
-                                    />
-                                :
-                                    <Image
-                                        source={require('./assets/Icons/like-gray.png')}
-                                        style={styles.like} 
-                                    />
-                            }
-                        </Pressable>
-                    </View>
+                    <Pressable 
+                        //INSERT LIKE FUNCTIONALITY
+                        >
+                        <View style={styles.iconContainer}>
+                            {/* setTab("liked") */}
+                            <Pressable onPress={()=>{tab === "liked" ? setTab("notLiked") : setTab("liked")}}>
+                                {
+                                    tab === "liked" ?
+                                        <Image
+                                            source={require('./assets/Icons/like-red.png')}
+                                            style={styles.like} 
+                                        />
+                                    :
+                                        <Image
+                                            source={require('./assets/Icons/like-gray.png')}
+                                            style={styles.like} 
+                                        />
+                                }
+                            </Pressable>
+                            
+                        </View>
+                    </Pressable>
                     {/* DM Item Owner */}
                     <Pressable 
-                        onPress={() => navigation.navigate('HomeDMScreen', { item: item })}>
+                        onPress={() => navigation.navigate('HomeDMScreen', { item: item })}
+                        style={({ pressed }) => [
+                            {
+                                backgroundColor: pressed
+                                ? 'rgb(210, 230, 255)'
+                                : 'white'
+                            },
+                            styles.wrapperCustom
+                        ]}>
                         <View style={styles.iconContainer}>
                             <Image
                                 source={require('./assets/Icons/chat-gray.png')}
@@ -193,8 +210,7 @@ export default function RenderFeedItem ({ item }) {
     },
     objectImage: {
         width: '100%',
-        resizeMode: 'stretch',
-        height: 400,
+        aspectRatio: 1,
     },
     postHeader: {
         flex: 1,
