@@ -52,6 +52,7 @@ export default function ProfileScreen() {
             image: 'https://images.unsplash.com/photo-1615650949849-37db4f2c67db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1760&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
+            role: require('./assets/Icons/donor-pink.png'),
         },
         {
             id: '1',
@@ -59,6 +60,7 @@ export default function ProfileScreen() {
             image: 'https://images.unsplash.com/photo-1570361269465-290e1149df5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1801&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
+            role: require('./assets/Icons/artist-purple.png'),
         },
         {
             id: '3',
@@ -66,6 +68,7 @@ export default function ProfileScreen() {
             image: 'https://images.unsplash.com/photo-1603697486934-686e0b3c9f06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2719&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
+            role: require('./assets/Icons/donor-pink.png'),
         },
     ]
 
@@ -118,6 +121,31 @@ export default function ProfileScreen() {
                     <Text style={styles.location}>{item.location}  </Text>  
                     </View>
                     <Text style={styles.distance}>{item.distance}</Text>
+                </View>
+            </View>
+        </View>
+    );
+
+    const renderArt = ({ item }) => (
+        <View style={styles.item}>
+            <Image
+                source={{ uri: item.image }}
+                style={styles.objectImage}
+            />
+            <View style={styles.bottomContainer}>
+                <View style={styles.textHalf}>
+                    <Text style={styles.title}>{item.title}</Text>
+                    <View style={styles.locationLine}>
+                    <Image
+                        style={styles.pin}
+                        source={require('./assets/Icons/pin.png')}
+                    />
+                    <Text style={styles.location}>{item.location}  </Text>  
+                    </View>
+                    <Text style={styles.distance}>{item.distance}</Text>
+                </View>
+                <View style={styles.roleContainer}> 
+                        <Image style={styles.role} source={item.role} />
                 </View>
             </View>
         </View>
@@ -216,7 +244,7 @@ export default function ProfileScreen() {
     } else if (tab === "yourArt") {
         flatlist = <FlatList 
                 data={YOUR_ART_DATA}
-                renderItem={renderItem}
+                renderItem={renderArt}
                 keyExtractor={item => item.id}
                 />
     } else {
@@ -442,6 +470,7 @@ const styles = StyleSheet.create({
     },
     textHalf: {
         margin: '4%',
+        width: '60%',
     },
     miniProf: {
         width: 50,
@@ -485,5 +514,21 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         flex: 1
+    },
+    like: {
+        width: 64,
+        height: 64,
+    },
+    role: {
+        height: 60,
+        width: 120,
+        resizeMode: 'contain',
+        alignSelf: 'center',
+    },
+    roleContainer:  {
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        width: '30%',
+        marginRight: 8,
     },
 });

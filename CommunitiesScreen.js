@@ -43,6 +43,43 @@ export default function CommunitiesScreen ({ navigation }) {
             number: '97',
             description: 'Welcome non-varsity Stanford athletes! Here you\'ll find all the recycled athletic gear you need. From frisbees to footballs, track spikes to soccer balls, we\'ve got you covered!'
         },
+        {
+            location: 'Stanford, CA',
+            name: 'Bay Beach Wildlife Preserve',
+            imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Resch_Falls.jpg',
+            id: '7',
+            read: 'true',
+            number: '18',
+            description: 'Welcome to the Bay Beach Wildlife Sanctuary! Most of our items are discarded trash we find in the santuary!'
+        },
+        {
+            location: 'Stanford, CA',
+            name: 'Stanford Farm',
+            imageUrl: 'https://cawarchitects.com/wp-content/uploads/2021/08/Stanford-Educational-Farm-Overlooking-Crops-to-Buildings-CAW-Architects-slideshow.jpg',
+            id: '6',
+            read: 'true',
+            number: '24',
+            description: 'Items from the farm that our farmers are no longer using, feel free to check it out to see if there is anything of interest. We upload new items every Monday!'
+        },
+        {
+            location: 'Stanford, CA',
+            name: 'Stanford Art Studio',
+            imageUrl: 'https://art.stanford.edu/sites/art/files/styles/hs_slideshow_large_2000x1500/public/media/image/facilities-painting.jpg?h=6eb229a4&itok=x0hv3ipO',
+            id: '5',
+            read: 'true',
+            number: '12',
+            description: 'Stanford Art Studio majors looking to get their hands on old art supplies or to share some of their own. Check us out! :)'
+        },
+        {
+            location: 'Palo Alto, CA',
+            name: 'Palo Alto Gardeners',
+            imageUrl: 'https://cdn.britannica.com/42/91642-050-332E5C66/Keukenhof-Gardens-Lisse-Netherlands.jpg',
+            id: '9',
+            read: 'true',
+            number: '97',
+            description: 'Want any gardening supplies that we are no longer using? Join our group and we can get to it to you ASAP! Open to all in the area!'
+        },
+
     ]
     const MY_COMMUNITIES = [
         {
@@ -72,6 +109,35 @@ export default function CommunitiesScreen ({ navigation }) {
             number: '17',
             description: 'We try to share our bird watching gear with those who can\'t afford it. Feel free to come to one of our meet ups on Saturdays and Sundays.'
         },
+
+        {
+            location: 'Half Moon Beach, CA',
+            name: 'Half Moon Beach',
+            imageUrl: 'https://www.planetware.com/photos-large/USCA/half-moon-bay-state-beaches.jpg',
+            id: '3',
+            read: 'true',
+            number: '49',
+            description: 'Join us in you are in the Half Moon area! Mostly beach trash, but who knows what you might find!'
+        },
+        {
+            location: 'San Jose, CA',
+            name: 'San Jose Painters',
+            imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Downtown_San_Jose_%2830001966530%29.jpg',
+            id: '9',
+            read: 'true',
+            number: '32',
+            description: 'Looking for some new sculputre materials in the SJ area? You have come to the right place! Feel free to join!'
+        },
+        {
+            location: 'Palo Alto, CA',
+            name: 'Palo Alto Knitting',
+            imageUrl: 'https://nimble-needles.com/wp-content/uploads/2021/12/the-difference-between-crochet-and-knitting-1024x684.jpg',
+            id: '10',
+            read: 'true',
+            number: '7',
+            description: 'Help us recycle our knitting supplies! Welcome to those looking to get used knitting materials or hoping to provide some of their own!'
+        },
+        
     ]
 
     const renderDM = ({ item }) => (
