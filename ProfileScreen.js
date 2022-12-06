@@ -338,6 +338,10 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontFamily: 'InterSemiBold',
     },
+    distance: {
+        fontFamily: 'InterRegular',
+        fontSize: 16,
+    },
     locationLine: {
         flexDirection: 'row',
         alignItems: 'center',
