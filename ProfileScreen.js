@@ -310,9 +310,9 @@ export default function ProfileScreen() {
             </View>
 
             {/* Conditional Flatlist */}
-            <View style={styles.bottomContainer}>
+            <SafeAreaView>
                 {flatlist}
-            </View>
+            </SafeAreaView>
         </SafeAreaView>
     );
 }
