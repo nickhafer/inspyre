@@ -6,6 +6,7 @@ import { useFonts } from 'expo-font';
 export default function HomeProfileScreen ({ navigation, route}) {
     const { user } = route.params;
     const [tab, setTab] = useState('givingAway')
+    const [tabLike, setTabLike] = useState('notLiked')
 
     const [loaded] = useFonts({
         InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
@@ -39,6 +40,36 @@ export default function HomeProfileScreen ({ navigation, route}) {
                         <Text style={styles.location}>{item.location}  </Text>  
                     </View>
                     <Text style={styles.distance}>{item.distance}</Text>
+                </View>
+                <View style={styles.iconsHalf}>
+                    {/* Like Action */}
+                    <View style={styles.iconContainer}>
+                        {/* setTab("liked") */}
+                        <Pressable onPress={()=>{tabLike === "liked" ? setTabLike("notLiked") : setTabLike("liked")}}>
+                            {
+                                tabLike === "liked" ?
+                                    <Image
+                                        source={require('./assets/Icons/like-red.png')}
+                                        style={styles.like} 
+                                    />
+                                :
+                                    <Image
+                                        source={require('./assets/Icons/like-gray.png')}
+                                        style={styles.like} 
+                                    />
+                            }
+                        </Pressable>
+                    </View>
+                    {/* DM Item Owner */}
+                    <Pressable 
+                        onPress={() => navigation.navigate('HomeDMScreen', { item: item })}>
+                        <View style={styles.iconContainer}>
+                            <Image
+                                source={require('./assets/Icons/chat-gray.png')}
+                                style={styles.chat} 
+                            />
+                        </View>
+                    </Pressable>
                 </View>
             </View>
         </SafeAreaView>
