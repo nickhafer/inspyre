@@ -31,6 +31,8 @@ export default function HomeScreen() {
                     image: 'https://images.unsplash.com/photo-1597405490028-282bac40f64c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1646&q=80',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Max',
+                    profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
                 {
                     id: '2',
@@ -38,6 +40,8 @@ export default function HomeScreen() {
                     image: 'https://st2.depositphotos.com/4341251/12431/i/600/depositphotos_124319510-stock-photo-wooden-chairs-with-old-plaster.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Max',
+                    profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
                 {
                     id: '3',
@@ -45,6 +49,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Max',
+                    profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
             ],
             art: [
@@ -54,6 +60,8 @@ export default function HomeScreen() {
                     image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Max',
+                    profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
                 {
                     id: '1',
@@ -61,6 +69,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Max',
+                    profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
                 {
                     id: '3',
@@ -68,6 +78,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Max',
+                    profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
             ],
         },
@@ -90,6 +102,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Jen',
+                    profilePic: 'https://www.birmingham.ac.uk/Images/College-EPS-only/college/undergraduate/international/yangyi-shi-ee-student-2-compressed-Cropped-293x228.jpg',
                 },
                 {
                     id: '2',
@@ -97,6 +111,8 @@ export default function HomeScreen() {
                     image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Jen',
+                    profilePic: 'https://www.birmingham.ac.uk/Images/College-EPS-only/college/undergraduate/international/yangyi-shi-ee-student-2-compressed-Cropped-293x228.jpg',
                 },
                 {
                     id: '3',
@@ -104,6 +120,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Jen',
+                    profilePic: 'https://www.birmingham.ac.uk/Images/College-EPS-only/college/undergraduate/international/yangyi-shi-ee-student-2-compressed-Cropped-293x228.jpg',
                 },
             ],
             art: [
@@ -113,6 +131,8 @@ export default function HomeScreen() {
                     image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Jen',
+                    profilePic: 'https://www.birmingham.ac.uk/Images/College-EPS-only/college/undergraduate/international/yangyi-shi-ee-student-2-compressed-Cropped-293x228.jpg',
                 },
                 {
                     id: '1',
@@ -120,6 +140,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Jen',
+                    profilePic: 'https://www.birmingham.ac.uk/Images/College-EPS-only/college/undergraduate/international/yangyi-shi-ee-student-2-compressed-Cropped-293x228.jpg',
                 },
                 {
                     id: '3',
@@ -127,6 +149,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Jen',
+                    profilePic: 'https://www.birmingham.ac.uk/Images/College-EPS-only/college/undergraduate/international/yangyi-shi-ee-student-2-compressed-Cropped-293x228.jpg',
                 },
             ],
         },
@@ -149,6 +173,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Martina',
+                    profilePic: 'https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg',
                 },
                 {
                     id: '2',
@@ -156,6 +182,8 @@ export default function HomeScreen() {
                     image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Martina',
+                    profilePic: 'https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg',
                 },
                 {
                     id: '3',
@@ -163,6 +191,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Martina',
+                    profilePic: 'https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg',
                 },
             ],
             art: [
@@ -172,6 +202,8 @@ export default function HomeScreen() {
                     image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Martina',
+                    profilePic: 'https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg',
                 },
                 {
                     id: '1',
@@ -179,6 +211,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Martina',
+                    profilePic: 'https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg',
                 },
                 {
                     id: '3',
@@ -186,6 +220,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Martina',
+                    profilePic: 'https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg',
                 },
             ],
         },
@@ -208,6 +244,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Amy',
+                    profilePic: 'https://images.squarespace-cdn.com/content/v1/58febac49f7456d3c6db76d2/1540838397271-DA3L16U7L6MLRG3XFGTV/KatherinexTA-16.jpg?format=1000w',
                 },
                 {
                     id: '2',
@@ -215,6 +253,8 @@ export default function HomeScreen() {
                     image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Amy',
+                    profilePic: 'https://images.squarespace-cdn.com/content/v1/58febac49f7456d3c6db76d2/1540838397271-DA3L16U7L6MLRG3XFGTV/KatherinexTA-16.jpg?format=1000w',
                 },
                 {
                     id: '3',
@@ -222,6 +262,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Amy',
+                    profilePic: 'https://images.squarespace-cdn.com/content/v1/58febac49f7456d3c6db76d2/1540838397271-DA3L16U7L6MLRG3XFGTV/KatherinexTA-16.jpg?format=1000w',
                 },
             ],
             art: [
@@ -231,6 +273,8 @@ export default function HomeScreen() {
                     image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Amy',
+                    profilePic: 'https://images.squarespace-cdn.com/content/v1/58febac49f7456d3c6db76d2/1540838397271-DA3L16U7L6MLRG3XFGTV/KatherinexTA-16.jpg?format=1000w',
                 },
                 {
                     id: '1',
@@ -238,6 +282,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Amy',
+                    profilePic: 'https://images.squarespace-cdn.com/content/v1/58febac49f7456d3c6db76d2/1540838397271-DA3L16U7L6MLRG3XFGTV/KatherinexTA-16.jpg?format=1000w',
                 },
                 {
                     id: '3',
@@ -245,6 +291,8 @@ export default function HomeScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Amy',
+                    profilePic: 'https://images.squarespace-cdn.com/content/v1/58febac49f7456d3c6db76d2/1540838397271-DA3L16U7L6MLRG3XFGTV/KatherinexTA-16.jpg?format=1000w',
                 },
             ],
         },

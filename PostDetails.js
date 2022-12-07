@@ -153,7 +153,7 @@ export default function PostDetails ({ route: { params }, navigation }) {
               <View style={styles.modalView}>
                   <Text style={styles.modalText}>Are you sure you want to post this?</Text>
                   <Pressable
-                    style={[styles.buttonEdit, styles.buttonClose]}
+                    style={[styles.buttonEdit, styles.buttonClose1]}
                     onPress={() => setModalVisible(!modalVisible)}
                   >
                     <Text style={styles.textStyle}>Keep editing</Text>
@@ -244,6 +244,12 @@ const styles = StyleSheet.create({
     elevation: 2,
     backgroundColor: '#81BBA4',
   },
+  buttonClose: {
+    backgroundColor: "#81BBA4",
+  },
+  buttonClose1: {
+        backgroundColor: "lightgrey",
+      },
   buttonPost: {
     borderRadius: 20,
     width: 200,
@@ -255,9 +261,7 @@ const styles = StyleSheet.create({
     width: 120,
     resizeMode: 'contain',
   },
-  buttonClose: {
-    backgroundColor: "#2196F3",
-  },
+  
   textStyle: {
     fontFamily: 'InterBold',
     textAlign: "center",
