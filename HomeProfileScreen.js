@@ -96,7 +96,7 @@ export default function HomeProfileScreen ({ navigation, route}) {
                     </View>
                     <Image 
                         style={styles.rating}
-                        source={require('./assets/Images/rating-green.png')} 
+                        source={user.rating} 
                     />
                 </View>
                 </View>
@@ -291,5 +291,33 @@ const styles = StyleSheet.create({
     },
     listContainer: {
         flex: 1,
+    },
+    chat: {
+        width: 64,
+        height: 64,
+    },
+    like: {
+        width: 64,
+        height: 64,
+    },
+    iconsHalf: {
+        margin: '2%',
+        width: '32%',
+        alignItems: 'flex-start',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    iconContainer: {
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    },
+    textHalf: {
+        margin: '2%',
+        width: '60%',
+    },
+    bottomContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        margin: 8,
     },
 });
