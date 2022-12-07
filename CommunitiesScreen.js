@@ -29,7 +29,7 @@ export default function CommunitiesScreen ({ navigation }) {
         },
         {
             location: 'Stanford, CA',
-            name: 'West FloMo',
+            name: 'West Flo',
             imageUrl: 'https://resed.stanford.edu/sites/g/files/sbiybj18956/files/styles/breakpoint_2xl_2x/public/media/image/flomo-alt_0.webp?itok=lKwTT0Yo',
             id: '1',
             read: 'true',
@@ -40,7 +40,7 @@ export default function CommunitiesScreen ({ navigation }) {
         },
         {
             location: 'Stanford, CA',
-            name: 'Stanford Clubs',
+            name: 'Stanford Club Sports',
             imageUrl: 'https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/stanfordrec.sidearmsports.com/images/2021/9/19/Club_Sports_graphics_slider_tablet.jpg',
             id: '2',
             read: 'true',
