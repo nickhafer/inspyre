@@ -168,7 +168,7 @@ export default function ProfileScreen() {
                     <View style={styles.nameRating}>
                         <Text style={styles.miniUsername}> {item.username} </Text>
                         <Image 
-                            source={require('./assets/Images/rating-green.png')}
+                            source={require('./assets/Icons/bigstars-yellow-50.png')}
                             style={styles.miniRating}
                         />
                     </View>
