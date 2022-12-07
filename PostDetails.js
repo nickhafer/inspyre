@@ -16,35 +16,33 @@ export default function PostDetails ({ route: { params }, navigation }) {
   const COMMUNITIES_TO_JOIN = [
     {
       id: '1',
-      // Add images to these two vars for all data using require(url)
-      // Then uncommment image stuff below
-      not_selected: "community not selected",
-      selected: "community selected",
+      not_selected: require('./assets/Images/city-of-palo-alto-gray.png'),
+      selected: require('./assets/Images/city-of-palo-alto-green.png'),
     },
     {
       id: '2',
-      not_selected: "community not selected",
-      selected: "community selected",
+      not_selected: require('./assets/Images/bay-beach-wildlife-preserve-gray.png'),
+      selected: require('./assets/Images/bay-beach-wildlife-preserve-green.png'),
     },
     {
       id: '3',
-      not_selected: "community not selected",
-      selected: "community selected",
+      not_selected: require('./assets/Images/stanford-club-sports-gray.png'),
+      selected: require('./assets/Images/stanford-club-sports-green.png'),
     },
     {
       id: '4',
-      not_selected: "community not selected",
-      selected: "community selected",
+      not_selected: require('./assets/Images/stanford-fram-gray.png'),
+      selected: require('./assets/Images/stanford-fram-green.png'),
     },
     {
       id: '5',
-      not_selected: "community not selected",
-      selected: "community selected",
+      not_selected: require('./assets/Images/west-flo-gray.png'),
+      selected: require('./assets/Images/west-flo-green.png'),
     },
     {
       id: '6',
-      not_selected: "community not selected",
-      selected: "community selected",
+      not_selected: require('./assets/Images/palo-alto-gardeners-gray.png'),
+      selected: require('./assets/Images/palo-alto-gardeners-green.png'),
     },
   ]
 
@@ -52,38 +50,32 @@ export default function PostDetails ({ route: { params }, navigation }) {
     <View>
       { item.id === "1" ?
         <Pressable onPress={() => {setC1(!c1)}}>
-          <Text>{c1 ? item.selected : item.not_selected}</Text>
-          {/* <Image source={c1 ? item.selected : item.not_selected}/> */}
+          <Image source={c1 ? item.selected : item.not_selected}/>
         </Pressable>
       : <></> }
       { item.id === "2" ?
         <Pressable onPress={() => {setC2(!c2)}}>
-          <Text>{c2 ? item.selected : item.not_selected}</Text>
-          {/* <Image source={c2 ? item.selected : item.not_selected}/> */}
+          <Image source={c2 ? item.selected : item.not_selected}/>
         </Pressable>
       : <></> }
       { item.id === "3" ?
         <Pressable onPress={() => {setC3(!c3)}}>
-          <Text>{c3 ? item.selected : item.not_selected}</Text>
-          {/* <Image source={c3 ? item.selected : item.not_selected}/> */}
+          <Image source={c3 ? item.selected : item.not_selected}/>
         </Pressable>
       : <></> }
       { item.id === "4" ?
         <Pressable onPress={() => {setC4(!c4)}}>
-          <Text>{c4 ? item.selected : item.not_selected}</Text>
-          {/* <Image source={c4 ? item.selected : item.not_selected}/> */}
+          <Image source={c4 ? item.selected : item.not_selected}/>
         </Pressable>
       : <></> }
       { item.id === "5" ?
         <Pressable onPress={() => {setC5(!c5)}}>
-          <Text>{c5 ? item.selected : item.not_selected}</Text>
-          {/* <Image source={c5 ? item.selected : item.not_selected}/> */}
+          <Image source={c5 ? item.selected : item.not_selected}/>
         </Pressable>
       : <></> }
       { item.id === "6" ?
         <Pressable onPress={() => {setC6(!c6)}}>
-          <Text>{c6 ? item.selected : item.not_selected}</Text>
-          {/* <Image source={c6 ? item.selected : item.not_selected}/> */}
+          <Image source={c6 ? item.selected : item.not_selected}/>
         </Pressable>
       : <></> }
     </View>
@@ -270,7 +262,7 @@ const styles = StyleSheet.create({
   addTitle: {
     fontFamily: 'InterBlack',
     fontSize: 24,
-    marginVertical: 8,
+    marginVertical: 4,
   },
   addLoc: {
     fontFamily: 'InterBold',
@@ -280,12 +272,12 @@ const styles = StyleSheet.create({
   addStory: {
     fontFamily: 'InterRegular',
     fontSize: 14,
-    marginVertical: 8,
+    marginVertical: 4,
   },
   addDetails: {
     fontFamily: 'InterRegular',
     fontSize: 14,
-    marginVertical: 8,
+    marginVertical: 4,
   },
   postTo: {
     fontFamily: 'InterBold',
