@@ -210,7 +210,7 @@ export default function CommunitiesScreen ({ navigation }) {
                 </View>
                 <View style = {header_styles.communityTitle}>
                     <Text style = {header_styles.communityTitleText}>
-                        Explore Communities
+                        Explore Communities Near Me
                     </Text>
                 </View>
                 
@@ -265,8 +265,9 @@ const header_styles = StyleSheet.create({
     },
     communityTitleText: {
         fontFamily: 'InterBlack',
-        fontSize: 30,
-        marginLeft: '2%',
+        fontSize: 24,
+        marginLeft: 8,
+        marginBottom: 8,
     },
     input: {
         padding: 10,

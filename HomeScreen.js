@@ -272,7 +272,7 @@ export default function HomeScreen() {
                 <Pressable onPress={() => navigation.navigate('HomeSearchScreen')}>
                 <Image
                     style = {styles.SearchIconImage}
-                    source={require('./FigmaIcons/SearchButton.png')}>
+                    source={require('./assets/Icons/search-gray.png')}>
                 </Image>
                 </Pressable>
             </View>
@@ -350,6 +350,7 @@ export default function HomeScreen() {
       SearchIconImage: {
         width: 64,
         height: '100%',
+        marginRight: 8,
       },
     profilePic: {
         height: 50,
