@@ -24,6 +24,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '209',
             description: 'Welcome to the official City of Palo Alto inspyre community! If you live nearby please join our cause and help spread awareness about sustainability and art. Have a great day!',
+            joinButton: require('./assets/Icons/leave-group-gray.png'),
             myCommunities: false,
             
         },
@@ -35,6 +36,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '28',
             description: 'Hey fellow Stanford students. This community is only for the coolest students living in West Flo right now. Bet you wish you could be a part of this community!',
+            joinButton: require('./assets/Icons/leave-group-gray.png'),
             myCommunities: false,
 
         },
@@ -46,6 +48,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '97',
             description: 'Welcome non-varsity Stanford athletes! Here you\'ll find all the recycled athletic gear you need. From frisbees to footballs, track spikes to soccer balls, we\'ve got you covered!',
+            joinButton: require('./assets/Icons/leave-group-gray.png'),
             myCommunities: false,
 
         },
@@ -57,6 +60,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '18',
             description: 'Welcome to the Bay Beach Wildlife Sanctuary! Most of our items are discarded trash we find in the santuary!',
+            joinButton: require('./assets/Icons/leave-group-gray.png'),
             myCommunities: false,
 
         },
@@ -68,6 +72,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '24',
             description: 'Items from the farm that our farmers are no longer using, feel free to check it out to see if there is anything of interest. We upload new items every Monday!',
+            joinButton: require('./assets/Icons/leave-group-gray.png'),
             myCommunities: false,
 
         },
@@ -79,6 +84,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '12',
             description: 'Stanford Art Studio majors looking to get their hands on old art supplies or to share some of their own. Check us out! :)',
+            joinButton: require('./assets/Icons/leave-group-gray.png'),
             myCommunities: false,
 
         },
@@ -90,6 +96,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '97',
             description: 'Want any gardening supplies that we are no longer using? Join our group and we can get to it to you ASAP! Open to all in the area!',
+            joinButton: require('./assets/Icons/leave-group-gray.png'),
             myCommunities: false,
 
         },
@@ -104,6 +111,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '44',
             description: 'Official inspyre home of the Palo Vikes! We host afternoon thrifting events once per week. Help us spread the word to get people upcycling. Sko\' Vikes!!',
+            joinButton: require('./assets/Icons/join-gray.png'),
             myCommunities: true,
         },
         {
@@ -114,6 +122,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '256',
             description: 'Family-owned thrift store trying to give you the best deals on the best clothes! Come on down and say hey!',
+            joinButton: require('./assets/Icons/join-gray.png'),
             myCommunities: true,
         },
         {
@@ -124,6 +133,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '17',
             description: 'We try to share our bird watching gear with those who can\'t afford it. Feel free to come to one of our meet ups on Saturdays and Sundays.',
+            joinButton: require('./assets/Icons/join-gray.png'),
             myCommunities: true,
         },
 
@@ -135,6 +145,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '49',
             description: 'Join us in you are in the Half Moon area! Mostly beach trash, but who knows what you might find!',
+            joinButton: require('./assets/Icons/join-gray.png'),
             myCommunities: true,
 
         },
@@ -146,6 +157,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '32',
             description: 'Looking for some new sculputre materials in the SJ area? You have come to the right place! Feel free to join!',
+            joinButton: require('./assets/Icons/join-gray.png'),
             myCommunities: true,
 
         },
@@ -157,6 +169,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '7',
             description: 'Help us recycle our knitting supplies! Welcome to those looking to get used knitting materials or hoping to provide some of their own!',
+            joinButton: require('./assets/Icons/join-gray.png'),
             myCommunities: true,
 
         },

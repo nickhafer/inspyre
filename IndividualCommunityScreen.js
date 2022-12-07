@@ -98,7 +98,7 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                                 style={[styles.button, styles.buttonOpen]}
                                 onPress={() => setModalVisible(true)}
                             >
-                                <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
+                                <Image source={message.joinButton} style={styles.postFirst} />
                             </Pressable>
                             </View>
                         </View>
@@ -139,7 +139,7 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                                     style={[styles.button, styles.buttonOpen]}
                                     onPress={() => setModalVisible(true)}>
                                     {/* Change this button to "Leave group" */}
-                                    <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
+                                    <Image source={message.joinButton} style={styles.postFirst} />
                                 </Pressable>
                             </View>
                         </View>
@@ -446,7 +446,7 @@ const styles = StyleSheet.create({
       joinButton: {
         justifyContent: 'center',
         alignItems: 'center',
-        height: 60,
+        height: 80,
         width: '100%',
       },    
   });
