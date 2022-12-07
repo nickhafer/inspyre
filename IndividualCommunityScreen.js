@@ -93,12 +93,14 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                                 </View>
                                 </Modal>
                             </View>
+                            <View style={styles.joinButton}>
                             <Pressable
                                 style={[styles.button, styles.buttonOpen]}
                                 onPress={() => setModalVisible(true)}
                             >
                                 <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
                             </Pressable>
+                            </View>
                         </View>
                         : 
                         <View>

@@ -23,6 +23,7 @@ export default function HomeScreen() {
             story: 'My grandmother\'s favorite folding chair.',
             exchangeDetails: 'Anyime around 6-8pm works for me!',
             bio: 'Just a guy whos trying to upcycle some of his goods!',
+            rating: require('./assets/Icons/bigstars-yellow-50.png'),
             givingAway: [
                 {
                     id: '1',
@@ -81,6 +82,7 @@ export default function HomeScreen() {
             donated: '11',
             listings: '2',
             bio: 'this is a placeholder for a profile bio',
+            rating: require('./assets/Icons/bigstars-yellow-40.png'),
             givingAway: [
                 {
                     id: '1',
@@ -139,6 +141,7 @@ export default function HomeScreen() {
             donated: '11',
             listings: '2',
             bio: 'this is a placeholder for a profile bio',
+            rating: require('./assets/Icons/bigstars-yellow-25.png'),
             givingAway: [
                 {
                     id: '1',
@@ -197,6 +200,7 @@ export default function HomeScreen() {
             donated: '11',
             listings: '2',
             bio: 'this is a placeholder for a profile bio',
+            rating: require('./assets/Icons/bigstars-yellow-37.png'),
             givingAway: [
                 {
                     id: '1',

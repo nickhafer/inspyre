@@ -376,13 +376,14 @@ const styles = StyleSheet.create({
         fontSize: 32,
     },
     profilePic: {
-        width: 150,
-        height: 150,
-        borderRadius: 75,
+        height: '100%',
+        aspectRatio: 1,
+        borderRadius: 100,
     }, 
     profileHeader: {
         flexDirection: 'row', 
         justifyContent: 'space-between',   
+        alignItems: 'center',
         marginTop: 8,
     },
     profileInfo: {
@@ -398,6 +399,7 @@ const styles = StyleSheet.create({
     username: {
         fontFamily: 'InterBlack',
         fontSize: 36,
+        width: '40%',
     },
     userLocation: { 
         fontFamily: 'InterSemiBold',
@@ -483,16 +485,17 @@ const styles = StyleSheet.create({
         fontFamily: 'InterBlack',
         fontSize: 24,
         marginLeft: 8,
+        width: '50%',
     },
     miniRating: {
-        width: 150,
+        width: '50%',
         resizeMode: 'contain',
     },
     nameRating: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        width: '80%',
+        width: '90%',
     },
     topBar: {
         flexDirection: 'row',

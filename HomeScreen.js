@@ -321,7 +321,7 @@ export default function HomeScreen() {
                 <Pressable onPress={() => navigation.navigate('HomeSearchScreen')}>
                 <Image
                     style = {styles.SearchIconImage}
-                    source={require('./FigmaIcons/SearchButton.png')}>
+                    source={require('./assets/Icons/search-gray.png')}>
                 </Image>
                 </Pressable>
             </View>
@@ -369,7 +369,6 @@ export default function HomeScreen() {
     inpsyreHeader: {
         width: '100%',
         height: '50%',
-        //backgroundColor: 'blue',
 
     },
     wrapperCustom: {
@@ -400,6 +399,7 @@ export default function HomeScreen() {
       SearchIconImage: {
         width: 64,
         height: '100%',
+        marginRight: 8,
       },
     profilePic: {
         height: 50,
@@ -420,7 +420,6 @@ export default function HomeScreen() {
         width: '100%',
         resizeMode: 'stretch',
         height: 400,
-        backgroundColor: 'red',
     },
     postHeader: {
         flex: 1,

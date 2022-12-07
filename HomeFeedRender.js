@@ -158,6 +158,7 @@ export default function RenderFeedItem ({ item }) {
         fontSize: 24,
         margin: 8,
         fontFamily: 'InterBlack',
+        width: '40%',
     },
     inpsyreHeader: {
         width: '100%',
@@ -193,9 +194,9 @@ export default function RenderFeedItem ({ item }) {
         height: '100%',
     },
     profilePic: {
-        height: 50,
-        width: 50,
-        borderRadius: 25,
+        height: '100%',
+        aspectRatio: 1,
+        borderRadius: 100,
     },
     rating: {
         width: 150,
@@ -206,7 +207,7 @@ export default function RenderFeedItem ({ item }) {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        width: '80%',
+        width: '85%',
     },
     objectImage: {
         width: '100%',
