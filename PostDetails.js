@@ -4,8 +4,90 @@ import React, { useState } from "react";
 export default function PostDetails ({ route: { params }, navigation }) {
   const { image } = params;
 
+  const [c1, setC1] = useState(false);
+  const [c2, setC2] = useState(false);
+  const [c3, setC3] = useState(false);
+  const [c4, setC4] = useState(false);
+  const [c5, setC5] = useState(false);
+  const [c6, setC6] = useState(false);
 
   const [modalVisible, setModalVisible] = useState(false);
+
+  const COMMUNITIES_TO_JOIN = [
+    {
+      id: '1',
+      // Add images to these two vars for all data using require(url)
+      // Then uncommment image stuff below
+      not_selected: "community not selected",
+      selected: "community selected",
+    },
+    {
+      id: '2',
+      not_selected: "community not selected",
+      selected: "community selected",
+    },
+    {
+      id: '3',
+      not_selected: "community not selected",
+      selected: "community selected",
+    },
+    {
+      id: '4',
+      not_selected: "community not selected",
+      selected: "community selected",
+    },
+    {
+      id: '5',
+      not_selected: "community not selected",
+      selected: "community selected",
+    },
+    {
+      id: '6',
+      not_selected: "community not selected",
+      selected: "community selected",
+    },
+  ]
+
+  const renderCommunities = ({ item }) => (
+    <View>
+      { item.id === "1" ?
+        <Pressable onPress={() => {setC1(!c1)}}>
+          <Text>{c1 ? item.selected : item.not_selected}</Text>
+          {/* <Image source={c1 ? item.selected : item.not_selected}/> */}
+        </Pressable>
+      : <></> }
+      { item.id === "2" ?
+        <Pressable onPress={() => {setC2(!c2)}}>
+          <Text>{c2 ? item.selected : item.not_selected}</Text>
+          {/* <Image source={c2 ? item.selected : item.not_selected}/> */}
+        </Pressable>
+      : <></> }
+      { item.id === "3" ?
+        <Pressable onPress={() => {setC3(!c3)}}>
+          <Text>{c3 ? item.selected : item.not_selected}</Text>
+          {/* <Image source={c3 ? item.selected : item.not_selected}/> */}
+        </Pressable>
+      : <></> }
+      { item.id === "4" ?
+        <Pressable onPress={() => {setC4(!c4)}}>
+          <Text>{c4 ? item.selected : item.not_selected}</Text>
+          {/* <Image source={c4 ? item.selected : item.not_selected}/> */}
+        </Pressable>
+      : <></> }
+      { item.id === "5" ?
+        <Pressable onPress={() => {setC5(!c5)}}>
+          <Text>{c5 ? item.selected : item.not_selected}</Text>
+          {/* <Image source={c5 ? item.selected : item.not_selected}/> */}
+        </Pressable>
+      : <></> }
+      { item.id === "6" ?
+        <Pressable onPress={() => {setC6(!c6)}}>
+          <Text>{c6 ? item.selected : item.not_selected}</Text>
+          {/* <Image source={c6 ? item.selected : item.not_selected}/> */}
+        </Pressable>
+      : <></> }
+    </View>
+  );
 
   return (
     <SafeAreaView style={styles.screenContainer}>
@@ -42,7 +124,13 @@ export default function PostDetails ({ route: { params }, navigation }) {
         />
         <View>
           <Text style={styles.postTo}>post to:</Text>
-          {/* Placeholder for group selection */}
+            {/* Placeholder for group selection */}
+            <FlatList
+                horizontal
+                data = {COMMUNITIES_TO_JOIN}
+                renderItem={renderCommunities}
+                keyExtractor={(item) => item.id}
+            />
         </View>
       </View>
       
