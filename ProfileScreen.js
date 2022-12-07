@@ -274,7 +274,7 @@ export default function ProfileScreen() {
                     </View>
                     <Image 
                         style={styles.rating}
-                        source={require('./assets/Images/rating-green.png')} 
+                        source={require('./assets/Icons/bigstars-yellow-50.png')} 
                     />
                 </View>
             </View>

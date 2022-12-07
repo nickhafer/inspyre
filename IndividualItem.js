@@ -22,7 +22,7 @@ export default function IndividualItem ({ navigation, route}) {
                 <Text style={styles.username}>{item.username}</Text>
                 <Image 
                     style={styles.rating}
-                    source={require('./assets/Images/rating-green.png')} 
+                    source={item.rating} 
                 />
             </View>
             {/* Image */}
