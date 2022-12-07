@@ -82,12 +82,12 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                                 >
                                 <View style={styles.centeredView}>
                                     <View style={styles.modalView}>
-                                        <Text style={styles.modalText}>You successfully joined this group! Let's keep exploring?</Text>
+                                        <Text style={styles.modalText}>Your request to join this community has been sent!</Text>
                                         <Pressable
                                             style={[styles.buttonPost, styles.buttonClose]}
-                                            onPress={() => {setModalVisible(!modalVisible), navigation.navigate('CommunitiesScreen')}}
+                                            onPress={() => {setModalVisible(!modalVisible), navigation.goBack()}}
                                         >
-                                            <Text style={styles.textStyle}>Continue Exploring</Text>
+                                            <Text style={styles.textStyle}>Ok</Text>
                                         </Pressable>
                                     </View>
                                 </View>
@@ -115,12 +115,18 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                                 >
                                 <View style={styles.centeredView}>
                                     <View style={styles.modalView}>
-                                        <Text style={styles.modalText}>You successfully left the group. Let's find a new one?</Text>
+                                        <Text style={styles.modalText}>Are you sure you want to leave this group?</Text>
                                         <Pressable
                                             style={[styles.buttonPost, styles.buttonClose]}
-                                            onPress={() => {setModalVisible(!modalVisible), navigation.navigate('CommunitiesScreen')}}
+                                            onPress={() => {setModalVisible(!modalVisible)}}
                                         >
-                                            <Text style={styles.textStyle}>Yeah!</Text>
+                                            <Text style={styles.textStyle}>No</Text>
+                                        </Pressable>
+                                        <Pressable
+                                            style={[styles.buttonPost, styles.buttonClose]}
+                                            onPress={() => {setModalVisible(!modalVisible), navigation.goBack()}}
+                                        >
+                                            <Text style={styles.textStyle}>Yes</Text>
                                         </Pressable>
                                     </View>
                                 </View>
@@ -130,6 +136,7 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                                 <Pressable
                                     style={[styles.button, styles.buttonOpen]}
                                     onPress={() => setModalVisible(true)}>
+                                    {/* Change this button to "Leave group" */}
                                     <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
                                 </Pressable>
                             </View>

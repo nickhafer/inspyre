@@ -122,6 +122,11 @@ export default function PostDetails ({ route: { params }, navigation }) {
           placeholder='add exchange details... time? location?    '
           onSubmitEditing={Keyboard.dismiss}
         />
+        <TextInput style={styles.addDetails}
+          placeholder='add visibily range for nearby artists... 5 miles? 10?'
+          onSubmitEditing={Keyboard.dismiss}
+          keyboardType="numeric"
+        />
         <View>
           <Text style={styles.postTo}>post to:</Text>
             {/* Placeholder for group selection */}

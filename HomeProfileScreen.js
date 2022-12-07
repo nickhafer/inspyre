@@ -104,7 +104,7 @@ export default function HomeProfileScreen ({ navigation, route}) {
                     }
                 </Pressable>
             </View>
-            <View>
+            <View >
                 {tab === "givingAway" ?
                     <FlatList 
                         data={user.givingAway}
@@ -151,6 +151,7 @@ const styles = StyleSheet.create({
     item: {
         width: '100%',
         height: '35%',
+        // flex: 1,
     },
     bottomContainer: {
         width: '100%',
@@ -256,5 +257,8 @@ const styles = StyleSheet.create({
         width: 48,
         height: 48,
         paddingHorizontal: 8,
+    },
+    listContainer: {
+        flex: 1,
     },
 });
