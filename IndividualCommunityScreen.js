@@ -188,7 +188,7 @@ const styles = StyleSheet.create({
     },
     mainInfo: {
         width: '100%',
-        height: '25%',
+        height: '20%',
         flexDirection: 'row',
         alignItems: 'flex-start',
         justifyContent: 'space-between',
@@ -382,7 +382,7 @@ const styles = StyleSheet.create({
         elevation: 2
       },
       postFirst: {
-        width: 120,
+        width: 250,
         resizeMode: 'contain',
       },
       buttonClose: {
@@ -433,4 +433,10 @@ const styles = StyleSheet.create({
         fontFamily: 'InterSemiBold',
         fontSize: 20,
       },
+      joinButton: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 60,
+        width: '100%',
+      },    
   });
