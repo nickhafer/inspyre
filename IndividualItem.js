@@ -164,4 +164,7 @@ const styles = StyleSheet.create({
         fontFamily: 'InterSemiBold',
 
     },
+    mainText: {
+        width: '60%',
+    },
 });
