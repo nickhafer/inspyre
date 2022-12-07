@@ -198,7 +198,7 @@ export default function RenderFeedItem ({ item }) {
         borderRadius: 25,
     },
     rating: {
-        width: 300,
+        width: 150,
         resizeMode: 'contain',
         alignSelf: 'flex-end',
     },
