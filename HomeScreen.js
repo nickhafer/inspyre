@@ -320,7 +320,6 @@ export default function HomeScreen() {
     inpsyreHeader: {
         width: '100%',
         height: '50%',
-        //backgroundColor: 'blue',
 
     },
     wrapperCustom: {
@@ -371,7 +370,6 @@ export default function HomeScreen() {
         width: '100%',
         resizeMode: 'stretch',
         height: 400,
-        backgroundColor: 'red',
     },
     postHeader: {
         flex: 1,
