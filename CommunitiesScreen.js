@@ -23,7 +23,9 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '17',
             read: 'true',
             number: '209',
-            description: 'Welcome to the official City of Palo Alto inspyre community! If you live nearby please join our cause and help spread awareness about sustainability and art. Have a great day!'
+            description: 'Welcome to the official City of Palo Alto inspyre community! If you live nearby please join our cause and help spread awareness about sustainability and art. Have a great day!',
+            myCommunities: false,
+            
         },
         {
             location: 'Stanford, CA',
@@ -32,7 +34,9 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '1',
             read: 'true',
             number: '28',
-            description: 'Hey fellow Stanford students. This community is only for the coolest students living in West Flo right now. Bet you wish you could be a part of this community!'
+            description: 'Hey fellow Stanford students. This community is only for the coolest students living in West Flo right now. Bet you wish you could be a part of this community!',
+            myCommunities: false,
+
         },
         {
             location: 'Stanford, CA',
@@ -41,7 +45,9 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '2',
             read: 'true',
             number: '97',
-            description: 'Welcome non-varsity Stanford athletes! Here you\'ll find all the recycled athletic gear you need. From frisbees to footballs, track spikes to soccer balls, we\'ve got you covered!'
+            description: 'Welcome non-varsity Stanford athletes! Here you\'ll find all the recycled athletic gear you need. From frisbees to footballs, track spikes to soccer balls, we\'ve got you covered!',
+            myCommunities: false,
+
         },
         {
             location: 'Stanford, CA',
@@ -50,7 +56,9 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '7',
             read: 'true',
             number: '18',
-            description: 'Welcome to the Bay Beach Wildlife Sanctuary! Most of our items are discarded trash we find in the santuary!'
+            description: 'Welcome to the Bay Beach Wildlife Sanctuary! Most of our items are discarded trash we find in the santuary!',
+            myCommunities: false,
+
         },
         {
             location: 'Stanford, CA',
@@ -59,7 +67,9 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '6',
             read: 'true',
             number: '24',
-            description: 'Items from the farm that our farmers are no longer using, feel free to check it out to see if there is anything of interest. We upload new items every Monday!'
+            description: 'Items from the farm that our farmers are no longer using, feel free to check it out to see if there is anything of interest. We upload new items every Monday!',
+            myCommunities: false,
+
         },
         {
             location: 'Stanford, CA',
@@ -68,7 +78,9 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '5',
             read: 'true',
             number: '12',
-            description: 'Stanford Art Studio majors looking to get their hands on old art supplies or to share some of their own. Check us out! :)'
+            description: 'Stanford Art Studio majors looking to get their hands on old art supplies or to share some of their own. Check us out! :)',
+            myCommunities: false,
+
         },
         {
             location: 'Palo Alto, CA',
@@ -77,7 +89,9 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '9',
             read: 'true',
             number: '97',
-            description: 'Want any gardening supplies that we are no longer using? Join our group and we can get to it to you ASAP! Open to all in the area!'
+            description: 'Want any gardening supplies that we are no longer using? Join our group and we can get to it to you ASAP! Open to all in the area!',
+            myCommunities: false,
+
         },
 
     ]
@@ -89,7 +103,8 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '17',
             read: 'true',
             number: '44',
-            description: 'Official inspyre home of the Palo Vikes! We host afternoon thrifting events once per week. Help us spread the word to get people upcycling. Sko\' Vikes!!'
+            description: 'Official inspyre home of the Palo Vikes! We host afternoon thrifting events once per week. Help us spread the word to get people upcycling. Sko\' Vikes!!',
+            myCommunities: true,
         },
         {
             location: 'Redwood City, CA',
@@ -98,7 +113,8 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '1',
             read: 'true',
             number: '256',
-            description: 'Family-owned thrift store trying to give you the best deals on the best clothes! Come on down and say hey!'
+            description: 'Family-owned thrift store trying to give you the best deals on the best clothes! Come on down and say hey!',
+            myCommunities: true,
         },
         {
             location: 'San Francisco, CA',
@@ -107,7 +123,8 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '2',
             read: 'true',
             number: '17',
-            description: 'We try to share our bird watching gear with those who can\'t afford it. Feel free to come to one of our meet ups on Saturdays and Sundays.'
+            description: 'We try to share our bird watching gear with those who can\'t afford it. Feel free to come to one of our meet ups on Saturdays and Sundays.',
+            myCommunities: true,
         },
 
         {
@@ -117,7 +134,9 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '3',
             read: 'true',
             number: '49',
-            description: 'Join us in you are in the Half Moon area! Mostly beach trash, but who knows what you might find!'
+            description: 'Join us in you are in the Half Moon area! Mostly beach trash, but who knows what you might find!',
+            myCommunities: true,
+
         },
         {
             location: 'San Jose, CA',
@@ -126,7 +145,9 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '9',
             read: 'true',
             number: '32',
-            description: 'Looking for some new sculputre materials in the SJ area? You have come to the right place! Feel free to join!'
+            description: 'Looking for some new sculputre materials in the SJ area? You have come to the right place! Feel free to join!',
+            myCommunities: true,
+
         },
         {
             location: 'Palo Alto, CA',
@@ -135,7 +156,9 @@ export default function CommunitiesScreen ({ navigation }) {
             id: '10',
             read: 'true',
             number: '7',
-            description: 'Help us recycle our knitting supplies! Welcome to those looking to get used knitting materials or hoping to provide some of their own!'
+            description: 'Help us recycle our knitting supplies! Welcome to those looking to get used knitting materials or hoping to provide some of their own!',
+            myCommunities: true,
+
         },
         
     ]

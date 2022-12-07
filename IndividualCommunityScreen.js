@@ -67,38 +67,74 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                     </View>
                     <View style={styles.bottomSection}>
                         <Text style={styles.description}> {message.description} </Text>
+                        {message.myCommunities ? 
                         <View>
-                            <Modal
-                            animationType="fade"
-                            transparent={true}
-                            visible={modalVisible}
-                            onRequestClose={() => {
-                                Alert.alert("Modal has been closed.");
-                                setModalVisible(!modalVisible);
-                            }}
-                            >
-                            <View style={styles.centeredView}>
-                                <View style={styles.modalView}>
-                                    <Text style={styles.modalText}>You just joined this group! Do you want to keep exploring?</Text>
-                                    <Pressable
-                                        style={[styles.buttonPost, styles.buttonClose]}
-                                        onPress={() => {setModalVisible(!modalVisible), navigation.navigate('CommunitiesScreen')}}
-                                    >
-                                        <Text style={styles.textStyle}>Continue Exploring</Text>
-                                    </Pressable>
+                            {/* Explore Communities "Request to Join" functionality */}
+                            <View>
+                                <Modal
+                                animationType="fade"
+                                transparent={true}
+                                visible={modalVisible}
+                                onRequestClose={() => {
+                                    Alert.alert("Modal has been closed.");
+                                    setModalVisible(!modalVisible);
+                                }}
+                                >
+                                <View style={styles.centeredView}>
+                                    <View style={styles.modalView}>
+                                        <Text style={styles.modalText}>You successfully joined this group! Let's keep exploring?</Text>
+                                        <Pressable
+                                            style={[styles.buttonPost, styles.buttonClose]}
+                                            onPress={() => {setModalVisible(!modalVisible), navigation.navigate('CommunitiesScreen')}}
+                                        >
+                                            <Text style={styles.textStyle}>Continue Exploring</Text>
+                                        </Pressable>
+                                    </View>
                                 </View>
+                                </Modal>
                             </View>
-                            </Modal>
+                            <Pressable
+                                style={[styles.button, styles.buttonOpen]}
+                                onPress={() => setModalVisible(true)}
+                            >
+                                <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
+                            </Pressable>
                         </View>
-      
-
-      <Pressable
-          style={[styles.button, styles.buttonOpen]}
-          onPress={() => setModalVisible(true)}
-      >
-          <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
-      </Pressable>
-                        {/* INSERT FUNCTIONALITY TO MAKE PRESSABLE AND JOIN COMMUNITY */}
+                        : 
+                        <View>
+                            {/* My Communities "Leave Group" functionality */}
+                            <View>
+                                <Modal
+                                animationType="fade"
+                                transparent={true}
+                                visible={modalVisible}
+                                onRequestClose={() => {
+                                    Alert.alert("Modal has been closed.");
+                                    setModalVisible(!modalVisible);
+                                }}
+                                >
+                                <View style={styles.centeredView}>
+                                    <View style={styles.modalView}>
+                                        <Text style={styles.modalText}>You successfully left the group. Let's find a new one?</Text>
+                                        <Pressable
+                                            style={[styles.buttonPost, styles.buttonClose]}
+                                            onPress={() => {setModalVisible(!modalVisible), navigation.navigate('CommunitiesScreen')}}
+                                        >
+                                            <Text style={styles.textStyle}>Yeah!</Text>
+                                        </Pressable>
+                                    </View>
+                                </View>
+                                </Modal>
+                            </View>
+                            <Pressable
+                                style={[styles.button, styles.buttonOpen]}
+                                onPress={() => setModalVisible(true)}
+                            >
+                                <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
+                            </Pressable>
+                        </View>
+                        }
+                        
                     </View>
                 </View>
                 
