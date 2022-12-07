@@ -5,7 +5,7 @@ import { useFonts } from 'expo-font';
 
 export default function IndividualItem ({ navigation, route}) {
     const { item } = route.params;
-    const [tab, setTab] = useState('notLiked')
+    const [tab, setTab] = useState(false)
 
     return (
         <SafeAreaView style={styles.screenContainer}>
@@ -46,9 +46,9 @@ export default function IndividualItem ({ navigation, route}) {
                     //INSERT LIKE FUNCTIONALITY
                     >
                     <View style={styles.iconContainer}>
-                        <Pressable onPress={()=>{tab === "liked" ? setTab("notLiked") : setTab("liked")}}>
+                        <Pressable onPress={()=>{setTab(!tab)}}>
                             {
-                                tab === "liked" ?
+                                tab ?
                                     <Image
                                         source={require('./assets/Icons/like-red.png')}
                                         style={styles.like} 
