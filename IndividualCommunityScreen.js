@@ -119,7 +119,7 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                                     <View style={styles.modalView}>
                                         <Text style={styles.modalText}>Are you sure you want to leave this group?</Text>
                                         <Pressable
-                                            style={[styles.buttonPost, styles.buttonClose]}
+                                            style={[styles.buttonPost, styles.buttonClose1]}
                                             onPress={() => {setModalVisible(!modalVisible)}}
                                         >
                                             <Text style={styles.textStyle}>No</Text>
@@ -396,7 +396,10 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
       },
       buttonClose: {
-        backgroundColor: "#2196F3",
+        backgroundColor: "#81bba4",
+      },
+      buttonClose1: {
+        backgroundColor: "lightgrey",
       },
       textStyle: {
         fontFamily: 'InterBold',
