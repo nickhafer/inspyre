@@ -66,7 +66,7 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                          </View>
                     </View>
                     <View style={styles.bottomSection}>
-                        <Text style={styles.description}> {message.description} </Text>
+                        <Text style={styles.description}>{message.description} </Text>
                         {message.myCommunities ? 
                         <View>
                             {/* Explore Communities "Request to Join" functionality */}
@@ -126,12 +126,13 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                                 </View>
                                 </Modal>
                             </View>
-                            <Pressable
-                                style={[styles.button, styles.buttonOpen]}
-                                onPress={() => setModalVisible(true)}
-                            >
-                                <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
-                            </Pressable>
+                            <View style={styles.joinButton}>
+                                <Pressable
+                                    style={[styles.button, styles.buttonOpen]}
+                                    onPress={() => setModalVisible(true)}>
+                                    <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
+                                </Pressable>
+                            </View>
                         </View>
                         }
                         
@@ -188,7 +189,7 @@ const styles = StyleSheet.create({
     },
     mainInfo: {
         width: '100%',
-        height: '20%',
+        height: '25%',
         flexDirection: 'row',
         alignItems: 'flex-start',
         justifyContent: 'space-between',
