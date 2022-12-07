@@ -91,13 +91,13 @@ export default function IndividualCommunityScreen ({ navigation, route}) {
                             </Modal>
                         </View>
       
-
-      <Pressable
-          style={[styles.button, styles.buttonOpen]}
-          onPress={() => setModalVisible(true)}
-      >
-          <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
-      </Pressable>
+                        <View style={styles.joinButton}> 
+                            <Pressable
+                                style={[styles.button, styles.buttonOpen]}
+                                onPress={() => setModalVisible(true)}>
+                                    <Image source={require('./FigmaIcons/Joinbutton.png')} style={styles.postFirst} />
+                            </Pressable>
+                        </View>
                         {/* INSERT FUNCTIONALITY TO MAKE PRESSABLE AND JOIN COMMUNITY */}
                     </View>
                 </View>
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
     },
     mainInfo: {
         width: '100%',
-        height: '25%',
+        height: '20%',
         flexDirection: 'row',
         alignItems: 'flex-start',
         justifyContent: 'space-between',
@@ -346,7 +346,7 @@ const styles = StyleSheet.create({
         elevation: 2
       },
       postFirst: {
-        width: 120,
+        width: 250,
         resizeMode: 'contain',
       },
       buttonClose: {
@@ -397,4 +397,10 @@ const styles = StyleSheet.create({
         fontFamily: 'InterSemiBold',
         fontSize: 20,
       },
+      joinButton: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 60,
+        width: '100%',
+      },    
   });
