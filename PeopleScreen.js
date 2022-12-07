@@ -531,7 +531,6 @@ const styles = (item) => StyleSheet.create({
         height: '10%',
         justifyContent: 'center',
         alignContent: 'center',
-        backgroundColor: 'red',
     },
     headerText: {
         fontSize: 42,
