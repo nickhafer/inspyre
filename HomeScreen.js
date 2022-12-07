@@ -23,7 +23,7 @@ export default function HomeScreen() {
             donated: '11',
             listings: '2',
             bio: 'Just a guy who\s trying to upcycle some of his goods!',
-            rating: require('./assets/Icons/bigstars-yellow-50.png'),
+            rating: require('./assets/Icons/bigstars-yellow-37.png'),
             givingAway: [
                 {
                     id: '1',
@@ -84,7 +84,7 @@ export default function HomeScreen() {
             donated: '11',
             listings: '2',
             bio: 'this is a placeholder for a profile bio',
-            rating: require('./assets/Icons/bigstars-yellow-50.png'),
+            rating: require('./assets/Icons/bigstars-yellow-40.png'),
             givingAway: [
                 {
                     id: '1',
@@ -145,7 +145,7 @@ export default function HomeScreen() {
             donated: '11',
             listings: '2',
             bio: 'I love travelling and sharing my memorabilia with others!',
-            rating: require('./assets/Icons/bigstars-yellow-50.png'),
+            rating: require('./assets/Icons/bigstars-yellow-25.png'),
             givingAway: [
                 {
                     id: '1',
