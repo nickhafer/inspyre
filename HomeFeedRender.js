@@ -43,7 +43,7 @@ export default function RenderFeedItem ({ item }) {
                     <View style={styles.nameRating}>
                         <Text style={styles.username}> {item.username} </Text>
                         <Image 
-                            source={require('./assets/Images/rating-green.png')}
+                            source={ item.rating}
                             style={styles.rating}
                         />
                     </View>
