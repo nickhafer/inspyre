@@ -22,6 +22,7 @@ export default function StanfordSearch ({ navigation }) {
             imageUrl: "https://advising.stanford.edu/sites/g/files/sbiybj20621/files/styles/card_1900x950/public/media/image/convocation_2012_0.jpg?h=2d2fbf65&itok=sGCgU476",
             id: '17',
             description: 'Welcome to the Stanford Frosh group. If you are a current freshman at Stanford, we would love to have you join the group!',
+            myCommunities: true,
         },
         {
             message: 'Members: 100',
@@ -30,7 +31,9 @@ export default function StanfordSearch ({ navigation }) {
             name: 'Stanford Rowing',
             imageUrl: 'https://i0.wp.com/www.rowingnews.com/wp-content/uploads/2020/07/2019-IR001-623-1-scaled.jpg?fit=2560%2C1707&ssl=1',
             id: '1',
-            description: 'Stanford rowing supplies primarily: old ores, run-down boats, you name it.'
+            description: 'Stanford rowing supplies primarily: old ores, run-down boats, you name it.',
+            myCommunities: true,
+
         },
         {
             message: 'Members: 44',
@@ -39,7 +42,9 @@ export default function StanfordSearch ({ navigation }) {
             name: 'Stanford Club Sports',
             imageUrl: 'https://media.cnn.com/api/v1/images/stellar/prod/221102021511-01-stanford-university-reviews-dorm-safety-procedures.jpg?c=original',
             id: '2',
-            description: "The official group for Stanford Club sports. We primarily have old uniforms and sports equipment, but open to whatever else people would like to share! Please feel free to join us and start upcycling!"
+            description: "The official group for Stanford Club sports. We primarily have old uniforms and sports equipment, but open to whatever else people would like to share! Please feel free to join us and start upcycling!",
+            myCommunities: true,
+
         },
         {
             message: 'Members: 42',
@@ -48,7 +53,9 @@ export default function StanfordSearch ({ navigation }) {
             location: "Stanford, CA",
             imageUrl:'https://poetsandquants.com/wp-content/uploads/sites/5/2018/01/stanford_day2-033-660x325.jpg',
             id: '3',
-            description: "Stanford GSB students only. You will be required to request to join. Primarily clothing for upcycling."
+            description: "Stanford GSB students only. You will be required to request to join. Primarily clothing for upcycling.",
+            myCommunities: true,
+
 
         },
         {
@@ -58,7 +65,9 @@ export default function StanfordSearch ({ navigation }) {
             location: "Stanford, CA",
             imageUrl: 'https://stanforddaily.com/wp-content/uploads/2021/11/1-scaled.jpg',
             id: '4',
-            description: 'The official group for the law school. Please join us whether or not you are apart of the Stanford Law School!'
+            description: 'The official group for the law school. Please join us whether or not you are apart of the Stanford Law School!',
+            myCommunities: true,
+
         },
         {
             message: 'Members: 98',
@@ -67,7 +76,9 @@ export default function StanfordSearch ({ navigation }) {
             location: "Stanford, CA",
             imageUrl: 'https://content.fortune.com/wp-content/uploads/2022/06/20210910_Stanford_Educational_Farm_N6A0359.jpg',
             id: '5',
-            description: 'Open to all! Join us in helping reduce waste by upcycling your items. We are mostly a community of people on campus, but are open to all!'
+            description: 'Open to all! Join us in helping reduce waste by upcycling your items. We are mostly a community of people on campus, but are open to all!',
+            myCommunities: true,
+
         },
         {
             message: 'Members: 80',
@@ -76,7 +87,9 @@ export default function StanfordSearch ({ navigation }) {
             location: "Stanford, CA",
             imageUrl: 'https://d2u3kfwd92fzu7.cloudfront.net/asset/cms/pARIS_PLUS_ART_BASEl_2023-2.jpg',
             id: '6',
-            description: 'For all Stanford artists looking for materials to upcycle for art, whether old brushes, tubes of paint, or materials for upcycled art!'
+            description: 'For all Stanford artists looking for materials to upcycle for art, whether old brushes, tubes of paint, or materials for upcycled art!',
+            myCommunities: true,
+
         },
     ]
 

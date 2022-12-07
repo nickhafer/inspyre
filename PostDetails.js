@@ -123,7 +123,7 @@ export default function PostDetails ({ route: { params }, navigation }) {
           onSubmitEditing={Keyboard.dismiss}
         />
         <TextInput style={styles.addDetails}
-          placeholder='add visibily range for nearby artists... 5 miles? 10?    '
+          placeholder='add visibily range for nearby artists... 5 miles? 10?'
           onSubmitEditing={Keyboard.dismiss}
           keyboardType="numeric"
         />
