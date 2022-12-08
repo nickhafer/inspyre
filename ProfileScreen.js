@@ -681,7 +681,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     iconsHalf: {
-        margin: '2%',
+        margin: '4%',
         width: '32%',
         alignItems: 'flex-start',
         justifyContent: 'space-evenly',

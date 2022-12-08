@@ -119,8 +119,12 @@ export default function PostDetails ({ route: { params }, navigation }) {
           onSubmitEditing={Keyboard.dismiss}
           keyboardType="numeric"
         />
-        <View>
-          <Text style={styles.postTo}>post to:</Text>
+        <Text style={styles.postTo}>post to:</Text>
+        
+      </View>
+      
+      <View style={styles.horizontalScroll}>
+          
             {/* Placeholder for group selection */}
             <FlatList
                 horizontal
@@ -129,8 +133,7 @@ export default function PostDetails ({ route: { params }, navigation }) {
                 keyExtractor={(item) => item.id}
             />
         </View>
-      </View>
-      
+
       <View>
         <Modal
           animationType="fade"
@@ -167,7 +170,7 @@ export default function PostDetails ({ route: { params }, navigation }) {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => setModalVisible(true)}
       >
-          <Image source={require('./assets/Icons/post-gray.png')} style={styles.postFirst} />
+          <Image source={require('./assets/Icons/post-text-gray.png')} style={styles.postFirst} />
       </Pressable>
     </SafeAreaView>
       
@@ -301,5 +304,8 @@ const styles = StyleSheet.create({
     margin: 8,
     fontFamily: 'InterSemiBold',
     fontSize: 20,
+  },
+  horizontalScroll: {
+    height: '8%',
   },
 });
