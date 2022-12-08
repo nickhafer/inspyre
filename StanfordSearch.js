@@ -166,6 +166,7 @@ const header_styles = StyleSheet.create({
         height: "100%",
         resizeMode: 'contain',
         width: 250,
+        marginLeft: 25,
     },
     back: {
         height: 48,
@@ -220,6 +221,7 @@ const styles = (item) => StyleSheet.create({
         fontFamily: 'InterBold',
         alignSelf: 'center',
         backgroundColor: 'red',
+        //marginLeft: 10,
     },
     exploreText: {
         fontSize: 16,
