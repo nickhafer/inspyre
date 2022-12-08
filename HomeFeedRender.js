@@ -8,7 +8,7 @@ export default function RenderFeedItem ({ item }) {
 
     const navigation = useNavigation();
 
-    const [tab, setTab] = useState('notLiked')
+    const [tab, setTab] = useState(false)
 
     const [loaded] = useFonts({
             InterBlack: require('./assets/Fonts/Inter-Black.ttf'),
@@ -77,15 +77,13 @@ export default function RenderFeedItem ({ item }) {
 
 
                 <View style={styles.iconsHalf}>
-                    {/* Like Action */}
+                    {/* Like Functionality */}
                     <Pressable 
-                        //INSERT LIKE FUNCTIONALITY
                         >
                         <View style={styles.iconContainer}>
-                            {/* setTab("liked") */}
-                            <Pressable onPress={()=>{tab === "liked" ? setTab("notLiked") : setTab("liked")}}>
+                            <Pressable onPress={()=>{setTab(!tab)}}>
                                 {
-                                    tab === "liked" ?
+                                    tab ?
                                         <Image
                                             source={require('./assets/Icons/like-red.png')}
                                             style={styles.like} 
@@ -96,6 +94,7 @@ export default function RenderFeedItem ({ item }) {
                                             style={styles.like} 
                                         />
                                 }
+                                
                             </Pressable>
                             
                         </View>

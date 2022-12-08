@@ -5,6 +5,7 @@ import { useFonts } from 'expo-font';
 
 export default function IndividualItem ({ navigation, route}) {
     const { item } = route.params;
+    const [tab, setTab] = useState(false)
 
     return (
         <SafeAreaView style={styles.screenContainer}>
@@ -45,10 +46,20 @@ export default function IndividualItem ({ navigation, route}) {
                     //INSERT LIKE FUNCTIONALITY
                     >
                     <View style={styles.iconContainer}>
-                        <Image
-                            source={require('./assets/Icons/like-gray.png')}
-                            style={styles.icons} 
-                        />
+                        <Pressable onPress={()=>{setTab(!tab)}}>
+                            {
+                                tab ?
+                                    <Image
+                                        source={require('./assets/Icons/like-red.png')}
+                                        style={styles.like} 
+                                    />
+                                :
+                                    <Image
+                                        source={require('./assets/Icons/like-gray.png')}
+                                        style={styles.like} 
+                                    />
+                            }
+                        </Pressable>
                     </View>
                 </Pressable>
                 {/* DM Item Owner */}
