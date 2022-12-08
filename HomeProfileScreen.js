@@ -231,6 +231,7 @@ const styles = StyleSheet.create({
     },
     word: {
         fontFamily: 'InterLight',
+        marginBottom: 2,
         fontSize: 16,
     },
     bioSection: {

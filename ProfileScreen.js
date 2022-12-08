@@ -653,6 +653,7 @@ const styles = StyleSheet.create({
     word: {
         fontFamily: 'InterLight',
         fontSize: 16,
+        marginBottom: 2,
     },
     bioSection: {
         width: '90%',
