@@ -57,8 +57,8 @@ export default function HomeScreen() {
             art: [
                 {
                     id: '2',
-                    title: 'Used Towel',
-                    image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+                    title: 'Upcycled Dog',
+                    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ9wbz8m7gcp5917VaLJ5XKn5eJTA2LHcy9Q&usqp=CAU',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Max',
@@ -66,8 +66,8 @@ export default function HomeScreen() {
                 },
                 {
                     id: '1',
-                    title: 'Broken Chair',
-                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    title: 'Tile Globe',
+                    image: 'https://artincontext.org/wp-content/uploads/2022/02/Recycled-Art.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Max',
@@ -75,8 +75,8 @@ export default function HomeScreen() {
                 },
                 {
                     id: '3',
-                    title: 'Water bottle',
-                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    title: 'Dog from Buttons',
+                    image: 'https://i.pinimg.com/originals/da/04/bc/da04bc50265538803e0157cf3f8173d8.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Max',
@@ -130,8 +130,8 @@ export default function HomeScreen() {
             art: [
                 {
                     id: '2',
-                    title: 'Used Towel',
-                    image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+                    title: 'Plastic Oceans',
+                    image: 'https://causeartist.com/wp-content/uploads/2020/09/Tan-Zi-Xi-artivistPlastic-Ocean.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Jen',
@@ -139,8 +139,8 @@ export default function HomeScreen() {
                 },
                 {
                     id: '1',
-                    title: 'Broken Chair',
-                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    title: 'Plastic Cactus Garden',
+                    image: 'https://www.upcyclethat.com/wp-content/uploads/2015/04/plastic_bottle_art2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Jen',
@@ -148,8 +148,8 @@ export default function HomeScreen() {
                 },
                 {
                     id: '3',
-                    title: 'Water bottle',
-                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    title: 'Plastic Flower',
+                    image: 'https://i.pinimg.com/originals/59/fb/78/59fb78f4f9ada334d4ece617d3f6a631.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Jen',
@@ -203,8 +203,8 @@ export default function HomeScreen() {
             art: [
                 {
                     id: '2',
-                    title: 'Used Towel',
-                    image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+                    title: 'Green Cardboard Flower',
+                    image: 'https://i.etsystatic.com/10018794/r/il/f3546d/3660780266/il_300x300.3660780266_oog2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Tia',
@@ -212,8 +212,8 @@ export default function HomeScreen() {
                 },
                 {
                     id: '1',
-                    title: 'Broken Chair',
-                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    title: 'Rainbow Cardboard Flower',
+                    image: 'https://i.etsystatic.com/10018794/r/il/dd5511/3660896296/il_570xN.3660896296_fzyr.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Tia',
@@ -221,8 +221,8 @@ export default function HomeScreen() {
                 },
                 {
                     id: '3',
-                    title: 'Water bottle',
-                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    title: 'Yellow',
+                    image: 'https://i.etsystatic.com/10018794/r/il/7ce067/3671802060/il_340x270.3671802060_h63x.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Tia',

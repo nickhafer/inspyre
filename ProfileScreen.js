@@ -117,24 +117,30 @@ export default function ProfileScreen() {
             art: [
                 {
                     id: '2',
-                    title: 'Used Towel',
-                    image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+                    title: 'Upcycled Dog',
+                    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ9wbz8m7gcp5917VaLJ5XKn5eJTA2LHcy9Q&usqp=CAU',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Max',
+                    profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
                 {
                     id: '1',
-                    title: 'Broken Chair',
-                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    title: 'Tile Globe',
+                    image: 'https://artincontext.org/wp-content/uploads/2022/02/Recycled-Art.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Max',
+                    profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
                 {
                     id: '3',
-                    title: 'Water bottle',
-                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    title: 'Dog from Buttons',
+                    image: 'https://i.pinimg.com/originals/da/04/bc/da04bc50265538803e0157cf3f8173d8.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    username: 'Max',
+                    profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
             ],
 
@@ -176,7 +182,7 @@ export default function ProfileScreen() {
             art: [
                 {
                     id: '2',
-                    title: 'Used Towel',
+                    title: 'Used Towael',
                     image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
