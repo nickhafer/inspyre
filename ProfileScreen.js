@@ -514,6 +514,7 @@ const styles = StyleSheet.create({
     },
     item: {
         width: '100%',
+        borderBottomWidth: 1,
     },
     flatlistContainer: {
         width: '100%',
