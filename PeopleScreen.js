@@ -15,7 +15,7 @@ export default function PeopleScreen ({ navigation }) {
 
     const PEOPLE_SCREEN_DATA = [
         {
-            message: 'Hey Tia, do you still have that cool rustic water bottle?',
+            message: 'What\'s good Tia, do you still have that rustic water bottle? I can pick it up sometime...',
             convo: require('./assets/Images/tia-convo.jpg'),
             username: 'Tia',
             time: 'Just now',

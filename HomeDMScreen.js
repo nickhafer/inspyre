@@ -66,7 +66,7 @@ export default function HomeDMScreen ({ navigation, route}) {
                     <View style={styles.chatSection}>
                         <View style={styles.inputMessageView}>
                             <Text style={styles.messageDescription}>
-                                Hey Tia, do you still have that cool rustic water bottle?
+                                What's good Tia, do you still have that rustic water bottle? I can pick it up sometime this weekend.
                             </Text>
                         </View>
                     </View>
