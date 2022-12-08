@@ -122,6 +122,8 @@ export default function ProfileScreen() {
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Max',
+                    story: 'Inspired by my own dog, found all the materials on this app over the past two years.',
+                    exchangeDetails: 'Not for sale',
                     profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
                 {
@@ -131,6 +133,8 @@ export default function ProfileScreen() {
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Max',
+                    story: 'Found all of these tiles over the past two years, but them together last month!',
+                    exchangeDetails: 'Not for sale',
                     profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
                 {
@@ -140,6 +144,8 @@ export default function ProfileScreen() {
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Max',
+                    story: 'I had been casually collecting buttons! Decided to make something inspired by my dog',
+                    exchangeDetails: 'Not for sale',
                     profilePic: 'https://static.wixstatic.com/media/557bf52ab26368a60e43a3f1bc2a05f1.jpg/v1/fill/w_640,h_558,fp_0.56_0.15,q_80,usm_0.66_1.00_0.01,enc_auto/557bf52ab26368a60e43a3f1bc2a05f1.jpg',
                 },
             ],
@@ -186,6 +192,8 @@ export default function ProfileScreen() {
                     image: 'https://insteading.com/assets/images/Art/Glass/alison%20apple%20tree.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'Just installed this in my own home!',
+                    exchangeDetails: 'Not for sale',
                 },
                 {
                     id: '1',
@@ -193,6 +201,8 @@ export default function ProfileScreen() {
                     image: 'https://insteading.com/assets/images/Art/Glass/alison%20fox.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'This was my first time experimenting with upcycled glass! AHH!!!!',
+                    exchangeDetails: 'Not for sale',
                 },
                 {
                     id: '3',
@@ -200,6 +210,8 @@ export default function ProfileScreen() {
                     image: 'https://i.pinimg.com/474x/54/34/a9/5434a96900dc0c053e0877b98e3919a7--recycled-glass-bottles-wine-bottles.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'Monster Mash of colorful greens. I was inspired by spring!',
+                    exchangeDetails: 'Not for sale',
                 },
             ],
         },
@@ -244,6 +256,9 @@ export default function ProfileScreen() {
                     image: 'https://media.istockphoto.com/id/1227594010/photo/fish-made-from-corks-from-plastic-bottles.jpg?s=612x612&w=0&k=20&c=XVizKwHlPKzvOasfmrSMubbp0kjA7ZpA-qxoX7ulnmg=',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'You can find this in downtown Palo Alto, check it out!',
+                    exchangeDetails: 'Not for sale',
+
                 },
                 {
                     id: '2',
@@ -251,6 +266,8 @@ export default function ProfileScreen() {
                     image: 'https://artsphere.org/wp-content/uploads/2020/06/recycled-fishies-768x644.jpeg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story:'My first work of art!',
+                    exchangeDetails: 'Not for sale',
                 },
                 {
                     id: '3',
@@ -258,6 +275,8 @@ export default function ProfileScreen() {
                     image: 'https://www.happyfamilyart.com/wp-content/uploads/2021/06/2DSculpture-15.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'blue fish swimming, my most recent work',
+                    exchangeDetails: 'Not for sale',
                 },
             ],
 
