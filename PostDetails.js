@@ -210,7 +210,10 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    aspectRatio: 1,
+    //aspectRatio: 1,
+    height: 325,
+    width: 400,
+    marginBottom:10,
   },
   modalView: {
     margin: 20,
