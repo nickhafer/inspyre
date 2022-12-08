@@ -25,15 +25,15 @@ export default function App() {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused }) => {
             if (route.name === 'Home') {
-              return <Image source={focused ? require('./assets/Icons/home-green.png') : require('./assets/Icons/home-gray.png')}/>
+              return <Image style= {styles.iconStyle} source={focused ? require('./assets/Icons/home-green.png') : require('./assets/Icons/home-gray.png')}/>
             } else if (route.name === 'Profile') {
-              return <Image source={focused ? require('./assets/Icons/profile-green.png') : require('./assets/Icons/profile-gray.png')}/>
+              return <Image style={styles.iconStyle} source={focused ? require('./assets/Icons/profile-green.png') : require('./assets/Icons/profile-gray.png')}/>
             } else if (route.name === 'Community') {
-              return <Image source={focused ? require('./assets/Icons/communities-green.png') : require('./assets/Icons/communities-gray.png')}/>
+              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/communities-green.png') : require('./assets/Icons/communities-gray.png')}/>
             } else if (route.name === 'Post') {
-              return <Image source={focused ? require('./assets/Icons/post-green.png') : require('./assets/Icons/post-gray.png')}/>
+              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/post-green.png') : require('./assets/Icons/post-gray.png')}/>
             } else if (route.name === 'Chat') {
-              return <Image source={focused ? require('./assets/Icons/chat-green.png') : require('./assets/Icons/chat-gray.png')}/>
+              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/chat-green.png') : require('./assets/Icons/chat-gray.png')}/>
             }
             return;
 
@@ -86,6 +86,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'red',
+  },
+  iconStyle: {
+    width: 50,
+    height:50,
+    marginTop:30
   },
   screenText: {
     fontSize: 32,
