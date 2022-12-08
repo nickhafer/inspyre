@@ -159,7 +159,7 @@ export default function HomeScreen() {
         {
             id: '3',
             title: 'My Favorite Arm Chair',
-            username: 'Martina',
+            username: 'Tia',
             image: 'https://st4.depositphotos.com/1734770/21308/i/600/depositphotos_213088602-stock-photo-old-tattered-red-armchair-wooden.jpg',
             profilePic: 'https://www.highline.edu/wp-content/uploads/2014/11/tha-dah-hser-highline-college.jpg',
             location: 'Palo Alto, CA',
