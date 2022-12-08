@@ -85,7 +85,7 @@ export default function HomeScreen() {
         },
         {
             id: '2',
-            title: 'Old Spin-3000 Chair',
+            title: 'Spin-3000 Chair',
             username: 'Jen',
             image: 'https://st4.depositphotos.com/6711826/27298/i/600/depositphotos_272982938-stock-photo-black-office-chair-old-damage.jpg',
             profilePic: 'https://www.birmingham.ac.uk/Images/College-EPS-only/college/undergraduate/international/yangyi-shi-ee-student-2-compressed-Cropped-293x228.jpg',
@@ -95,6 +95,8 @@ export default function HomeScreen() {
             listings: '2',
             bio: 'this is a placeholder for a profile bio',
             rating: require('./assets/Icons/bigstars-yellow-40.png'),
+            story: 'This chair was in an earthquake! It makes the wear and tear more exciting.',
+            exchangeDetails: 'Happy to meet Tuesdays or Thursdays.',
             givingAway: [
                 {
                     id: '1',
@@ -164,6 +166,8 @@ export default function HomeScreen() {
             distance: '1.2 miles',
             donated: '11',
             listings: '2',
+            story: 'Got this in a yard sale a few years ago. The former owner was from England.',
+            exchangeDetails: 'Happy to meet in Palo Alto anytime after 4:00',
             bio: 'this is a placeholder for a profile bio',
             rating: require('./assets/Icons/bigstars-yellow-25.png'),
             givingAway: [
@@ -235,6 +239,8 @@ export default function HomeScreen() {
             distance: '0.7 miles',
             donated: '11',
             listings: '2',
+            story: 'I bought this four years ago. The fabric is still in great condition!',
+            exchangeDetails: 'Prefer to meet on Stanford campus.',
             bio: 'this is a placeholder for a profile bio',
             rating: require('./assets/Icons/bigstars-yellow-37.png'),
             givingAway: [
@@ -317,7 +323,7 @@ export default function HomeScreen() {
                 <Pressable onPress={() => navigation.navigate('HomeSearchScreen')}>
                 <Image
                     style = {styles.SearchIconImage}
-                    source={require('./FigmaIcons/SearchButton.png')}>
+                    source={require('./assets/Icons/search-gray.png')}>
                 </Image>
                 </Pressable>
             </View>
