@@ -37,9 +37,9 @@ export default function HomeProfileScreen ({ navigation, route}) {
                             style={styles.pin}
                             source={require('./assets/Icons/pin.png')}
                         />
-                        <Text style={styles.location}>{item.location}  </Text>  
+                        <Text style={styles.location}> {item.location}  </Text>  
                     </View>
-                    <Text style={styles.distance}>{item.distance}</Text>
+                    <Text style={styles.distance}>{"\t"}{item.distance}</Text>
                 </View>
                 <View style={styles.iconsHalf}>
                     {/* Like Action */}
