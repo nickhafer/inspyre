@@ -263,16 +263,25 @@ export default function ProfileScreen() {
                     </View>
                     <Text style={styles.distance}>{item.distance}</Text>
                 </View>
+                <View>
+                    {/* Add icons here */}
+                    <Text>edit item placeholder</Text>
+                    <Text>delete item placeholder</Text>
+                    <Text>these should be side by side like the chat and like buttons</Text>
+                    {/* also make the delete icon a red trash can and the edit button like a gray pencil or smth */}
+                </View>
             </View>
         </View>
     );
 
     const renderArt = ({ item }) => (
         <View style={styles.item}>
-            <Image
-                source={{ uri: item.image }}
-                style={styles.objectImage}
-            />
+            <Pressable onPress={() => navigation.navigate('IndividualItem', { item: item })}>
+                <Image
+                    source={{ uri: item.image, }}
+                    style={styles.objectImage}
+                />
+            </Pressable>
             <View style={styles.bottomContainer}>
                 <View style={styles.textHalf}>
                     <Text style={styles.title}>{item.title}</Text>
