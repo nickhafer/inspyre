@@ -123,6 +123,8 @@ const styles = StyleSheet.create({
     },
     chatSection: {
         height: '70%',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
     },
     topBar: {
         flexDirection: 'row',
@@ -222,6 +224,5 @@ const styles = StyleSheet.create({
     convo: {
         width: '100%',
         resizeMode: 'contain',
-        alignSelf: 'center',
     },
   });
