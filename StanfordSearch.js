@@ -23,6 +23,7 @@ export default function StanfordSearch ({ navigation }) {
             id: '17',
             description: 'Welcome to the Stanford Frosh group. If you are a current freshman at Stanford, we would love to have you join the group!',
             myCommunities: true,
+            joinButton: require('./assets/Icons/join-gray.png'),
         },
         {
             message: 'Members: 100',
@@ -33,6 +34,7 @@ export default function StanfordSearch ({ navigation }) {
             id: '1',
             description: 'Stanford rowing supplies primarily: old ores, run-down boats, you name it.',
             myCommunities: true,
+            joinButton: require('./assets/Icons/join-gray.png'),
 
         },
         {
@@ -44,6 +46,7 @@ export default function StanfordSearch ({ navigation }) {
             id: '2',
             description: "The official group for Stanford Club sports. We primarily have old uniforms and sports equipment, but open to whatever else people would like to share! Please feel free to join us and start upcycling!",
             myCommunities: true,
+            joinButton: require('./assets/Icons/join-gray.png'),
 
         },
         {
@@ -55,6 +58,7 @@ export default function StanfordSearch ({ navigation }) {
             id: '3',
             description: "Stanford GSB students only. You will be required to request to join. Primarily clothing for upcycling.",
             myCommunities: true,
+            joinButton: require('./assets/Icons/join-gray.png'),
 
 
         },
@@ -67,6 +71,7 @@ export default function StanfordSearch ({ navigation }) {
             id: '4',
             description: 'The official group for the law school. Please join us whether or not you are apart of the Stanford Law School!',
             myCommunities: true,
+            joinButton: require('./assets/Icons/join-gray.png'),
 
         },
         {
@@ -78,6 +83,7 @@ export default function StanfordSearch ({ navigation }) {
             id: '5',
             description: 'Open to all! Join us in helping reduce waste by upcycling your items. We are mostly a community of people on campus, but are open to all!',
             myCommunities: true,
+            joinButton: require('./assets/Icons/join-gray.png'),
 
         },
         {
@@ -89,6 +95,7 @@ export default function StanfordSearch ({ navigation }) {
             id: '6',
             description: 'For all Stanford artists looking for materials to upcycle for art, whether old brushes, tubes of paint, or materials for upcycled art!',
             myCommunities: true,
+            joinButton: require('./assets/Icons/join-gray.png'),
 
         },
     ]
