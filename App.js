@@ -28,13 +28,13 @@ export default function App() {
             if (route.name === 'Home') {
               return <Image style= {styles.iconStyle} source={focused ? require('./assets/Icons/titled-home-green.png') : require('./assets/Icons/titled-home-white.png')}/>
             } else if (route.name === 'Profile') {
-              return <Image style={styles.iconStyle} source={focused ? require('./assets/Icons/profile-green.png') : require('./assets/Icons/profile-white.png')}/>
+              return <Image style={styles.iconStyle} source={focused ? require('./assets/Icons/titled-profile-green.png') : require('./assets/Icons/titled-profile-white.png')}/>
             } else if (route.name === 'Community') {
               return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/titled-communities-green.png') : require('./assets/Icons/titled-communities-white.png')}/>
             } else if (route.name === 'Post') {
-              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/post-green.png') : require('./assets/Icons/post-white.png')}/>
+              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/titled-post-green.png') : require('./assets/Icons/titled-post-white.png')}/>
             } else if (route.name === 'Chat') {
-              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/chat-green.png') : require('./assets/Icons/chat-white.png')}/>
+              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/titled-chat-green.png') : require('./assets/Icons/titled-chat-white.png')}/>
             }
             return;
 
@@ -90,8 +90,8 @@ const styles = StyleSheet.create({
   },
   iconStyle: {
     resizeMode: 'contain',
-    width:'100%',
-    marginTop:20,
+    height: 64,
+    marginTop:16,
   },
   screenText: {
     fontSize: 32,
