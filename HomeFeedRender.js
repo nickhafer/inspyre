@@ -130,6 +130,7 @@ export default function RenderFeedItem ({ item }) {
     },
     item: {
         backgroundColor: 'white',
+        borderBottomWidth: 1,
     },
     title: {
         fontSize: 25,
