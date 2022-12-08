@@ -276,12 +276,21 @@ export default function ProfileScreen() {
                     </View>
                     <Text style={styles.distance}>{"\t"}{item.distance}</Text>
                 </View>
-                <View>
-                    {/* Add icons here */}
-                    <Text>edit item placeholder</Text>
-                    <Text>delete item placeholder</Text>
-                    <Text>these should be side by side like the chat and like buttons</Text>
-                    {/* also make the delete icon a red trash can and the edit button like a gray pencil or smth */}
+                <View style={styles.iconsHalf}>
+                    {/* Like Functionality */}
+                        <View style={styles.iconContainer}>
+                                        <Image
+                                            source={require('./assets/Icons/edit-gray.png')}
+                                            style={styles.edit} 
+                                        />
+
+                        </View>
+                        <View style={styles.iconContainer}>
+                            <Image
+                                source={require('./assets/Icons/delete-gray.png')}
+                                style={styles.delete} 
+                            />
+                        </View>
                 </View>
             </View>
         </View>
@@ -669,11 +678,11 @@ const styles = StyleSheet.create({
         margin: '2%',
         width: '32%',
         alignItems: 'flex-start',
+        justifyContent: 'space-evenly',
         flexDirection: 'row',
-        justifyContent: 'center',
     },
     iconContainer: {
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         alignItems: 'center',
     },
     bottomContainer: {
@@ -696,5 +705,13 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',
         width: '30%',
         marginRight: 8,
+    },
+    edit: {
+        width: 56,
+        height: 56,
+    },
+    delete: {
+        width: 56,
+        height: 56,
     },
 });
