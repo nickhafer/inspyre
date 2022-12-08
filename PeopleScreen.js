@@ -24,9 +24,10 @@ export default function PeopleScreen ({ navigation }) {
             read: 'true',
             location: 'Palo Alto, CA',
             distance: '1.2 miles',
+            rating: require('./assets/Icons/bigstars-yellow-25.png'),
             donated: '11',
             listings: '2',
-            bio: 'this is a placeholder for a profile bio',
+            bio: 'I love travelling and sharing my memorabilia with others!',
             givingAway: [
                 {
                     id: '1',
@@ -98,7 +99,8 @@ export default function PeopleScreen ({ navigation }) {
             distance: '1.2 miles',
             donated: '11',
             listings: '2',
-            bio: 'this is a placeholder for a profile bio',
+            bio: 'Love making lamps from chopsticks!',
+            rating: require('./assets/Icons/bigstars-yellow-50.png'),
             givingAway: [
                 {
                     id: '1',
@@ -164,7 +166,8 @@ export default function PeopleScreen ({ navigation }) {
             distance: '1.2 miles',
             donated: '11',
             listings: '2',
-            bio: 'this is a placeholder for a profile bio',
+            bio: 'Former Stanford art studio student',
+            rating: require('./assets/Icons/bigstars-yellow-50.png'),
             givingAway: [
                 {
                     id: '1',
@@ -230,7 +233,8 @@ export default function PeopleScreen ({ navigation }) {
             distance: '1.2 miles',
             donated: '11',
             listings: '2',
-            bio: 'this is a placeholder for a profile bio',
+            bio: 'Full time artist!',
+            rating: require('./assets/Icons/bigstars-yellow-50.png'),
             givingAway: [
                 {
                     id: '1',
@@ -297,7 +301,8 @@ export default function PeopleScreen ({ navigation }) {
             distance: '1.2 miles',
             donated: '11',
             listings: '2',
-            bio: 'this is a placeholder for a profile bio',
+            bio: 'Excited about all things sculputre!',
+            rating: require('./assets/Icons/bigstars-yellow-50.png'),
             givingAway: [
                 {
                     id: '1',
@@ -328,6 +333,8 @@ export default function PeopleScreen ({ navigation }) {
                     image: 'https://2.bp.blogspot.com/-OYvOnhl-PiU/VZZp3DXZrOI/AAAAAAAEn_8/9VocHaUCycM/s1600/Richard%2BStainthorp%2BTutt%2527Art%2540%2B%25284%2529.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'Thank you everyone who provided me wire to make this!',
+                    exchangeDetails: 'Message me if interested',
                 },
                 {
                     id: '1',
@@ -335,6 +342,8 @@ export default function PeopleScreen ({ navigation }) {
                     image: 'https://images1.novica.net/pictures/7/p369586_2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'Metal deer I made from items collected on inspyre!',
+                    exchangeDetails: 'Message me if interested',
                 },
                 {
                     id: '3',
@@ -342,6 +351,8 @@ export default function PeopleScreen ({ navigation }) {
                     image: 'https://images1.novica.net/pictures/7/p390138_2_400.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'Metal Harness I made from metal collected from the Bay Area',
+                    exchangeDetails: 'Message me if interested',
                 },
             ],
         },
@@ -357,7 +368,8 @@ export default function PeopleScreen ({ navigation }) {
             distance: '1.2 miles',
             donated: '11',
             listings: '2',
-            bio: 'this is a placeholder for a profile bio',
+            bio: 'Stanford 2026',
+            rating: require('./assets/Icons/bigstars-yellow-50.png'),
             givingAway: [
                 {
                     id: '1',
@@ -388,6 +400,8 @@ export default function PeopleScreen ({ navigation }) {
                     image: 'https://secure.img1-fg.wfcdn.com/im/99474861/resize-h755-w755%5Ecompr-r85/1068/106899005/Taybah+Eco+Friendly+Recycled+Metal+Auto+Parts+Sculpture.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'Made from small items I collected on this app. I love this little camera man!',
+                    exchangeDetails: 'Message me if interested',
                 },
                 {
                     id: '1',
@@ -395,6 +409,8 @@ export default function PeopleScreen ({ navigation }) {
                     image: 'https://images1.novica.net/pictures/7/p368390_2c_400.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'This little sailor is made from metal scraps I collected on this app!',
+                    exchangeDetails: 'Message me if interested',
                 },
                 {
                     id: '3',
@@ -402,6 +418,8 @@ export default function PeopleScreen ({ navigation }) {
                     image: 'https://images1.novica.net/pictures/7/p368388_2_400.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'An artist at their table. All materials from this app!',
+                    exchangeDetails: 'Message me if interested',
                 },
             ],
         },
@@ -417,7 +435,8 @@ export default function PeopleScreen ({ navigation }) {
             distance: '1.2 miles',
             donated: '11',
             listings: '2',
-            bio: 'this is a placeholder for a profile bio',
+            bio: 'Stanford Art Studio Professor',
+            rating: require('./assets/Icons/bigstars-yellow-50.png'),
             givingAway: [
                 {
                     id: '1',
@@ -448,6 +467,8 @@ export default function PeopleScreen ({ navigation }) {
                     image: 'http://embakerart.weebly.com/uploads/1/3/9/5/13959176/2080033_orig.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'I collected 320 vinyl cds for this radio piece. It is currently on display in SF!',
+                    exchangeDetails: 'Not for sale',
                 },
                 {
                     id: '1',
@@ -455,6 +476,8 @@ export default function PeopleScreen ({ navigation }) {
                     image: 'https://www.geekalerts.com/u/Recyled-Computer-Gallery-Flood.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'All of these wires came from this app. They came from you all!',
+                    exchangeDetails: 'Message me if interested',
                 },
                 {
                     id: '3',
@@ -462,6 +485,8 @@ export default function PeopleScreen ({ navigation }) {
                     image: 'https://inhabitat.com/files/susiemacmurraymixtureoffrai.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    story: 'All pieces that I found on this app or literally in a dumpster! Second lives rock!!',
+                    exchangeDetails: 'Message me if interested',
                 },
             ],
         },
@@ -477,6 +502,7 @@ export default function PeopleScreen ({ navigation }) {
             donated: '11',
             listings: '2',
             bio: 'Evil Cousin of Mario',
+            rating: require('./assets/Icons/bigstars-yellow-50.png'),
             givingAway: [
                 {
                     id: '1',
