@@ -60,14 +60,15 @@ export default function DMScreen ({ navigation, route}) {
                     </View>
                 </View>
                 <View style={styles.chatSection}>
-                    <View style={styles.messageDescriptionView}>
+                    <Image style={styles.convo} source={require('./assets/Images/lucas-convo.png')}/>
+                    {/* <View style={styles.messageDescriptionView}>
                         <Text style={styles.messageDescription}>{message.message}</Text>
                     </View>
                     <View style={styles.inputMessageView}>
                         <Text style={styles.messageDescription}>
                             {text.split('').map((word) => word).join('')}
                         </Text>
-                    </View>
+                    </View> */}
                 </View>
                 <View style={styles.chatBottom}>
                     <View style={styles.textInputView}>
@@ -101,6 +102,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 36
+    },
+    convo: {
+        width: '100%',
+        height: 600,
+        resizeMode:'contain',
+        backgroundColor: 'red',
     },
     input: {
         padding: 10,
