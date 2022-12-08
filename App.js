@@ -25,15 +25,15 @@ export default function App() {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused }) => {
             if (route.name === 'Home') {
-              return <Image style= {styles.iconStyle} source={focused ? require('./assets/Icons/home-green.png') : require('./assets/Icons/home-gray.png')}/>
+              return <Image style= {styles.iconStyle} source={focused ? require('./assets/Icons/home-green.png') : require('./assets/Icons/home-white.png')}/>
             } else if (route.name === 'Profile') {
-              return <Image style={styles.iconStyle} source={focused ? require('./assets/Icons/profile-green.png') : require('./assets/Icons/profile-gray.png')}/>
+              return <Image style={styles.iconStyle} source={focused ? require('./assets/Icons/profile-green.png') : require('./assets/Icons/profile-white.png')}/>
             } else if (route.name === 'Community') {
-              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/communities-green.png') : require('./assets/Icons/communities-gray.png')}/>
+              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/communities-green.png') : require('./assets/Icons/communities-white.png')}/>
             } else if (route.name === 'Post') {
-              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/post-green.png') : require('./assets/Icons/post-gray.png')}/>
+              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/post-green.png') : require('./assets/Icons/post-white.png')}/>
             } else if (route.name === 'Chat') {
-              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/chat-green.png') : require('./assets/Icons/chat-gray.png')}/>
+              return <Image style = {styles.iconStyle} source={focused ? require('./assets/Icons/chat-green.png') : require('./assets/Icons/chat-white.png')}/>
             }
             return;
 
