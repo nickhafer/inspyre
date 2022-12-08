@@ -259,9 +259,9 @@ export default function ProfileScreen() {
                         style={styles.pin}
                         source={require('./assets/Icons/pin.png')}
                     />
-                    <Text style={styles.location}>{item.location}  </Text>  
+                    <Text style={styles.location}> {item.location}</Text>  
                     </View>
-                    <Text style={styles.distance}>{item.distance}</Text>
+                    <Text style={styles.distance}>{"\t"}{item.distance}</Text>
                 </View>
             </View>
         </View>
@@ -281,9 +281,9 @@ export default function ProfileScreen() {
                         style={styles.pin}
                         source={require('./assets/Icons/pin.png')}
                     />
-                    <Text style={styles.location}>{item.location}  </Text>  
+                    <Text style={styles.location}> {item.location}</Text>  
                     </View>
-                    <Text style={styles.distance}>{item.distance}</Text>
+                    <Text style={styles.distance}>{"\t"}{item.distance}</Text>
                 </View>
                 <View style={styles.roleContainer}> 
                         <Image style={styles.role} source={item.role} />
@@ -307,7 +307,7 @@ export default function ProfileScreen() {
                 <Pressable onPress={() => navigation.navigate('HomeProfileScreen', { user: item })}>
                     {/* Username & rating */}
                     <View style={styles.nameRating}>
-                        <Text style={styles.miniUsername}> {item.username} </Text>
+                        <Text style={styles.miniUsername}>{item.username}</Text>
                         <Image 
                             source={item.rating}
                             style={styles.miniRating}
@@ -332,9 +332,9 @@ export default function ProfileScreen() {
                                 style={styles.pin}
                                 source={require('./assets/Icons/pin.png')}
                             />
-                            <Text style={styles.location}>{item.location}  </Text>  
+                            <Text style={styles.location}> {item.location}</Text>  
                         </View>
-                        <Text style={styles.distance}>{item.distance}</Text>
+                        <Text style={styles.distance}>{"\t"}{item.distance}</Text>
                     </Pressable>
                     
                 </View>
