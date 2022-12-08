@@ -70,7 +70,7 @@ export default function RenderFeedItem ({ item }) {
                             />
                             <Text style={styles.location}>{item.location}  </Text>
                         </View>
-                        <Text style={styles.distance}>{item.distance}</Text>
+                        <Text style={styles.distance}>{"\t"}{item.distance}</Text>
                     </Pressable>
                     
                 </View>
