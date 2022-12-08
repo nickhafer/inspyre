@@ -60,14 +60,15 @@ export default function DMScreen ({ navigation, route}) {
                     </View>
                 </View>
                 <View style={styles.chatSection}>
-                    <View style={styles.messageDescriptionView}>
+                    <Image style={styles.convo} source={message.convo}/>
+                    {/* <View style={styles.messageDescriptionView}>
                         <Text style={styles.messageDescription}>{message.message}</Text>
                     </View>
                     <View style={styles.inputMessageView}>
                         <Text style={styles.messageDescription}>
                             {text.split('').map((word) => word).join('')}
                         </Text>
-                    </View>
+                    </View> */}
                 </View>
                 <View style={styles.chatBottom}>
                     <View style={styles.textInputView}>
@@ -217,5 +218,10 @@ const styles = StyleSheet.create({
         width: 48,
         height: 48,
 
+    },
+    convo: {
+        width: '100%',
+        resizeMode: 'contain',
+        alignSelf: 'center',
     },
   });
