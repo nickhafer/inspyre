@@ -428,6 +428,65 @@ export default function PeopleScreen ({ navigation }) {
                 },
             ],
         },
+        {
+            message: 'Waaaaaaaaaahhhh!!',
+            username: 'Wario',
+            time: '2d ago',
+            profilePic: 'https://play.nintendo.com/images/Masthead_Wario.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png',
+            id: '123',
+            read: 'true',
+            location: 'Palo Alto, CA',
+            distance: '1.2 miles',
+            donated: '11',
+            listings: '2',
+            bio: 'Evil Cousin of Mario',
+            givingAway: [
+                {
+                    id: '1',
+                    title: 'Broken Chair',
+                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    location: 'Palo Alto, CA',
+                    distance: '1.2 miles',
+                },
+                {
+                    id: '2',
+                    title: 'Used Towel',
+                    image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+                    location: 'Palo Alto, CA',
+                    distance: '1.2 miles',
+                },
+                {
+                    id: '3',
+                    title: 'Water bottle',
+                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    location: 'Palo Alto, CA',
+                    distance: '1.2 miles',
+                },
+            ],
+            art: [
+                {
+                    id: '2',
+                    title: 'Used Towel',
+                    image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+                    location: 'Palo Alto, CA',
+                    distance: '1.2 miles',
+                },
+                {
+                    id: '1',
+                    title: 'Broken Chair',
+                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    location: 'Palo Alto, CA',
+                    distance: '1.2 miles',
+                },
+                {
+                    id: '3',
+                    title: 'Water bottle',
+                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    location: 'Palo Alto, CA',
+                    distance: '1.2 miles',
+                },
+            ],
+        },
     ]
 
     const renderDM = ({ item }) => (
@@ -488,7 +547,7 @@ const header_styles = StyleSheet.create({
         marginBottom: 7,
         // backgroundColor: '#f9c2ff',
         height: "100%",
-        width: 265,
+        width: 300,
         marginLeft: 60,
     },
 });
