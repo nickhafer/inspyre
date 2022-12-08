@@ -111,7 +111,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '44',
             description: 'Official inspyre home of the Palo Vikes! We host afternoon thrifting events once per week. Help us spread the word to get people upcycling. Sko\' Vikes!!',
-            joinButton: require('./assets/Icons/join-gray.png'),
+            joinButton: require('./assets/Icons/request-gray.png'),
             myCommunities: true,
         },
         {
@@ -122,7 +122,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '256',
             description: 'Family-owned thrift store trying to give you the best deals on the best clothes! Come on down and say hey!',
-            joinButton: require('./assets/Icons/join-gray.png'),
+            joinButton: require('./assets/Icons/request-gray.png'),
             myCommunities: true,
         },
         {
@@ -133,7 +133,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '17',
             description: 'We try to share our bird watching gear with those who can\'t afford it. Feel free to come to one of our meet ups on Saturdays and Sundays.',
-            joinButton: require('./assets/Icons/join-gray.png'),
+            joinButton: require('./assets/Icons/request-gray.png'),
             myCommunities: true,
         },
 
@@ -145,7 +145,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '49',
             description: 'Join us in you are in the Half Moon area! Mostly beach trash, but who knows what you might find!',
-            joinButton: require('./assets/Icons/join-gray.png'),
+            joinButton: require('./assets/Icons/request-gray.png'),
             myCommunities: true,
 
         },
@@ -157,7 +157,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '32',
             description: 'Looking for some new sculputre materials in the SJ area? You have come to the right place! Feel free to join!',
-            joinButton: require('./assets/Icons/join-gray.png'),
+            joinButton: require('./assets/Icons/request-gray.png'),
             myCommunities: true,
 
         },
@@ -169,7 +169,7 @@ export default function CommunitiesScreen ({ navigation }) {
             read: 'true',
             number: '7',
             description: 'Help us recycle our knitting supplies! Welcome to those looking to get used knitting materials or hoping to provide some of their own!',
-            joinButton: require('./assets/Icons/join-gray.png'),
+            joinButton: require('./assets/Icons/request-gray.png'),
             myCommunities: true,
 
         },
