@@ -276,8 +276,8 @@ export default function HomeScreen() {
             art: [
                 {
                     id: '2',
-                    title: 'Used Towel',
-                    image: 'https://www.myfrugalhome.com/wp-content/uploads/2015/07/redyedtowels590.jpg',
+                    title: 'Cardboard Posing Girl',
+                    image: 'http://3.bp.blogspot.com/-R5blLZFrQ0Y/UvCboTnFDAI/AAAAAAAAZfE/iHWGWwsIOlE/s1600/golzad_art5.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Amy',
@@ -285,8 +285,8 @@ export default function HomeScreen() {
                 },
                 {
                     id: '1',
-                    title: 'Broken Chair',
-                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    title: 'My Cardboard Owl',
+                    image: 'https://mir-s3-cdn-cf.behance.net/projects/404/163b3626577711.5564ef6ccf915.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Amy',
@@ -294,8 +294,8 @@ export default function HomeScreen() {
                 },
                 {
                     id: '3',
-                    title: 'Water bottle',
-                    image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
+                    title: 'Cardboard Fish',
+                    image: 'http://webtoolfeed.files.wordpress.com/2012/11/goldfish021.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
                     username: 'Amy',
