@@ -23,6 +23,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator style={styles.screenContainer}
         screenOptions={({ route }) => ({
+          tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => {
             if (route.name === 'Home') {
               return <Image style= {styles.iconStyle} source={focused ? require('./assets/Icons/home-green.png') : require('./assets/Icons/home-white.png')}/>

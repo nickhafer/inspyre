@@ -431,7 +431,7 @@ export default function PeopleScreen ({ navigation }) {
         {
             message: 'Waaaaaaaaaahhhh!!',
             username: 'Wario',
-            time: '2d ago',
+            time: '6d ago',
             profilePic: 'https://play.nintendo.com/images/Masthead_Wario.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png',
             id: '123',
             read: 'true',
