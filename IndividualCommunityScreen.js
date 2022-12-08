@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     },
     mainInfo: {
         width: '100%',
-        height: '25%',
+        height: '20%',
         flexDirection: 'row',
         alignItems: 'flex-start',
         justifyContent: 'space-between',
@@ -308,7 +308,7 @@ const styles = StyleSheet.create({
     bottomSection: {
         height: '40%',
         width: '100%',
-        justifyContent: 'space-evenly',
+        justifyContent: 'flex-start',
         //backgroundColor:'blue',
     },
     description: {

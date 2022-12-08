@@ -24,36 +24,50 @@ export default function App() {
       <Tab.Navigator style={styles.screenContainer}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused }) => {
-            let iconName;
-
             if (route.name === 'Home') {
-              iconName = focused ? 'home' : 'home-outline';
-            } 
-            else if (route.name === 'Search') {
-              iconName = focused ? 'search' : 'search-outline';
+              return <Image source={focused ? require('./assets/Icons/home-green.png') : require('./assets/Icons/home-gray.png')}/>
             } else if (route.name === 'Profile') {
-              iconName = focused
-                ? "person-circle"
-                : 'person-circle-outline';
+              return <Image source={focused ? require('./assets/Icons/profile-green.png') : require('./assets/Icons/profile-gray.png')}/>
+            } else if (route.name === 'Community') {
+              return <Image source={focused ? require('./assets/Icons/communities-green.png') : require('./assets/Icons/communities-gray.png')}/>
+            } else if (route.name === 'Post') {
+              return <Image source={focused ? require('./assets/Icons/post-green.png') : require('./assets/Icons/post-gray.png')}/>
+            } else if (route.name === 'Chat') {
+              return <Image source={focused ? require('./assets/Icons/chat-green.png') : require('./assets/Icons/chat-gray.png')}/>
             }
-            else if (route.name === 'Community') {
-              iconName = focused
-                ? 'people'
-                : 'people-outline';
-            } 
-            else if (route.name === 'Post') {
-              iconName = focused
-                ? 'add-circle'
-                : 'add-circle-outline';
-            } 
-            else if (route.name === 'Chat') {
-              iconName = focused
-                ? 'paper-plane'
-                : 'paper-plane-outline';
-            }
+            return;
+
+            // original:
+
+            // let iconName;
+
+            // if (route.name === 'Home') {
+            //   iconName = focused ? 'home' : 'home-outline';
+            // } 
+            // else if (route.name === 'Search') {
+            //   iconName = focused ? 'search' : 'search-outline';
+            // } else if (route.name === 'Profile') {
+            //   iconName = focused
+            //     ? "person-circle"
+            //     : 'person-circle-outline';
+            // }
+            // else if (route.name === 'Community') {
+            //   iconName = focused
+            //     ? 'people'
+            //     : 'people-outline';
+            // } 
+            // else if (route.name === 'Post') {
+            //   iconName = focused
+            //     ? 'add-circle'
+            //     : 'add-circle-outline';
+            // } 
+            // else if (route.name === 'Chat') {
+            //   iconName = focused
+            //     ? 'paper-plane'
+            //     : 'paper-plane-outline';
+            // }
             
-            return <Ionicons name={iconName} size={24} color="black" />;
-            // return <Image source={{ uri: iconName }}/>;
+            // return <Ionicons name={iconName} size={24} color="black" />;
           }
         })}>
         <Tab.Screen name="Home" component={HomeStack} options={{headerShown: false, unmountOnBlur: true}}/>
