@@ -489,6 +489,7 @@ const header_styles = StyleSheet.create({
         // backgroundColor: '#f9c2ff',
         height: "100%",
         width: 265,
+        marginLeft: 60,
     },
 });
 
