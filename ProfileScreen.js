@@ -75,6 +75,8 @@ export default function ProfileScreen() {
     const LIKED_ITEMS_DATA = [
         {
             id: '3',
+            story: 'Some great converse that have certainly lasted me a while',
+            exchangeDetails: 'Anyime around 6-8pm works for me!',
             title: 'Old Converse',
             image: 'https://images.unsplash.com/photo-1597405490028-282bac40f64c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1646&q=80',
             location: 'Palo Alto, CA',
@@ -89,6 +91,7 @@ export default function ProfileScreen() {
                     image: 'https://www.goodshomedesign.com/wp-content/uploads/2021/11/old-new-chair-2.jpg',
                     location: 'Palo Alto, CA',
                     distance: '1.2 miles',
+                    
                 },
                 {
                     id: '2',
@@ -133,6 +136,8 @@ export default function ProfileScreen() {
         {
             id: '2',
             title: 'Converse High Top',
+            story: 'I wore these to class every day through my sophomore year of college',
+            exchangeDetails: 'anytime before my 10am class works :)',
             image: 'https://everydayrecycler.com/wp-content/uploads/2020/09/Old-Shoes.jpg',
             location: 'Stanford, CA',
             distance: '0.3 miles',
@@ -189,6 +194,8 @@ export default function ProfileScreen() {
         {
             id: '1',
             title: 'Old Vans',
+            story: 'my very first pair of skate shoes!',
+            exchangeDetails: 'sometime in the afternoon this weekend',
             image: 'https://i.pinimg.com/originals/56/98/44/569844f4fdb836afd1d96bd7aa586dd5.jpg',
             location: 'Redwood City, CA',
             distance: '3.1 miles',
