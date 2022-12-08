@@ -100,16 +100,7 @@ export default function RenderFeedItem ({ item }) {
                         </View>
                     </Pressable>
                     {/* DM Item Owner */}
-                    <Pressable 
-                        onPress={() => navigation.navigate('HomeDMScreen', { item: item })}
-                        style={({ pressed }) => [
-                            {
-                                backgroundColor: pressed
-                                ? 'rgb(210, 230, 255)'
-                                : 'white'
-                            },
-                            styles.wrapperCustom
-                        ]}>
+                    <Pressable onPress={() => navigation.navigate('HomeDMScreen', { item: item })}>
                         <View style={styles.iconContainer}>
                             <Image
                                 source={require('./assets/Icons/chat-gray.png')}
