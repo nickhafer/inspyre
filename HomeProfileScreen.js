@@ -23,12 +23,12 @@ export default function HomeProfileScreen ({ navigation, route}) {
 
     const renderItem = ({ item }) => (
         <SafeAreaView style={styles.item}>
-            {/* <Pressable onPress={() => navigation.navigate('IndividualItem', { item: item })}> */}
-            <Image
-                source={{ uri: item.image, }}
-                style={styles.objectImage}
-            />
-            {/* </Pressable> */}
+            <Pressable onPress={() => navigation.navigate('IndividualItem', { item: item })}>
+                <Image
+                    source={{ uri: item.image, }}
+                    style={styles.objectImage}
+                />
+            </Pressable>
             <View style={styles.bottomContainer}>
                 <View style={styles.textHalf}>
                     <Text style={styles.title}>{item.title}</Text>

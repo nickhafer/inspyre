@@ -49,6 +49,8 @@ export default function ProfileScreen() {
         {
             id: '2',
             title: 'Fist With Nails',
+            story: 'i donated the nails to make this art!!!',
+            exchangeDetails: 'not for sale',
             image: 'https://images.unsplash.com/photo-1615650949849-37db4f2c67db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1760&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
@@ -57,6 +59,8 @@ export default function ProfileScreen() {
         {
             id: '1',
             title: 'Simple Flowers',
+            story: 'a cool piece of art i made with some flowers i found in the rain',
+            exchangeDetails: 'not for sale',
             image: 'https://images.unsplash.com/photo-1570361269465-290e1149df5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1801&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
@@ -65,6 +69,8 @@ export default function ProfileScreen() {
         {
             id: '3',
             title: 'Some Ceramics',
+            story: 'i donated some leftover clay we had from my art class',
+            exchangeDetails: 'not for sale',
             image: 'https://images.unsplash.com/photo-1603697486934-686e0b3c9f06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2719&q=80',
             location: 'Palo Alto, CA',
             distance: '0 miles',
