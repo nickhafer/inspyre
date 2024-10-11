@@ -1,4 +1,8 @@
 # Starter repo for inspyre
+
+## Visit our project website for a short overview:
+https://hci.stanford.edu/courses/cs147/2022/au/projects/SustainableHabits/inspyre/
+
 ## Steps to get started:
  1. Download/clone the repo. Either by using git:
  ```git clone https://github.com/nickhafer/inspyre``` 
